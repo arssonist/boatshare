@@ -352,3 +352,127 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/users/" for ::1 at 2016-09-27 16:40:25 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/" for ::1 at 2016-09-27 16:41:15 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-09-27 16:41:17 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.9ms)
+  Rendered users/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-09-27 16:41:33 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aYDIpEaxp6I2Z5B9aUfo//WiQGbHnaUm937E4vcCQE/9+cFxpQlWJGIJdxdtsFFEyVNQzQoOm/uAlh+lFRAFNQ==", "user"=>{"name"=>"Captain Catherine", "email"=>"catherine@captain.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "catherine@captain.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?)[0m  [["email", "catherine@captain.com"], ["created_at", 2016-09-27 20:41:33 UTC], ["updated_at", 2016-09-27 20:41:33 UTC], ["crypted_password", "$2a$10$Wbax0q3YfYesvPt/NhrNGeHusMJEgVOcwaWPb5EEZT7ksnAEo58a6"], ["salt", "yPigADPXsjKqHbZrDKpy"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 77ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users/4" for ::1 at 2016-09-27 16:41:33 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-09-27 16:41:36 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-09-27 16:42:42 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for ::1 at 2016-09-27 16:42:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2016-09-27 16:43:31 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/2" for ::1 at 2016-09-27 16:43:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2016-09-27 16:43:39 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 45ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-09-27 16:43:55 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hx39bBKzEg+VJyqBxgeYmV4Yh+/g1i4fV8YKO9pj9ZaLZPS58QvjicFJzevC8CEiYumXRC1FEMIgLtF8OHGw7A==", "user"=>{"name"=>"Captain Mina", "email"=>"mina@captain.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mina@captain.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?)[0m  [["email", "mina@captain.com"], ["created_at", 2016-09-27 20:43:55 UTC], ["updated_at", 2016-09-27 20:43:55 UTC], ["crypted_password", "$2a$10$Xxv4lshkyYDyUfAQDtjr8uHwgwYMamPLOszxe9Jw1HLcLZCQi5k.6"], ["salt", "J8Cz1bksZy9g3sCvo6LN"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 76ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/5" for ::1 at 2016-09-27 16:43:55 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/" for ::1 at 2016-09-27 16:44:00 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
