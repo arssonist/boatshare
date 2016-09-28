@@ -5,7 +5,8 @@ class VoyagesController < ApplicationController
   end
 
   def index
-    @voyages = @user.voyages
+    # @voyages = @user.voyages
+    @voyages = Voyage.all
   end
 
   def show
@@ -32,7 +33,7 @@ class VoyagesController < ApplicationController
 
   def create
     @voyage = Voyage.new(voyage_params)
-    @voyage.user = @voyage
+    # @voyage.user = @voyage
 
     if @voyage.save
       redirect_to [@user, @voyage]
