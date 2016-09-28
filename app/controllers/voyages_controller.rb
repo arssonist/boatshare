@@ -5,8 +5,8 @@ class VoyagesController < ApplicationController
   end
 
   def index
-    # @voyages = @user.voyages
-    @voyages = Voyage.all
+    @voyages = @user.voyages
+    # @voyages = Voyage.all
   end
 
   def show
