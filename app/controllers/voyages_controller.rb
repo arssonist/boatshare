@@ -33,7 +33,7 @@ class VoyagesController < ApplicationController
 
   def create
     @voyage = Voyage.new(voyage_params)
-    # @voyage.user = @voyage
+    @voyage.captain = current_user
 
     if @voyage.save
       redirect_to [@user, @voyage]
@@ -50,7 +50,7 @@ class VoyagesController < ApplicationController
   end
 
   def ensure_user_match
-    if @voyage.user != @user
+    if @voyage.captain != @user
       not_found
     end
   end
