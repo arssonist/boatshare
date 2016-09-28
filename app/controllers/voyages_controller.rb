@@ -1,12 +1,16 @@
 class VoyagesController < ApplicationController
 
   before_action do
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:user_id]) if params[:user_id]
+
   end
 
   def index
-    @voyages = @user.voyages
-    # @voyages = Voyage.all
+    if @user
+      @voyages = @user.voyages
+    else
+      @voyages = Voyage.all
+    end
   end
 
   def show

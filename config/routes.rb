@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
- root :to => 'user_sessions#new'
+ root :to => 'voyages#index'
  resources :user_sessions
  resources :users do
    resources :voyages
