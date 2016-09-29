@@ -3,9 +3,9 @@
 <div class="voyages-display">
 
     <% @voyages.each do |voyage|%>
+    <%= link_to "View this Voyage", voyage_path(voyage.id) %><
       <%= render 'voyage', voyage: voyage%>
     <% end %>
   </div>
 
 <%= link_to "Create a new voyage!", new_voyage_path  %>
- 
