@@ -14,7 +14,8 @@ class VoyagesController < ApplicationController
   end
 
   def show
-
+    @reservation = Reservation.new
+    @voyage = Voyage.find(params[:id])
   end
 
   def edit
