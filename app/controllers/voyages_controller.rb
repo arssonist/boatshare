@@ -50,7 +50,7 @@ class VoyagesController < ApplicationController
   def destroy
     @voyage = Voyage.find(params[:id])
     @voyage.destroy
-    redirect_to user_voyages_path
+    redirect_to voyages_path
   end
   #
   # def ensure_user_match

@@ -11018,3 +11018,520 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 43ms (Views: 38.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/login" for ::1 at 2016-09-29 18:16:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (5.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 359ms (Views: 332.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2016-09-29 18:16:55 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for ::1 at 2016-09-29 18:17:00 -0400
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rrB4alNPPa5Y8QzKg6YjLLor3nKn4f7NkzoRwUoxZuMyeRDu92er953KNXPO2VVQV2Zz5/lPYAQPXQxPwW3xOA==", "email"=>"daffy@klown.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'daffy@klown.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-09-29 18:17:00 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.3ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 79ms (Views: 67.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-29 18:17:38 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/voyages/1" for ::1 at 2016-09-29 18:18:09 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.4ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 55ms (Views: 38.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/voyages/new" for ::1 at 2016-09-29 18:18:22 -0400
+Processing by VoyagesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/new.html.erb within layouts/application
+  Rendered voyages/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/voyages/20" for ::1 at 2016-09-29 18:18:33 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/7" for ::1 at 2016-09-29 18:18:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 59ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/7" for ::1 at 2016-09-29 18:25:59 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (21.9ms)
+  Rendered users/show.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `reservation' for #<User:0x007fde40430870>
+Did you mean?  reservations
+               reservations=):
+     5: 
+     6: 
+     7: 
+     8: <% user.reservation.each do |reservation|%>
+     9:  <h6><%= "Test" %></h6>
+    10: <% end %>
+  
+app/views/users/_user.html.erb:8:in `_app_views_users__user_html_erb___1748863779643761262_70296253979380'
+app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___4207720125048613082_70296268889040'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.0ms)
+Started GET "/users/7" for ::1 at 2016-09-29 18:26:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."passenger_id" = ?[0m  [["passenger_id", 7]]
+  Rendered users/_user.html.erb (3.8ms)
+  Rendered users/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 37ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-09-29 18:34:20 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.9ms)
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 64ms (Views: 61.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/voyages/1" for ::1 at 2016-09-29 18:34:22 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/voyages.1" for ::1 at 2016-09-29 18:34:26 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/voyages.1"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (18.2ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.2ms)
+Started GET "/voyages" for ::1 at 2016-09-29 18:35:46 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.6ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/voyages/1" for ::1 at 2016-09-29 18:35:48 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/voyages/1" for ::1 at 2016-09-29 18:35:50 -0400
+Processing by VoyagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/g2pNlx5mFQlzr5kpcBDeKPXHU7ov7lx+VR3xeq+TiBixMGy+FEODeD1h93ovzUETpqw27YRJ7hlM2pLYeLZ+w==", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "voyages" WHERE "voyages"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (undefined local variable or method `user_voyages_path' for #<VoyagesController:0x007fde39d13200>
+Did you mean?  users_path
+               new_voyage_path
+               user_session_path
+               edit_voyage_path):
+  
+app/controllers/voyages_controller.rb:53:in `destroy'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.6ms)
+Started GET "/voyages/" for ::1 at 2016-09-29 18:38:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.5ms)
+  Rendered voyages/_voyage.html.erb (0.3ms)
+  Rendered voyages/_voyage.html.erb (0.3ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 384ms (Views: 337.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/voyages/2" for ::1 at 2016-09-29 18:38:22 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 57ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/voyages/2" for ::1 at 2016-09-29 18:38:30 -0400
+Processing by VoyagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DfLcDD/oA2G36bOy5jeC0kKnsbu0iNy03AZYTzZRHbWRO7SIm8CVOHLSigurSPSur+ocLuomQn1AYUXBvQ2Kbg==", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "voyages" WHERE "voyages"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 1.9ms)
+
+
+  
+NameError (undefined local variable or method `user_voyages_path' for #<VoyagesController:0x007fb1a9aa3608>
+Did you mean?  users_path
+               new_voyage_path
+               user_session_path
+               edit_voyage_path):
+  
+app/controllers/voyages_controller.rb:53:in `destroy'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.1ms)
+Started DELETE "/voyages/2" for ::1 at 2016-09-29 18:38:59 -0400
+Processing by VoyagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DfLcDD/oA2G36bOy5jeC0kKnsbu0iNy03AZYTzZRHbWRO7SIm8CVOHLSigurSPSur+ocLuomQn1AYUXBvQ2Kbg==", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 27ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Voyage with 'id'=2):
+  
+app/controllers/voyages_controller.rb:51:in `destroy'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.5ms)
+Started GET "/voyages/" for ::1 at 2016-09-29 18:39:15 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.9ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/voyages/5" for ::1 at 2016-09-29 18:39:19 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 30.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/voyages/5" for ::1 at 2016-09-29 18:39:23 -0400
+Processing by VoyagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J/Oc0LEz/zX0B1TqhA9Njd450SOUQDmSJq1irc/tpHm7OvRUFRtpbDE8bVPJcDvxM3R8tsrup1u6yn8jRLEzog==", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "voyages" WHERE "voyages"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/voyages" for ::1 at 2016-09-29 18:39:23 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 66ms (Views: 55.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/voyages/3" for ::1 at 2016-09-29 18:39:26 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/voyages/3" for ::1 at 2016-09-29 18:39:29 -0400
+Processing by VoyagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"voTvqNO+yIJEtqoyRDMEW5h41/t7GHCVIMNkprQuUioiTYcsd5Ze24GNk4sJTHIndTV6biW27ly8pHkoP3LF8Q==", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "voyages" WHERE "voyages"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/voyages" for ::1 at 2016-09-29 18:39:29 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (1.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 55ms (Views: 51.4ms | ActiveRecord: 0.5ms)
+
+

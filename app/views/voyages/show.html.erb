@@ -11,3 +11,7 @@
   <% end %>
 
 </p>
+
+
+
+<%= link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the location '#{@voyage.title}'? This cannot be undone!"}%>
