@@ -14,9 +14,7 @@ class VoyagesController < ApplicationController
   end
 
   def show
-    @voyages = Voyage.all
-    # @voyage = Voyage.find(params[:id])
-
+  
   end
 
   def edit
