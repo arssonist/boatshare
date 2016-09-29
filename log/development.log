@@ -9767,3 +9767,523 @@ Migrating to AddLocationToVoyage (20160929204128)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/voyages" for ::1 at 2016-09-29 17:08:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.5ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.5ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (71.3ms)
+Completed 200 OK in 507ms (Views: 454.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/3" for ::1 at 2016-09-29 17:08:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (4.7ms)
+  Rendered users/show.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="user-partial">
+    2:   <h6><%= user.name %></h6>
+    3:   <h6><%= user.email %></h6>
+    4: </div>
+  
+app/views/users/_user.html.erb:2:in `_app_views_users__user_html_erb___3174999051910891215_70189855527760'
+app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb__3022934157648152449_70189890242220'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (100.7ms)
+Started GET "/users/3" for ::1 at 2016-09-29 17:08:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (6.7ms)
+  Rendered users/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="user-partial">
+    2:   <h6><%= user.name %></h6>
+    3:   <h6><%= user.email %></h6>
+    4: </div>
+  
+app/views/users/_user.html.erb:2:in `_app_views_users__user_html_erb___3174999051910891215_70189858461840'
+app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb__3022934157648152449_70189858231660'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.4ms)
+Started GET "/users/3" for ::1 at 2016-09-29 17:08:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 33.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for ::1 at 2016-09-29 17:09:35 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-09-29 17:09:36 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.6ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.3ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 70ms (Views: 61.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/logout" for ::1 at 2016-09-29 17:09:37 -0400
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C/mhXYQLFVLlAqGCUlMRiJB1p2CvKykKpiTMu1brOBMh+ZC0Iole/+BAlt4U+ks+89hM6VoCpV9YIhEnBD67uQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/voyages
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/voyages" for ::1 at 2016-09-29 17:09:37 -0400
+Processing by VoyagesController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-09-29 17:09:37 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions" for ::1 at 2016-09-29 17:09:44 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UserSessionsController):
+  
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+Started GET "/users/new" for ::1 at 2016-09-29 17:09:47 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (24.6ms)
+  Rendered users/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 79ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-29 17:10:40 -0400
+Processing by VoyagesController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-09-29 17:10:40 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-09-29 17:10:44 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 53ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-09-29 17:11:03 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GPdMquTds3PPoEoxxqzJpwJqGD0rYg5ay6097QDh5oylWSEYk02euYOfgO+oBruFFHpYXutDEcTAEaqhpUteYg==", "user"=>{"name"=>"Superman", "email"=>"superman@kdk.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "superman@kdk.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?)[0m  [["email", "superman@kdk.com"], ["created_at", 2016-09-29 21:11:03 UTC], ["updated_at", 2016-09-29 21:11:03 UTC], ["crypted_password", "$2a$10$Qp5m6c2omP38AsGDLli.Q.FEoj.Vj40B1Sh3eQXbO5n8jqd/tQlKS"], ["salt", "CnT61tex6wkBzhWYkbnq"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "superman@kdk.com"], ["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 302 Found in 81ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for ::1 at 2016-09-29 17:11:03 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-09-29 17:13:24 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.9ms)
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/voyages" for ::1 at 2016-09-29 17:13:25 -0400
+Processing by VoyagesController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-09-29 17:13:25 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.1ms)
+  Rendered user_sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions" for ::1 at 2016-09-29 17:13:31 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UserSessionsController):
+  
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+Started GET "/login" for ::1 at 2016-09-29 17:14:30 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (4.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 112ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-09-29 17:14:32 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.1ms)
+  Rendered user_sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-09-29 17:14:34 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-09-29 17:15:43 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.4ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions" for ::1 at 2016-09-29 17:15:47 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UserSessionsController):
+  
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+Started GET "/users/new" for ::1 at 2016-09-29 17:15:49 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.4ms)
+  Rendered users/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-09-29 17:16:04 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-09-29 17:16:24 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 41ms (Views: 27.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for ::1 at 2016-09-29 17:16:25 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-09-29 17:16:39 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"57/KkfsIRIKY6syXQ0QI0odHUPlTB0GIDQZQGD7IebULSh+YNcAe507bkVmN7uTtrc9zGUtq2xDJ6ySBjX3F+g==", "user"=>{"name"=>"Rob Ford", "email"=>"rob@ford.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rob@ford.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rob Ford"], ["email", "rob@ford.com"], ["created_at", 2016-09-29 21:16:39 UTC], ["updated_at", 2016-09-29 21:16:39 UTC], ["crypted_password", "$2a$10$ozgCoFHyxodlM/5.A0CayOq6LrYbWLXwxTCYmGI0UA2FGrBOtMWlG"], ["salt", "n4bkqdghssTzj8UeiZeY"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "rob@ford.com"], ["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 302 Found in 81ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for ::1 at 2016-09-29 17:16:39 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2016-09-29 17:18:19 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.0ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/_user.html.erb (0.1ms)
+  Rendered users/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 49ms (Views: 41.7ms | ActiveRecord: 0.9ms)
+
+
