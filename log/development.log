@@ -6746,3 +6746,386 @@ Processing by VoyagesController#show as HTML
 Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:50:47 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (144.5ms)
+  Rendered voyages/show.html.erb within layouts/application (148.4ms)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `voyage' for #<#<Class:0x007f96024bfa60>:0x007f95fc3f33f8>
+Did you mean?  voyage_url
+               @voyages):
+    1: <div class="voyage-show">
+    2:   <h3><%= voyage.title %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141083914180'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141079428880'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141079428880'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.0ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:51:16 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (142.0ms)
+  Rendered voyages/show.html.erb within layouts/application (145.6ms)
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `voyage' for #<#<Class:0x007f96024bfa60>:0x007f95faf786f8>
+Did you mean?  voyage_url
+               @voyages):
+    1: <div class="voyage-show">
+    2:   <h3><%= voyage.user_id.title %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141071284140'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141068724000'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141068724000'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.2ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:51:24 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (130.1ms)
+  Rendered voyages/show.html.erb within layouts/application (132.8ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `voyage' for #<#<Class:0x007f96024bfa60>:0x007f95fcb6cb20>
+Did you mean?  voyage_url
+               @voyages):
+    1: <div class="voyage-show">
+    2:   <h3><%= voyage.captain_id.title %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141083432180'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141083347620'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141083347620'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.1ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.0ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:51:34 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (132.1ms)
+  Rendered voyages/show.html.erb within layouts/application (135.2ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `captain_id' for #<#<Class:0x007f96024bfa60>:0x007f96011aa1c8>):
+    1: <div class="voyage-show">
+    2:   <h3><%= captain_id.voyage.title %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141081942680'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141120175540'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141120175540'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.2ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:51:52 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (124.0ms)
+  Rendered voyages/show.html.erb within layouts/application (126.9ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `voyage' for #<#<Class:0x007f96024bfa60>:0x007f96048045e8>
+Did you mean?  voyage_url
+               @voyages):
+    1: <div class="voyage-show">
+    2:   <h3><%= voyage.captain.title %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141084206220'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141148669960'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141148669960'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.5ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:52:13 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (137.5ms)
+  Rendered voyages/show.html.erb within layouts/application (141.0ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `voyages' for #<#<Class:0x007f96024bfa60>:0x007f96025ecb18>
+Did you mean?  @voyages):
+    1: <div class="voyage-show">
+    2:   <h3><%= voyages.all %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141130831640'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141130795680'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141130795680'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.2ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:52:18 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.6ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (168.5ms)
+  Rendered voyages/show.html.erb within layouts/application (174.9ms)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `voyage' for #<#<Class:0x007f96024bfa60>:0x007f96010827a0>
+Did you mean?  voyage_url
+               @voyages):
+    1: <div class="voyage-show">
+    2:   <h3><%= voyage.all %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141103937720'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141119578600'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141119578600'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.7ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:52:28 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (3.1ms)
+  Rendered voyages/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    1: <div class="voyage-show">
+    2:   <h3><%= @voyage.all %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141106098240'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141105981920'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141105981920'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.9ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:52:33 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.3ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/show.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 72ms (Views: 68.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:56:57 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.7ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/show.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:57:06 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (6.9ms)
+  Rendered voyages/show.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for #<Voyage:0x007f9604059258>):
+    1: <div class="voyage-show">
+    2:   <h3><%= voyage.all %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141084021280'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141083960400'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141083960400'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.2ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:57:12 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (125.8ms)
+  Rendered voyages/show.html.erb within layouts/application (129.0ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `voyages' for #<#<Class:0x007f96024bfa60>:0x007f96041ec340>
+Did you mean?  voyage
+               @voyages):
+    1: <div class="voyage-show">
+    2:   <h3><%= voyages.all %></h3>
+    3:   </p>
+  
+app/views/voyages/_voyage.html.erb:2:in `_app_views_voyages__voyage_html_erb__1383836083078251862_70141084031940'
+app/views/voyages/show.html.erb:6:in `block in _app_views_voyages_show_html_erb__2883312624911726925_70141145474740'
+app/views/voyages/show.html.erb:5:in `_app_views_voyages_show_html_erb__2883312624911726925_70141145474740'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.6ms)
+Started GET "/voyages/show" for ::1 at 2016-09-28 23:58:16 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  [1m[36mVoyage Load (0.4ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.7ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/show.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.5ms)
+
+

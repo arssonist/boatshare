@@ -3,7 +3,7 @@
 <div class="voyages-display">
 
     <% @voyages.each do |voyage|%>
-      <%= render 'voyage'%>
+      <%= render 'voyage', voyage: voyage%>
     <% end %>
   </div>
 
