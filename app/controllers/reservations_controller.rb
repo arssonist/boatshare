@@ -42,9 +42,9 @@ class ReservationsController < ApplicationController
       @reservation.voyage_id = params[:voyage_id]
 
       if @reservation.save
-        redirect_to "/voyages/#{params[:voyage_id]}"
+        redirect_to "/voyages/#{params[:voyage_id]}" #Update this to redirect_to /voyages/reservation/instance
       else
-        redirect_to '/voyages'
+        redirect_to '/voyages' #update this to redirect_to voyages/reservation/new 
       end
 
     end
