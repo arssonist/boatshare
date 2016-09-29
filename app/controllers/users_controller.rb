@@ -14,8 +14,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:id])
-    # @voyages = User.voyages 
+    @users = User.all
+    # find(params[:id])
+    # @voyages = User.voyages
   end
 
   # GET /users/new
