@@ -1,10 +1,1 @@
 <h1>BoatShare Voyage#Show page!</h1>
-
-<div class="voyages-display">
-
-    <% @voyages.each do |voyage|%>
-      <%= render 'voyage', voyage: voyage%>
-    <% end %>
-  </div>
-
-<%= link_to "Create a new voyage!", new_voyage_path  %>
