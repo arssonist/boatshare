@@ -9,7 +9,7 @@ class VoyagesController < ApplicationController
     if @user
       @voyages = @user.voyages
     else
-      @voyages = Voyage.all
+      @voyages = Voyage.all.order("created_at_desc")
     end
   end
 

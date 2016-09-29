@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927193750) do
+ActiveRecord::Schema.define(version: 20160929172050) do
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "passenger_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160927193750) do
     t.datetime "updated_at",       null: false
     t.string   "crypted_password"
     t.string   "salt"
+    t.text     "bio"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
