@@ -14,8 +14,7 @@ class VoyagesController < ApplicationController
   end
 
   def show
-    @voyage = Voyage.find(params[:id])
-
+  
   end
 
   def edit
@@ -61,7 +60,7 @@ class VoyagesController < ApplicationController
 
 private
   def voyage_params
-    params.require(:voyage).permit(:title, :captain_id) #will need to add more fields as they are added to model
+    params.require(:voyage).permit(:title) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
   end
 
 end
