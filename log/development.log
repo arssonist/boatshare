@@ -6638,3 +6638,249 @@ app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__16752765
   Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
   Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.0ms)
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:17:17 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"reservations", :id=>"22"} missing required keys: [:voyage_id]):
+    1: <h1>Voyages#show</h1>
+    2: 
+    3: 
+    4: <%= link_to "Book this Voyage", new_voyage_reservation_path  %>
+  
+app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__1675276516186639854_70343210240200'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.2ms)
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:19:09 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `reservation' for #<Voyage:0x007ff419eb4c58>
+Did you mean?  reservations
+               reservations=):
+  
+app/controllers/voyages_controller.rb:18:in `show'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.6ms)
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:20:24 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"reservations", :id=>"22"} missing required keys: [:voyage_id]):
+    1: <h1>Voyages#show</h1>
+    2: 
+    3: 
+    4: <%= link_to "Book this Voyage", new_voyage_reservation_path  %>
+  
+app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__1675276516186639854_70343223390640'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.3ms)
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:22:13 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reservations", :id=>"22"} missing required keys: [:voyage_id]):
+    1: <h1>Voyages#show</h1>
+    2: 
+    3: 
+    4: <%= link_to "Book this Voyage", voyage_reservation_path  %>
+  
+app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__1675276516186639854_70343197475160'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.8ms)
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:23:31 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reservations", :id=>"22"} missing required keys: [:voyage_id]):
+    1: <h1>Voyages#show</h1>
+    2: 
+    3: 
+    4: <%= link_to "Book this Voyage", voyage_reservation_path  %>
+  
+app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__1675276516186639854_70343235926060'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.1ms)
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:23:37 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reservations", :id=>"22"} missing required keys: [:voyage_id]):
+    1: <h1>Voyages#show</h1>
+    2: 
+    3: 
+    4: <%= link_to "Book this Voyage", voyage_reservation_path  %>
+  
+app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__1675276516186639854_70343203499800'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.4ms)
+Started GET "/voyages/" for ::1 at 2016-09-28 22:23:41 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  Rendered voyages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/voyages/new" for ::1 at 2016-09-28 22:23:42 -0400
+Processing by VoyagesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/new.html.erb within layouts/application
+  Rendered voyages/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:23:51 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reservations", :id=>"22"} missing required keys: [:voyage_id]):
+    1: <h1>Voyages#show</h1>
+    2: 
+    3: 
+    4: <%= link_to "Book this Voyage", voyage_reservation_path  %>
+  
+app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__1675276516186639854_70343225342520'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.6ms)
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:24:16 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"reservations", :id=>"22"} missing required keys: [:voyage_id]):
+    1: <h1>Voyages#show</h1>
+    2: 
+    3: 
+    4: <%= link_to "Book this Voyage", voyage_reservation_path  %>
+  
+app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__1675276516186639854_70343238302760'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.6ms)
+Started GET "/voyages/22" for ::1 at 2016-09-28 22:40:08 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"reservations", :id=>"22"}):
+    1: <h1>Voyages#show</h1>
+    2: 
+    3: 
+    4: <%= link_to "Book this Voyage", controller: 'reservations'  %>
+  
+app/views/voyages/show.html.erb:4:in `_app_views_voyages_show_html_erb__1675276516186639854_70343253981440'
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/chrisdielschnieder/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.9ms)

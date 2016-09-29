@@ -14,8 +14,7 @@ class ReservationsController < ApplicationController
     end
 
     def show
-      # @voyage = Voyage.find(params[:id])
-      # ensure_user_match
+      @reservation = Reservation.find(params[:id])
     end
 
     def edit
@@ -44,7 +43,7 @@ class ReservationsController < ApplicationController
       if @reservation.save
         redirect_to "/voyages/#{params[:voyage_id]}" #Update this to redirect_to /voyages/reservation/instance
       else
-        redirect_to '/voyages' #update this to redirect_to voyages/reservation/new 
+        redirect_to '/voyages' #update this to redirect_to voyages/reservation/new
       end
 
     end
