@@ -1,4 +1,10 @@
-<h1>Voyages#show</h1>
+<h1>BoatShare Voyage#Show page!</h1>
 
+<div class="voyages-display">
 
-<%= link_to "Book this Voyage (not working)"  %>
+    <% @voyages.each do |voyage|%>
+      <%= render 'voyage'%>
+    <% end %>
+  </div>
+
+<%= link_to "Book this Voyage", new_voyage_path  %>
