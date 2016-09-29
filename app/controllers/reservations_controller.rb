@@ -1,5 +1,4 @@
 class ReservationsController < ApplicationController
-  class VoyagesController < ApplicationController
 
     before_action do
       @user = Reservation.find(params[:user_id]) if params[:user_id]
@@ -7,62 +6,64 @@ class ReservationsController < ApplicationController
     end
 
     def index
-      if @reservation
-        @voyages = @reservation.voyages
-      else
-        @voyages = Voyage.all
-      end
+      # if @reservation
+      #   @voyages = @reservation.voyages
+      # else
+      #   @voyages = Voyage.all
+      # end
     end
 
     def show
-      @voyage = Voyage.find(params[:id])
-      ensure_user_match
+      # @voyage = Voyage.find(params[:id])
+      # ensure_user_match
     end
 
     def edit
-      @voyage = Voyage.find(params[:id])
+      # @voyage = Voyage.find(params[:id])
     end
 
     def update
-      @voyage = Voyage.find(params[:id])
-      if @voyage.update(voyage_params)
-        redirect_to [@reservation, @voyage] #review
-      else
-        redirect_back_or_to [@reservation, @voyage]
-      end
+      # @voyage = Voyage.find(params[:id])
+      # if @voyage.update(voyage_params)
+      #   redirect_to [@reservation, @voyage] #review
+      # else
+      #   redirect_back_or_to [@reservation, @voyage]
+      # end
     end
 
     def new
-      @voyage = Voyage.new
+      @reservation = Reservation.new
+      @voyage = Voyage.find(params[:voyage_id])
     end
 
     def create
-      @voyage = Voyage.new(voyage_params)
-      @voyage.captain = current_user
+      @reservation = Reservation.new
+      @reservation.passenger_id = current_user.id
+      @reservation.voyage_id = params[:voyage_id]
 
-      if @voyage.save
-        redirect_to [@reservation, @voyage]
+      if @reservation.save
+        redirect_to "/voyages/#{params[:voyage_id]}"
       else
-        redirect_to new_user_voyage_path
+        redirect_to '/voyages'
       end
 
     end
 
     def destroy
-      @voyage = Voyage.find(params[:id])
-      @voyage.destroy
-      redirect_to user_voyages_path
+      # @voyage = Voyage.find(params[:id])
+      # @voyage.destroy
+      # redirect_to user_voyages_path
     end
 
     def ensure_user_match
-      if @voyage.captain != @reservation
-        not_found
-      end
+      # if @voyage.captain != @reservation
+      #   not_found
+      # end
     end
 
   private
-    def voyage_params
-      params.require(:voyage).permit(:title, :captain_id) #will need to add more fields as they are added to model
-    end
+    # def reservation_params
+    #   params.require(:reservation).permit(:title, :captain_id) #will need to add more fields as they are added to model
+    # end
 
   end

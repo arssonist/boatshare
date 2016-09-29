@@ -1,26 +1,16 @@
 Rails.application.routes.draw do
 
-  get 'reservations/index'
 
-  get 'reservations/new'
-
-  get 'reservations/create'
-
-  get 'reservations/show'
-
-  get 'reservations/destroy'
-
-  get 'reservations/edit'
-
-  get 'reservations/update'
 
  root :to => 'voyages#index'
  resources :user_sessions
- resources :users do
-   resources :voyages
+ resources :users  
+
+
+ resources :voyages do
+   resources :reservations
  end
- resources :reservations do
- end
+
 
 
 

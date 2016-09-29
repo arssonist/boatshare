@@ -15,7 +15,7 @@ class VoyagesController < ApplicationController
 
   def show
     @voyage = Voyage.find(params[:id])
-    ensure_user_match
+
   end
 
   def edit
@@ -40,9 +40,9 @@ class VoyagesController < ApplicationController
     @voyage.captain = current_user
 
     if @voyage.save
-      redirect_to [@user, @voyage]
+      redirect_to @voyage
     else
-      redirect_to new_user_voyage_path
+      redirect_to new_voyage_path
     end
 
   end
@@ -52,12 +52,12 @@ class VoyagesController < ApplicationController
     @voyage.destroy
     redirect_to user_voyages_path
   end
-
-  def ensure_user_match
-    if @voyage.captain != @user
-      not_found
-    end
-  end
+  #
+  # def ensure_user_match
+  #   if @voyage.captain != @user
+  #     not_found
+  #   end
+  # end
 
 private
   def voyage_params
