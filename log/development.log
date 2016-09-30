@@ -1905,3 +1905,94 @@ Processing by VoyagesController#edit as HTML
 Completed 200 OK in 77ms (Views: 70.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/voyages/5/edit" for ::1 at 2016-09-30 17:55:07 -0400
+Processing by VoyagesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering voyages/edit.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (21.0ms)
+  Rendered voyages/edit.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 76ms (Views: 72.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for ::1 at 2016-09-30 17:56:40 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."passenger_id" = ?[0m  [["passenger_id", 2]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages" WHERE "voyages"."captain_id" = ?[0m  [["captain_id", 2]]
+  Rendered users/_user.html.erb (5.3ms)
+  Rendered users/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 62ms (Views: 55.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/voyages/5" for ::1 at 2016-09-30 17:56:43 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 52ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/voyages/5/edit" for ::1 at 2016-09-30 17:56:44 -0400
+Processing by VoyagesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering voyages/edit.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (11.6ms)
+  Rendered voyages/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/voyages/5" for ::1 at 2016-09-30 17:56:47 -0400
+Processing by VoyagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0544p7PnA5S2m+ABsecOX4TlKNYAQqcydoY74u1CGElN3Qdivfivh693bqL7XiIGsImwFXw/S+wcy/8uNx2OGg==", "voyage"=>{"title"=>"Ocean sailing", "description"=>"sailing the ocean desc", "location"=>"Toronto", "start_time"=>"2016-12-29T23:59:00", "end_time"=>"2016-12-30T23:59:00", "capacity"=>"2"}, "commit"=>"Update Voyage", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.4ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[33mUPDATE "voyages" SET "capacity" = ?, "updated_at" = ? WHERE "voyages"."id" = ?[0m  [["capacity", 2], ["updated_at", 2016-09-30 21:56:47 UTC], ["id", 5]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages/5
+Completed 302 Found in 29ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/voyages/5" for ::1 at 2016-09-30 17:56:47 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 64ms (Views: 57.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/voyages/5/edit" for ::1 at 2016-09-30 17:56:50 -0400
+Processing by VoyagesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering voyages/edit.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (7.0ms)
+  Rendered voyages/edit.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 57ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for ::1 at 2016-09-30 17:56:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."passenger_id" = ?[0m  [["passenger_id", 2]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages" WHERE "voyages"."captain_id" = ?[0m  [["captain_id", 2]]
+  Rendered users/_user.html.erb (4.2ms)
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 53ms (Views: 43.6ms | ActiveRecord: 0.6ms)
+
+
