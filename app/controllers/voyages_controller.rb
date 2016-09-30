@@ -41,7 +41,9 @@ class VoyagesController < ApplicationController
 
     if @voyage.save
       redirect_to @voyage
+        flash[:notice] = "Voyage succesfully created."
     else
+      flash[:notice] = "Sorry, Voyage not created. Try Again"
       redirect_to new_voyage_path
     end
 
@@ -50,7 +52,7 @@ class VoyagesController < ApplicationController
   def destroy
     @voyage = Voyage.find(params[:id])
     @voyage.destroy
-    redirect_to user_voyages_path
+    redirect_to voyages_path
   end
   #
   # def ensure_user_match
