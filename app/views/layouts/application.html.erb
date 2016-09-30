@@ -8,6 +8,25 @@
   </head>
   <body>
 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <%= link_to "Home", root_path %>
+                  </li>
+                  <li>
+                      <%= link_to "Register", new_user_path %> |
+                  </li>
+                  <li>
+                      <a href="blog.html">Voyages</a>
+                  </li>
+                  <li>
+                      <a href="contact.html">Contact</a>
+                  </li>
+              </ul>
+          </div>
+
+
+
   <div id="nav">
       <%= link_to "Home", root_path %>
     <% if current_user %>
@@ -27,7 +46,7 @@
 
   <% if flash.any? %>
       <% flash.each do |key, value| %>
-      
+
       </p>
       <% end %>
       <% end %>
