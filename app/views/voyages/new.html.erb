@@ -2,7 +2,7 @@
 
 
 
-<%= form_for [@voyage] do |f| %>
+<%= form_for @voyage do |f| %>
 
   <div>
    <%= f.label :title %>
@@ -27,6 +27,11 @@
   <div>
     <%= f.label :end_time %>
     <%= f.datetime_field :end_time %>
+  </div>
+
+  <div>
+    <%= f.label :capacity%>
+    <%= f.select :capacity, options_for_select(0..100) %>
   </div>
 
 
