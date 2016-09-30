@@ -1,6 +1,3 @@
-
-
-
 <h1><%= @voyage.title %></h1>
 
 <h6>Voyage departs from :<%= @voyage.location %></h6>
@@ -10,13 +7,9 @@
 <h6>Voyage capacity: <%= @voyage.capacity %></h6>
 
 <p>
-
   <%= form_for [@voyage, @reservation] do |f|%>
   <%= f.submit %>
   <% end %>
-
 </p>
 
-
-
-<%= link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the location '#{@voyage.title}'? This cannot be undone!"}%>
+<%= link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{@voyage.title}'? This cannot be undone!"}%>  

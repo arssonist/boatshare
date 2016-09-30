@@ -1,2 +1,7 @@
 <h1>Reservations#destroy</h1>
-<p>Find me in app/views/reservations/destroy.html.erb</p>
+
+<p>
+  <%= form_for [@voyage, @reservation] do |f|%>
+  <%= f.delete %>
+  <% end %>
+</p>

@@ -3,8 +3,7 @@ Rails.application.routes.draw do
  root :to => 'voyages#index'
  resources :user_sessions
  resources :users
-
-
+ 
  resources :voyages do
    resources :reservations
  end
