@@ -11018,3 +11018,66 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 43ms (Views: 38.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/voyages" for ::1 at 2016-09-30 12:46:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VoyagesController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-09-30 12:46:25 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.8ms)
+  Rendered user_sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 374ms (Views: 350.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/user_sessions" for ::1 at 2016-09-30 12:46:28 -0400
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oeRAeqD8KIOJOWkeAHb/8uJCVagJOYRDZ5Y16D0mni+K2LMKL7nfqGg7r8SPakT3Pw1fMLcsAKYRZ+kFTq0tMQ==", "email"=>"alex@captain.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'alex@captain.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/voyages
+Completed 302 Found in 151ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/voyages" for ::1 at 2016-09-30 12:46:28 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.5ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 108ms (Views: 95.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/voyages/20" for ::1 at 2016-09-30 12:46:33 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 58ms (Views: 47.1ms | ActiveRecord: 0.6ms)
+
+
