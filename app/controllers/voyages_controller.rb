@@ -43,7 +43,7 @@ class VoyagesController < ApplicationController
       redirect_to @voyage
         flash[:notice] = "Voyage succesfully created."
     else
-      flash[:error] = "Sorry, Voyage not created."
+      flash[:notice] = "Sorry, Voyage not created. Try Again"
       redirect_to new_voyage_path
     end
 
