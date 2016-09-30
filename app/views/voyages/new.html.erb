@@ -1,15 +1,35 @@
-<div class="container">
+<div class="voyage-new-field">
 
 
-<%= render 'voyage' %>
 
-<%= form_for [@user, @voyage] do |f| %>
+<%= form_for [@voyage] do |f| %>
 
-  <div class='field'>
+  <div>
    <%= f.label :title %>
    <%= f.text_field :title %>
    </div>
-<!-- add new fields -->
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description%>
+  </div>
+
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div>
+    <%= f.label :start_time %>
+    <%= f.datetime_field :start_time %>
+  </div>
+
+  <div>
+    <%= f.label :end_time %>
+    <%= f.datetime_field :end_time %>
+  </div>
+
+
 
     <%= f.submit %>
       <% end %>

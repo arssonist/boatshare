@@ -41,7 +41,9 @@ class VoyagesController < ApplicationController
 
     if @voyage.save
       redirect_to @voyage
+        flash[:notice] = "Voyage succesfully created."
     else
+      flash[:error] = "Sorry, Voyage not created."
       redirect_to new_voyage_path
     end
 
