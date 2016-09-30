@@ -12,4 +12,6 @@
 <h2>All Created Voyages </h2>
 <% user.voyages.each do |voyage| %>
   <h6><%= voyage.title %></h6>
+  <h6><%= link_to "View your voyage", voyage %> </h6>
+
 <% end %>

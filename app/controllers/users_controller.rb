@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-
   end
 
   # GET /users/1
@@ -19,7 +18,7 @@ class UsersController < ApplicationController
     # find(params[:id])
     # @voyages = User.voyages
   end
-
+  
   # GET /users/new
   def new
     @user = User.new
@@ -49,8 +48,6 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
-
-
 
   end
 
