@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     # find(params[:id])
     # @voyages = User.voyages
   end
-  
+
   # GET /users/new
   def new
     @user = User.new
@@ -27,7 +27,6 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
-
   end
 
   # POST /users
