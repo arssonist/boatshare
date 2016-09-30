@@ -6,6 +6,7 @@ class VoyagesController < ApplicationController
   end
 
   def index
+
     if @user
       @voyages = @user.voyages
     else
@@ -54,7 +55,7 @@ class VoyagesController < ApplicationController
     @voyage.destroy
     redirect_to voyages_path
   end
-  #
+
   # def ensure_user_match
   #   if @voyage.captain != @user
   #     not_found
