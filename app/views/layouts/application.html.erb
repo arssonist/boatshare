@@ -29,33 +29,32 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><%= link_to "Home", root_path, class: 'nav navbar-nav'%> </li>
                         <li>
-                            <li><a href="/voyages/new">New Voyage</a></li>
+                            <%= link_to "Home", root_path%> 
                         </li>
-                      
+                  <% if current_user %>
                         <li>
-                          
+                            <%= link_to "Profile", user_path(current_user)%>
+                        </li>
+                        <li> 
+                            <%= link_to "Logout", :logout, method: :post %>
+                        </li>
+                  <% else %>
+                       <li >
+                      <%= link_to "Register", new_user_path %>
+                        <%= link_to "Login", :login %> 
+                       </li>
+                       <li>
+                        <%= link_to "Home", root_path %>
+                  <% end %>
+                        </li>
                         <li>
                             <a href="contact.html">Contact</a>
                         </li>
-                        <li>
-
-                        </li>
                     </ul>
-<!--
-                <div id="nav">
-                    <%= link_to "Home", root_path %>
--->
-                  <% if current_user %>
-                    <%= link_to "Profile", user_path(current_user)%>
-                    <%= link_to "Logout", :logout, method: :post %>
-                  <% else %>
-                    <%= link_to "Register", new_user_path %> |
-                    <%= link_to "Login", :login %>
-                    <%= link_to "Home", root_path %>
-                  <% end %>
-                </div>!-- </div> -->
+
+
+                </div>
                 
                 <div>
                   <p id="notice"><%= flash[:notice] %></p>

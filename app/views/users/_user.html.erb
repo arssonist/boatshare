@@ -17,17 +17,18 @@
   <h6><%= voyage.title %></h6>
   <h6><%= voyage.location %></h6>
     <h6><%= voyage.description %></h6>
-    <h4>All passengers on this Voyage</h4>
-<% voyage.passengers do |passenger| %>
-<h6> <%= passenger.name %></h6>
 <% end %>
   
+    <h4>All passengers on this Voyage</h4>
+    <% voyage.passengers do |passenger| %>
+    <h6> <%= passenger.name %></h6>
+<% end %>
    
     
     <h6><%= link_to voyage.title, voyage_path(voyage.id) %></h6>
 
 
 
-<% end %>
+
 
 
