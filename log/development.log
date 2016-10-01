@@ -1996,3 +1996,218 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 53ms (Views: 43.6ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for ::1 at 2016-10-01 14:26:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.5ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.5ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 431ms (Views: 374.0ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mVoyage Load (5.1ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "voyages" SET "updated_at" = ?, "vessel_type" = ? WHERE "voyages"."id" = ?[0m  [["updated_at", 2016-10-01 18:52:09 UTC], ["vessel_type", 0], ["id", 3]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2016-10-01 14:54:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.5ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.6ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 420ms (Views: 374.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/voyages/new" for ::1 at 2016-10-01 14:54:21 -0400
+Processing by VoyagesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering voyages/new.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (40.2ms)
+  Rendered voyages/new.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 83ms (Views: 75.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/voyages" for ::1 at 2016-10-01 14:54:54 -0400
+Processing by VoyagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CK2zDGoj6RUgPfXWVwEbt8mesPMossfRY1fKnT9vPMjl2bORgAQOjjAf8n7nRsE/OgPxh/HnmLLBVXPK2fzSog==", "voyage"=>{"title"=>"Big blue sea", "description"=>"Let's cruise on the big blue sea", "location"=>"Toronto Canada", "vessel_type"=>"Yacht", "start_time"=>"2016-12-31T23:59", "end_time"=>"2017-12-30T22:58", "capacity"=>"1"}, "commit"=>"Create Voyage"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "description", "vessel_type", "start_time", "end_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Big blue sea"], ["captain_id", 2], ["created_at", 2016-10-01 18:54:54 UTC], ["updated_at", 2016-10-01 18:54:54 UTC], ["location", "Toronto Canada"], ["description", "Let's cruise on the big blue sea"], ["vessel_type", 0], ["start_time", 2016-12-31 23:59:00 UTC], ["end_time", 2017-12-30 22:58:00 UTC], ["capacity", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages/6
+Completed 302 Found in 14ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/voyages/6" for ::1 at 2016-10-01 14:54:54 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.6ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 62ms (Views: 42.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/voyages/6" for ::1 at 2016-10-01 14:56:01 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/voyages/6" for ::1 at 2016-10-01 14:56:06 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/voyages/6/edit" for ::1 at 2016-10-01 14:56:15 -0400
+Processing by VoyagesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering voyages/edit.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (11.0ms)
+  Rendered voyages/edit.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 65ms (Views: 58.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/voyages/6" for ::1 at 2016-10-01 14:56:20 -0400
+Processing by VoyagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxzDJFe4tdTj98NjMf4WD0/v7dJZag9VoB/kKgzgc/pGnsl4y9nHd/07SmPRc2SdV15d557Yn5LpkbUOvPV8+Q==", "voyage"=>{"title"=>"Big blue sea", "description"=>"Let's cruise on the big blue sea", "location"=>"Toronto Canada", "vessel_type"=>"Yacht", "start_time"=>"2016-12-31T23:59:00", "end_time"=>"2017-12-30T22:58:00", "capacity"=>"0"}, "commit"=>"Update Voyage", "id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "voyages" SET "vessel_type" = ?, "capacity" = ?, "updated_at" = ? WHERE "voyages"."id" = ?[0m  [["vessel_type", 0], ["capacity", 0], ["updated_at", 2016-10-01 18:56:20 UTC], ["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages/6
+Completed 302 Found in 76ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/voyages/6" for ::1 at 2016-10-01 14:56:20 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 103ms (Views: 90.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/voyages/6/edit" for ::1 at 2016-10-01 14:56:23 -0400
+Processing by VoyagesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering voyages/edit.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (9.2ms)
+  Rendered voyages/edit.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 57ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/voyages/6" for ::1 at 2016-10-01 14:56:31 -0400
+Processing by VoyagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iSWLrCy7fvQd/7QlnEFjZW868SDZtA/XbQIXzwwa1XeQp4HwsNoMVwMzPSV8zBH3d4tBFR4GnxAkjEbrvA/adA==", "voyage"=>{"title"=>"Big blue sea", "description"=>"Let's cruise on the big blue sea", "location"=>"Toronto Canada", "vessel_type"=>"yacht", "start_time"=>"2016-12-31T23:59:00", "end_time"=>"2017-12-30T22:58:00", "capacity"=>"21"}, "commit"=>"Update Voyage", "id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "voyages" SET "vessel_type" = ?, "capacity" = ?, "updated_at" = ? WHERE "voyages"."id" = ?[0m  [["vessel_type", 0], ["capacity", 21], ["updated_at", 2016-10-01 18:56:31 UTC], ["id", 6]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages/6
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/voyages/6" for ::1 at 2016-10-01 14:56:31 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mVoyage Load (2.9ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" ORDER BY "voyages"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/voyages/6/edit" for ::1 at 2016-10-01 14:57:05 -0400
+Processing by VoyagesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering voyages/edit.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (7.4ms)
+  Rendered voyages/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for ::1 at 2016-10-01 14:57:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."passenger_id" = ?[0m  [["passenger_id", 2]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages" WHERE "voyages"."captain_id" = ?[0m  [["captain_id", 2]]
+  Rendered users/_user.html.erb (11.9ms)
+  Rendered users/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 74ms (Views: 51.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-01 14:57:11 -0400
+Processing by VoyagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (1.0ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/voyages/new" for ::1 at 2016-10-01 14:57:13 -0400
+Processing by VoyagesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering voyages/new.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (7.3ms)
+  Rendered voyages/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/voyages" for ::1 at 2016-10-01 14:57:55 -0400
+Processing by VoyagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vqbv4Xl9ozpTeVMBnzEvOtTSBrdtb9bvKn4sKiU6G/ZT0u98k1pEoUNbVKkvdvWyJ09Hw7Q6iYyIfJV9w6n1nA==", "voyage"=>{"title"=>"Booze Cruise", "description"=>"Let's go drink Moet in the Outer Harbour", "location"=>"Boston", "vessel_type"=>"Keelboat", "start_time"=>"2016-11-29T23:59", "end_time"=>"2016-12-31T23:59", "capacity"=>"1"}, "commit"=>"Create Voyage"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "description", "vessel_type", "start_time", "end_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Booze Cruise"], ["captain_id", 2], ["created_at", 2016-10-01 18:57:55 UTC], ["updated_at", 2016-10-01 18:57:55 UTC], ["location", "Boston"], ["description", "Let's go drink Moet in the Outer Harbour"], ["vessel_type", 0], ["start_time", 2016-11-29 23:59:00 UTC], ["end_time", 2016-12-31 23:59:00 UTC], ["capacity", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages/7
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/voyages/7" for ::1 at 2016-10-01 14:57:55 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 55ms (Views: 50.3ms | ActiveRecord: 0.5ms)
+
+
