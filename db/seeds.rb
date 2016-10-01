@@ -7,9 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
 user1 = User.create!(name: "joe", email: "joe@joe.com", password: "1234", password_confirmation: "1234")
 user2 = User.create!(name: "tom", email: "tom@tom.com", password: "1234", password_confirmation: "1234")
 user3 = User.create!(name: "john", email: "john@john.com", password: "1234", password_confirmation: "1234")
+
 
 voyage1 = Voyage.create!(title: "Voyage1", location: "Toronto", start_time: DateTime.parse("2016-09-30 11:11:00"), capacity: 1, captain: user1)
 voyage2 = Voyage.create!(title: "Voyage2", location: "Toronto", start_time: DateTime.parse("2016-09-30 11:11:00"), capacity: 1, captain: user2)
