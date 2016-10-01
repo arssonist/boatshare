@@ -9,9 +9,27 @@
   <h6><%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
 <% end %>
 
-<h2>All Created Voyages </h2>
+
+
+
+<h2>All My Created Voyages </h2>
 <% user.voyages.each do |voyage| %>
   <h6><%= voyage.title %></h6>
-  <h6><%= link_to "View your voyage", voyage %> </h6>
-
+  <h6><%= voyage.location %></h6>
+    <h6><%= voyage.description %></h6>
 <% end %>
+  
+<!--  Commented out- display all passengers on each voyage- will get help with this-->
+<!--    <h4>All passengers on this Voyage</h4>-->
+    <%# voyage.passengers do |passenger| %>
+<!--    <h6> <%=# passenger.name %></h6>-->
+<%# end %>
+   
+    
+<!--    <h6><%=# link_to voyage.title, voyage_path(voyage.id) %></h6>-->
+
+
+
+
+
+

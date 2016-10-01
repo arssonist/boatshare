@@ -2,37 +2,105 @@
 <html>
   <head>
     <title>Tutorial</title>
+      <%= javascript_include_tag :all %>
       <%= stylesheet_link_tag    "application" %>
       <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
   </head>
   <body>
 
-  <div id="nav">
-      <%= link_to "Home", root_path %>
-    <% if current_user %>
-      <%= link_to "Profile Home", user_path(current_user)%>
-      <%= link_to "Logout", :logout, method: :post %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
-      <%= link_to "Home", root_path %>
-    <% end %>
-  </div>
-  <div>
-    <p id="notice"><%= flash[:notice] %></p>
-    <p id="alert"><%= flash[:alert] %></p>
-  </div>
+        <div class="brand">Gilligan</div>
+        <div class="address-bar">Reach us at 416-000-0000</div>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                    <a class="navbar-brand" href="index.html">Business Casual</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <%= link_to "Home", root_path%> 
+                        </li>
+                  <% if current_user %>
+                        <li>
+                            <%= link_to "Profile", user_path(current_user)%>
+                        </li>
+                        <li> 
+                            <%= link_to "Logout", :logout, method: :post %>
+                        </li>
+                  <% else %>
+                       <li >
+                      <%= link_to "Register", new_user_path %>
+                        <%= link_to "Login", :login %> 
+                        </li>
+                    
+                  <% end %>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
 
 
-  <% if flash.any? %>
-      <% flash.each do |key, value| %>
-      
+                </div>
+                
+                <div>
+                  <p id="notice"><%= flash[:notice] %></p>
+                  <p id="alert"><%= flash[:alert] %></p>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+
+        <% if flash.any? %>
+        <% flash.each do |key, value| %>
+
       </p>
       <% end %>
       <% end %>
 
       <%= yield %>
 
-  </body>
-</html>
+        <!-- /.container -->
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+               <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-skype"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Script to Activate the Carousel -->
+        <script>
+        $('.carousel').carousel({
+            interval: 5000 //changes the speed
+        })
+        </script>
+
+    </body>
+
+    </html>
