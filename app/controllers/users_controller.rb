@@ -3,11 +3,10 @@ class UsersController < ApplicationController
   #
   skip_before_action :require_login, only: [:index, :new, :create]
 
-
   # GET /users
   # GET /users.json
   def index
-     
+
   end
 
   # GET /users/1
@@ -15,8 +14,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @reservation = @user.reservations
-#      commented out until can get help- for displaying passengers 
-      #@voyage = @voyage.passengers
     # find(params[:id])
     # @voyages = User.voyages
   end
@@ -37,7 +34,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-    redirect_to(:voyages, notice: 'User was successfully created') #redirects user to index
+    redirect_to(:users, notice: 'User was successfully created') #redirects user to index
     end
 
     respond_to do |format|
