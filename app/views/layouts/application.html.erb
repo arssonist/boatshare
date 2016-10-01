@@ -29,13 +29,13 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                            <li><a href="/">Home</a></li>
+                        <li><%= link_to "Home", root_path, class: 'nav navbar-nav'%> </li>
                         <li>
                             <li><a href="/voyages/new">New Voyage</a></li>
                         </li>
                       
                         <li>
-                          <%= link_to "Profile", user_path(current_user)%>
+                          
                         <li>
                             <a href="contact.html">Contact</a>
                         </li>
@@ -43,9 +43,10 @@
 
                         </li>
                     </ul>
-                </div>
+<!--
                 <div id="nav">
                     <%= link_to "Home", root_path %>
+-->
                   <% if current_user %>
                     <%= link_to "Profile", user_path(current_user)%>
                     <%= link_to "Logout", :logout, method: :post %>
@@ -54,7 +55,8 @@
                     <%= link_to "Login", :login %>
                     <%= link_to "Home", root_path %>
                   <% end %>
-                </div>
+                </div>!-- </div> -->
+                
                 <div>
                   <p id="notice"><%= flash[:notice] %></p>
                   <p id="alert"><%= flash[:alert] %></p>
