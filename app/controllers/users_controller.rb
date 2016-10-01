@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @reservation = @user.reservations
+#      commented out until can get help- for displaying passengers 
       #@voyage = @voyage.passengers
     # find(params[:id])
     # @voyages = User.voyages
