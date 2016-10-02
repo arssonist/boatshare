@@ -33,7 +33,7 @@ class ReservationsController < ApplicationController
     def new
       @reservation = Reservation.new
       @voyage = Voyage.find(params[:voyage_id])
-      @voyage = Voyage.capacity += 1
+      # @voyage = Voyage.capacity += 1
     end
 
     def create
