@@ -18,6 +18,5 @@ Rails.application.routes.draw do
  resources :password_resets
 
 end
-s#destroy', :as => :logout
-
-end
+#destroy', :as => :logout
+ 
