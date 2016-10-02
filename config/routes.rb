@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/create'
+
+  get 'password_resets/edit'
+
+  get 'password_resets/update'
+
  root :to => 'voyages#index'
  resources :user_sessions
  resources :users
