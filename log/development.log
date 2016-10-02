@@ -47288,3 +47288,293 @@ DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is depreca
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "passenger_id" integer, "voyage_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "crypted_password" varchar, "salt" varchar, "bio" text, "reset_password_token" varchar, "reset_password_token_expires_at" datetime, "reset_password_email_sent_at" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "voyages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "captain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location" varchar, "description" varchar, "start_time" datetime, "end_time" datetime, "capacity" integer, "vessel_type" varchar, "boat_image_url" varchar)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161002034925')[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160926213617'), ('20160926213908'), ('20160926230912'), ('20160927193750'), ('20160929172050'), ('20160929204128'), ('20161001224201'), ('20161001224449'), ('20161001231158');
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-02 18:18:58 UTC], ["updated_at", 2016-10-02 18:18:58 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "passenger_id" integer, "voyage_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "crypted_password" varchar, "salt" varchar, "bio" text, "reset_password_token" varchar, "reset_password_token_expires_at" datetime, "reset_password_email_sent_at" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "voyages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "captain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location" varchar, "description" varchar, "start_time" datetime, "end_time" datetime, "capacity" integer, "vessel_type" varchar, "boat_image_url" varchar)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161002034925')[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160926213617'), ('20160926213908'), ('20160926230912'), ('20160927193750'), ('20160929172050'), ('20160929204128'), ('20161001224201'), ('20161001224449'), ('20161001231158');
+
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-02 18:18:58 UTC], ["updated_at", 2016-10-02 18:18:58 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joe.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "joe"], ["email", "joe@joe.com"], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC], ["crypted_password", "$2a$10$ezrC/AfHpE2KCjvo3Ss5AuPd.BQttWfM5/UuYDdvFyzOmMlo3hKTa"], ["salt", "p7yFhzf3qZEJcyXsHHqr"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tom@tom.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tom"], ["email", "tom@tom.com"], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC], ["crypted_password", "$2a$10$a55Pv3eeiWX2wtPrwYq1wOhS5rqYAXFF8em2zr8OI1RvvVse0/9Fm"], ["salt", "Jn6EzBYQr83U7N5C2tow"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "john@john.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "john"], ["email", "john@john.com"], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC], ["crypted_password", "$2a$10$u.lM6IBxeROB2Z.XJ2q6MeCULMEQgWO9Lxrwh2ZFnv1ibEu2LkoAi"], ["salt", "8AoLTFsfpcnWqQMojPWB"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage1"], ["captain_id", 1], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage2"], ["captain_id", 2], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage3"], ["captain_id", 3], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 2], ["voyage_id", 2], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 1], ["voyage_id", 3], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 3], ["voyage_id", 2], ["created_at", 2016-10-02 18:18:59 UTC], ["updated_at", 2016-10-02 18:18:59 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from require at /Users/chrisdielschnieder/Desktop/bitmaker_work/rails/boatshare/bin/rails:9)
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "passenger_id" integer, "voyage_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "crypted_password" varchar, "salt" varchar, "bio" text, "reset_password_token" varchar, "reset_password_token_expires_at" datetime, "reset_password_email_sent_at" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "voyages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "captain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location" varchar, "description" varchar, "start_time" datetime, "end_time" datetime, "capacity" integer, "vessel_type" varchar, "boat_image_url" varchar)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161002034925')[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160926213617'), ('20160926213908'), ('20160926230912'), ('20160927193750'), ('20160929172050'), ('20160929204128'), ('20161001224201'), ('20161001224449'), ('20161001231158');
+
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-02 18:21:40 UTC], ["updated_at", 2016-10-02 18:21:40 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "passenger_id" integer, "voyage_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "crypted_password" varchar, "salt" varchar, "bio" text, "reset_password_token" varchar, "reset_password_token_expires_at" datetime, "reset_password_email_sent_at" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "voyages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "captain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location" varchar, "description" varchar, "start_time" datetime, "end_time" datetime, "capacity" integer, "vessel_type" varchar, "boat_image_url" varchar)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161002034925')[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160926213617'), ('20160926213908'), ('20160926230912'), ('20160927193750'), ('20160929172050'), ('20160929204128'), ('20161001224201'), ('20161001224449'), ('20161001231158');
+
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-02 18:21:40 UTC], ["updated_at", 2016-10-02 18:21:40 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joe.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "joe"], ["email", "joe@joe.com"], ["created_at", 2016-10-02 18:21:40 UTC], ["updated_at", 2016-10-02 18:21:40 UTC], ["crypted_password", "$2a$10$5rOrABVbc8zIuMRPRiUWTuQlMtKqAGuLgQTmh2pDXoDB66WR8nGBu"], ["salt", "Ewxsz3xCyLtR2qmwNskg"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tom@tom.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tom"], ["email", "tom@tom.com"], ["created_at", 2016-10-02 18:21:40 UTC], ["updated_at", 2016-10-02 18:21:40 UTC], ["crypted_password", "$2a$10$6jN/1wCPIos4hEqhlSRD3.tQ8Lo8ZrgQna.DR7.pN6uC1ZvTzy3fu"], ["salt", "hxEyzqzEybgpprG4eMxY"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "john@john.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "john"], ["email", "john@john.com"], ["created_at", 2016-10-02 18:21:40 UTC], ["updated_at", 2016-10-02 18:21:40 UTC], ["crypted_password", "$2a$10$3mkbO/a6by/jiOh8oxwWWOQtMVVJQyeq8PR5A5ryR5W5mkn53OI3G"], ["salt", "S1zBnS25pAGJym8y3y9h"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage1"], ["captain_id", 1], ["created_at", 2016-10-02 18:21:40 UTC], ["updated_at", 2016-10-02 18:21:40 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage2"], ["captain_id", 2], ["created_at", 2016-10-02 18:21:40 UTC], ["updated_at", 2016-10-02 18:21:40 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage3"], ["captain_id", 3], ["created_at", 2016-10-02 18:21:41 UTC], ["updated_at", 2016-10-02 18:21:41 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 2], ["voyage_id", 2], ["created_at", 2016-10-02 18:21:41 UTC], ["updated_at", 2016-10-02 18:21:41 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 1], ["voyage_id", 3], ["created_at", 2016-10-02 18:21:41 UTC], ["updated_at", 2016-10-02 18:21:41 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 3], ["voyage_id", 2], ["created_at", 2016-10-02 18:21:41 UTC], ["updated_at", 2016-10-02 18:21:41 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from require at /Users/chrisdielschnieder/Desktop/bitmaker_work/rails/boatshare/bin/rails:9)
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "passenger_id" integer, "voyage_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "crypted_password" varchar, "salt" varchar, "bio" text, "reset_password_token" varchar, "reset_password_token_expires_at" datetime, "reset_password_email_sent_at" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "voyages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "captain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location" varchar, "description" varchar, "start_time" datetime, "end_time" datetime, "capacity" integer, "vessel_type" varchar, "boat_image_url" varchar)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161002034925')[0m
+  [1m[35m (2.4ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160926213617'), ('20160926213908'), ('20160926230912'), ('20160927193750'), ('20160929172050'), ('20160929204128'), ('20161001224201'), ('20161001224449'), ('20161001231158');
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "passenger_id" integer, "voyage_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "crypted_password" varchar, "salt" varchar, "bio" text, "reset_password_token" varchar, "reset_password_token_expires_at" datetime, "reset_password_email_sent_at" datetime)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "voyages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "captain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location" varchar, "description" varchar, "start_time" datetime, "end_time" datetime, "capacity" integer, "vessel_type" varchar, "boat_image_url" varchar)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161002034925')[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160926213617'), ('20160926213908'), ('20160926230912'), ('20160927193750'), ('20160929172050'), ('20160929204128'), ('20161001224201'), ('20161001224449'), ('20161001231158');
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joe@joe.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "joe"], ["email", "joe@joe.com"], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC], ["crypted_password", "$2a$10$/9dX79ePRJnm1QGySolU/uGKy84ChI09ZMlErnEjD1Mf7oRQtm47S"], ["salt", "GGJeZZ9o9fQyP1D778Bn"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "tom@tom.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "tom"], ["email", "tom@tom.com"], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC], ["crypted_password", "$2a$10$XJItWVZ.2og32Nz0KUanl.9FxB88pBl/9oKdmAc4ygZjfhYAgWuiW"], ["salt", "UzWqsPk82tbqEjB8z1oH"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "john@john.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "john"], ["email", "john@john.com"], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC], ["crypted_password", "$2a$10$3QFLn0jN251NL1XJNBLy/OuyKlfN1ZOA/BxYkOf83q8XiwfLgUgfm"], ["salt", "xd3yuNQsNLZcxALEbjgV"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage1"], ["captain_id", 1], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage2"], ["captain_id", 2], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "start_time", "capacity") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Voyage3"], ["captain_id", 3], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC], ["location", "Toronto"], ["start_time", 2016-09-30 11:11:00 UTC], ["capacity", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 2], ["voyage_id", 2], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 1], ["voyage_id", 3], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("passenger_id", "voyage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["passenger_id", 3], ["voyage_id", 2], ["created_at", 2016-10-02 18:22:57 UTC], ["updated_at", 2016-10-02 18:22:57 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
