@@ -1,0 +1,40 @@
+header{
+	width: 100%;
+	background-color: #222222;
+}
+
+footer{
+  padding: 25px 15px;
+  background: #CCCCCC;
+}
+
+img {
+  margin: 0 auto;
+}
+
+.navbar-inverse{
+	border-top: 0px;
+}
+
+
+.headerLogo{
+    margin-bottom:40px;
+}
+
+.btHeader{
+	margin: 10px;
+}
+
+h1{
+	font-size: 25px;
+	color: #666666;
+	margin-top: 10px;
+}
+
+.inputSearch{
+	margin-top: 12px;
+}
+
+.navbar-nav{
+	width: 100%;
+}
