@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-    redirect_to(:users, notice: 'User was successfully created') #redirects user to index
+    redirect_to(:voyages, notice: 'User was successfully created') #redirects user to index
     end
 
     respond_to do |format|
