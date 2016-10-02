@@ -31,6 +31,7 @@ header{
 footer{
   padding: 25px 15px;
   background: #FFFFFF;
+  opacity: 0.5;
 }
 
 img {
