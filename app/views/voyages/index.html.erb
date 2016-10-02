@@ -19,7 +19,9 @@
             <img class="img-responsive" src="http://am.leagueoflegends.com/image?f=http://news.cdn.leagueoflegends.com/public/images/articles/2015/june_2015/BOET/AstroSplash_thumb.jpg" class="img-responsive">
         </a>
         <h3>
-            <a href="#">Project Name</a>
+          <% @voyages.each do |voyage|%>
+          <%= link_to "View this Voyage", voyage_path(voyage.id) %>
+            <%= render 'voyage', voyage: voyage%>
         </h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
     </div>

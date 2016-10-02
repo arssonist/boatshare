@@ -3,11 +3,10 @@ class UsersController < ApplicationController
   #
   skip_before_action :require_login, only: [:index, :new, :create]
 
-
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+
   end
 
   # GET /users/1
@@ -18,7 +17,7 @@ class UsersController < ApplicationController
     # find(params[:id])
     # @voyages = User.voyages
   end
-  
+
   # GET /users/new
   def new
     @user = User.new
@@ -27,7 +26,6 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
-
   end
 
   # POST /users
@@ -36,7 +34,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-    redirect_to(:users, notice: 'User was successfully created') #redirects user to index
+    redirect_to(:voyages, notice: 'User was successfully created') #redirects user to index
     end
 
     respond_to do |format|

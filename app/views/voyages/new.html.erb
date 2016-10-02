@@ -1,42 +1,7 @@
-<div class="voyage-new-field">
+<h1>Create a new voyage!</h1>
+
+<%= render 'form', voyage: @voyage, reservation: @reservation %>
 
 
-
-<%= form_for @voyage do |f| %>
-
-  <div>
-   <%= f.label :title %>
-   <%= f.text_field :title %>
-   </div>
-
-  <div>
-    <%= f.label :description %>
-    <%= f.text_area :description%>
-  </div>
-
-  <div>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-
-  <div>
-    <%= f.label :start_time %>
-    <%= f.datetime_field :start_time %>
-  </div>
-
-  <div>
-    <%= f.label :end_time %>
-    <%= f.datetime_field :end_time %>
-  </div>
-
-  <div>
-    <%= f.label :capacity%>
-    <%= f.select :capacity, options_for_select(0..100) %>
-  </div>
-
-
-
-    <%= f.submit %>
-      <% end %>
 
 </div>
