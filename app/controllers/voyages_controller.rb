@@ -6,6 +6,8 @@ class VoyagesController < ApplicationController
     @user = User.find(params[:user_id]) if params[:user_id]
   end
 
+  before_action :ensure_user_match, only: [:edit, :update, :delete]
+
   def index
 
     if @user
@@ -21,7 +23,6 @@ class VoyagesController < ApplicationController
   end
 
   def edit
-    @voyage = Voyage.find(params[:id])
   end
 
   def update
@@ -57,15 +58,17 @@ class VoyagesController < ApplicationController
     redirect_to voyages_path
   end
 
-  # def ensure_user_match
-  #   if @voyage.captain != @user
-  #     not_found
-  #   end
-  # end
+  #edit needs to be down there to create @voyage before it can be changed.
+  def ensure_user_match
+      @voyage = Voyage.find(params[:id])
+    if @voyage.captain != current_user
+      not_found
+    end
+  end
 
 private
   def voyage_params
-    params.require(:voyage).permit(:title, :location, :description, :vessel_type, :start_time, :end_time, :capacity) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
+    params.require(:voyage).permit(:title, :location, :description, :vessel_type, :boat_image_url, :start_time, :end_time, :capacity) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
   end
 
 end

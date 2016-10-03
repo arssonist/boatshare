@@ -55,11 +55,11 @@ class ReservationsController < ApplicationController
       redirect_to user_voyages_path
     end
 
-    def ensure_user_match
-      # if @voyage.captain != @reservation
-      #   not_found
-      # end
-    end
+    # def ensure_user_match
+    #   if @voyage.captain != @reservation
+    #     not_found
+    #   end
+    # end
 
   private
     # def reservation_params
