@@ -8,6 +8,7 @@ class UserSessionsController < ApplicationController
    def create
      if @user = login(params[:email], params[:password])
        redirect_back_or_to(:voyages, notice: 'Login successful')
+       
   # made changes to redirect to voyages
      else
        flash.now[:alert] = 'Login failed'

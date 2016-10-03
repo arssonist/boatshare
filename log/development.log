@@ -446,3 +446,1384 @@ Processing by VoyagesController#index as HTML
 Completed 200 OK in 126ms (Views: 109.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/login" for ::1 at 2016-10-02 17:05:02 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.1ms)
+  Rendered user_sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 79ms (Views: 56.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-02 17:05:04 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-02 17:05:07 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rg1LCZRAXIjwa2bmb54587aPI8pcc8N+3V4rXeW6yLNiH7JaMjh1WjkkmKTCQ1UORwRGMQVSZwdCyrFB/kOv3w==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-02 17:05:07 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 61ms (Views: 53.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-02 17:12:49 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.5ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59ms (Views: 54.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2016-10-02 17:12:56 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (2.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-02 17:13:05 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-02 17:13:08 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QPdDg2Zdp9EvNpDS/yN3x1/8y/L9im8VbQ1wrrPZ/gGM5brQwCWOA+Z5bpBS/hs6rneuCaSry2zymeqyqCCZbQ==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-02 17:13:08 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-10-02 17:35:17 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (4.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 93ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for ::1 at 2016-10-02 17:35:20 -0400
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pSwapadyNiDC2ygQHPvCJyz3IU6+TvyhGGTQSo6wPpxk7j3BaMJo7vbDRxdrtPiNvzrdztXBKJ6Fz4UReUUgSw==", "email"=>"jane.rawls@me.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'jane.rawls@me.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (2.9ms)
+  Rendered user_sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 76ms (Views: 61.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/user_sessions" for ::1 at 2016-10-02 17:35:27 -0400
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xMkT3XUwztBArAgepqoyN9zEeePs4lKdYDajck45rTuzf0ZyfEan3BJ7V1PO4t4vy270edTPMR0TMBbwaRQoqw==", "email"=>"jane.rawls@me.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'jane.rawls@me.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2016-10-02 17:35:29 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (35.8ms)
+  Rendered users/new.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 84ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-10-02 17:35:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BTP2AorTELemk1e0GrUmB8s2AL3JPAD6Em8MQ3jvGC9+d7QzZ6tLGZWQvakBHHsAb1B3r/KRh0DZ0tZTWw6RSA==", "user"=>{"name"=>"Captain Joseph ", "email"=>"joseph@captain.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joseph@captain.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Captain Joseph "], ["email", "joseph@captain.com"], ["created_at", 2016-10-02 21:35:43 UTC], ["updated_at", 2016-10-02 21:35:43 UTC], ["crypted_password", "$2a$10$MWlWwZfBIyRR5H.CQzdDH.1sc8ESAKPro73AwSSKSD.N/.vy9Vd1q"], ["salt", "LUgcM236H3cWKiNLSNeM"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "joseph@captain.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 302 Found in 118ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/voyages" for ::1 at 2016-10-02 17:35:43 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.4ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-10-02 17:35:51 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 53ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for ::1 at 2016-10-02 17:35:53 -0400
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xrw2rj1VqN+YxkdhGcwZBsjZr/YnIcp4pmdvBbZpNy2ffhHK8uX2EazeKGZugyOsWxRTdkyuHkc7zDpeQZwp+g==", "email"=>"jane.rawls@me.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'jane.rawls@me.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user_sessions" for ::1 at 2016-10-02 17:36:03 -0400
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RaG4lgiWE829uCcZTY1S7sk1hXYdg1yPQaAVLMtNzIQyF+05AeB6we9veFQlxb723p8I7CWuPw8ypqCu7GBJFA==", "email"=>"joseph@captain.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'joseph@captain.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/voyages
+Completed 302 Found in 132ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/voyages" for ::1 at 2016-10-02 17:36:03 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/voyages/new" for ::1 at 2016-10-02 17:36:08 -0400
+Processing by VoyagesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering voyages/new.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (12.3ms)
+  Rendered voyages/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 85ms (Views: 57.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/voyages" for ::1 at 2016-10-02 17:36:58 -0400
+Processing by VoyagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QWHeasWZ4BxVkVRsb2njtiQS1eZ0pPmVloAwxqdvBlGzKpZOPdz/bNl5tdO4AIQGDddoAN8+ig+hUicgR3qb2Q==", "voyage"=>{"title"=>"Ocean voyage", "description"=>"Ocean voyage desc", "location"=>"Ocean voyage loc", "vessel_type"=>"Ocean voyage vessel type", "boat_image_url"=>"https://s-media-cache-ak0.pinimg.com/originals/d7/fa/de/d7fade2f0585065bac1b5067e644f06b.jpg", "start_time"=>"2016-10-31T23:59", "end_time"=>"2016-12-31T23:59", "capacity"=>"1"}, "commit"=>"Create Voyage"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: boat_image_url
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "description", "start_time", "end_time", "capacity", "vessel_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Ocean voyage"], ["captain_id", 1], ["created_at", 2016-10-02 21:36:58 UTC], ["updated_at", 2016-10-02 21:36:58 UTC], ["location", "Ocean voyage loc"], ["description", "Ocean voyage desc"], ["start_time", 2016-10-31 23:59:00 UTC], ["end_time", 2016-12-31 23:59:00 UTC], ["capacity", 1], ["vessel_type", "Ocean voyage vessel type"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages/1
+Completed 302 Found in 21ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/voyages/1" for ::1 at 2016-10-02 17:36:58 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 107ms (Views: 88.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/logout" for ::1 at 2016-10-02 17:47:22 -0400
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rsOQKNnjTnl2fsbbP+Ox3VKsY4jbrXKI+7zOJpIjkmHZdcWH0JUndSSpmZZXq13FRQbuEuOAEQiIunuktQ4X8Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/voyages
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/voyages" for ::1 at 2016-10-02 17:47:22 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.7ms)
+  Rendered voyages/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeDataTypeForBoatImageUrl (20161002214913)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avoyages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "captain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location" varchar, "description" varchar, "start_time" datetime, "end_time" datetime, "capacity" integer, "vessel_type" varchar, "boat_image_url" varchar)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "avoyages" ("id","title","captain_id","created_at","updated_at","location","description","start_time","end_time","capacity","vessel_type","boat_image_url")
+                     SELECT "id","title","captain_id","created_at","updated_at","location","description","start_time","end_time","capacity","vessel_type","boat_image_url" FROM "voyages"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "voyages"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "voyages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "captain_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "location" varchar, "description" varchar, "start_time" datetime, "end_time" datetime, "capacity" integer, "vessel_type" varchar, "boat_image_url" text)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "voyages" ("id","title","captain_id","created_at","updated_at","location","description","start_time","end_time","capacity","vessel_type","boat_image_url")
+                     SELECT "id","title","captain_id","created_at","updated_at","location","description","start_time","end_time","capacity","vessel_type","boat_image_url" FROM "avoyages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "avoyages"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161002214913"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users/new" for ::1 at 2016-10-02 17:51:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (24.6ms)
+  Rendered users/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 820ms (Views: 317.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2016-10-02 17:51:40 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7A8B1YsJUa+mdI57AjGBVsXmO1NW9OnxNNAIz9F3tEAeLC03sFmfDDak/a/BXachF8QDaxyOi4HNp27FyTLVg==", "user"=>{"name"=>"Captain Norm", "email"=>"norm@captain.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "norm@captain.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Captain Norm"], ["email", "norm@captain.com"], ["created_at", 2016-10-02 21:51:40 UTC], ["updated_at", 2016-10-02 21:51:40 UTC], ["crypted_password", "$2a$10$M6zAsoe89sH17woZw7hro.0oL2k6jwzyHHtugFFvqIU5DjJPVi2E6"], ["salt", "U38RpKDC5zjaeCEjsYBq"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "norm@captain.com"], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 302 Found in 105ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/voyages" for ::1 at 2016-10-02 17:51:40 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (2.1ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.9ms)
+  Rendered voyages/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 160ms (Views: 108.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/voyages/new" for ::1 at 2016-10-02 17:52:51 -0400
+Processing by VoyagesController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-10-02 17:52:51 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 76ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_sessions" for ::1 at 2016-10-02 17:52:56 -0400
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/v0uFUi6lPM/YmZ/YDoWq4IfHcuh9J/BhoYn0WdQs2eUloSeXq3tBpO4301yanQjrCjnaOQ2cN6IdwIT7DVh2Q==", "email"=>"norm@captain.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = 'norm@captain.com' ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/voyages/new
+Completed 302 Found in 133ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/voyages/new" for ::1 at 2016-10-02 17:52:56 -0400
+Processing by VoyagesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering voyages/new.html.erb within layouts/application
+  Rendered voyages/_form.html.erb (10.9ms)
+  Rendered voyages/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 65ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/voyages" for ::1 at 2016-10-02 17:53:34 -0400
+Processing by VoyagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pFRY5p9WWPvOuIL2Kmil1R6r2C8WZuaqIhJp4ZDm67fjnNRVF7sbwUD7wzl5ZRVMweNQz/dPDyPh97R5uIf+MA==", "voyage"=>{"title"=>"Norm Voyage Title", "description"=>"Norm Voyage desc", "location"=>"Norm Voyage  loc", "vessel_type"=>"Norm Voyage vessel", "boat_image_url"=>"https://s-media-cache-ak0.pinimg.com/originals/d7/fa/de/d7fade2f0585065bac1b5067e644f06b.jpg", "start_time"=>"2016-10-31T23:59", "end_time"=>"2016-12-31T23:58", "capacity"=>"13"}, "commit"=>"Create Voyage"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: boat_image_url
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "voyages" ("title", "captain_id", "created_at", "updated_at", "location", "description", "start_time", "end_time", "capacity", "vessel_type") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Norm Voyage Title"], ["captain_id", 2], ["created_at", 2016-10-02 21:53:34 UTC], ["updated_at", 2016-10-02 21:53:34 UTC], ["location", "Norm Voyage  loc"], ["description", "Norm Voyage desc"], ["start_time", 2016-10-31 23:59:00 UTC], ["end_time", 2016-12-31 23:58:00 UTC], ["capacity", 13], ["vessel_type", "Norm Voyage vessel"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages/2
+Completed 302 Found in 19ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/voyages/2" for ::1 at 2016-10-02 17:53:34 -0400
+Processing by VoyagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT  "voyages".* FROM "voyages" WHERE "voyages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering voyages/show.html.erb within layouts/application
+  Rendered voyages/show.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 148ms (Views: 128.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 14:05:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.6ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (21.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 848ms (Views: 822.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/logout" for ::1 at 2016-10-03 14:05:21 -0400
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oXKbjHGHHYToF9nPmskMKwgkvagyOGB/LvJQCExcavvmuhc/+WpevmZUmADJxLyy12w1SNMRifbtF42QZD1/fA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/voyages
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/voyages" for ::1 at 2016-10-03 14:05:21 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.4ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.6ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 14:05:23 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (2.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 78ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 14:05:26 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 14:05:57 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 14:06:00 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (2.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-10-03 14:06:01 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (20.9ms)
+  Rendered users/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-10-03 14:06:17 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RFwMVp/Cr7vb+iqzHNTTvCAksTdbdrqFa/LodAePloK+lWXppasp/qZ5XfRIC0PbsaPBmXf08800/91ZJ85Ifw==", "user"=>{"name"=>"Captain Jane", "email"=>"jane.rawls@me.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "crypted_password", "salt") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Captain Jane"], ["email", "jane.rawls@me.com"], ["created_at", 2016-10-03 18:06:17 UTC], ["updated_at", 2016-10-03 18:06:17 UTC], ["crypted_password", "$2a$10$STWs9DO9GuBesbuo6Viv5u4TSG5jUEQbBth1r8uLyk8s6Vsv0i7Vi"], ["salt", "rCaoskAxD5RQWi1Wp9zW"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/voyages
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 302 Found in 87ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/voyages" for ::1 at 2016-10-03 14:06:17 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.7ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 14:06:21 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 14:06:31 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 14:06:34 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 14:06:37 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ye6NQdASNc06cSE1yxHP1s7OVT6UJs6ZiTt+qQ5Qbs+31k5A3O7I1ltcRPYhIQbJw8bpLgekH8rxrAW5lXPB+A==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = 'qUBDutp4roPzbgPMSBAq', "reset_password_email_sent_at" = '2016-10-03 18:06:37.857745' WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+UserMailer#reset_password_email: processed outbound mail in 1.3ms
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.3ms)
+
+
+  
+ArgumentError (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+  
+app/mailers/user_mailer.rb:12:in `reset_password_email'
+app/controllers/password_resets_controller.rb:10:in `create'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.5ms)
+Started GET "/password_resets/new" for ::1 at 2016-10-03 14:39:54 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 14:40:00 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NmnNiqtlfyZFgehPuhSOY7faXCObEXjvwRx1IE3ghOMsdY3cUOLitjxQ5TLIP2Scxw1EpBSyrnaLs6lQVCdWDQ==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = '3fXCb78cDp6ws8ssq5MR', "reset_password_email_sent_at" = '2016-10-03 18:40:00.348400' WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+UserMailer#reset_password_email: processed outbound mail in 1.7ms
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.0ms)
+
+
+  
+ArgumentError (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+  
+app/mailers/user_mailer.rb:12:in `reset_password_email'
+app/controllers/password_resets_controller.rb:10:in `create'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.0ms)
+Started GET "/login" for ::1 at 2016-10-03 15:36:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (5.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 748ms (Views: 266.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 15:36:12 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 100ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 15:36:14 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (2.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 71ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 15:55:22 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.4ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.5ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 83ms (Views: 70.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 15:55:26 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (2.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 63ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 15:55:29 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 15:55:31 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2g+LSVSJ6nwGJajtrlhRsKmjNURV74JeDNjsDEZyDj6kN0hIWHUXZ2cIzS5EaJivpKuJVMZtUw10T5cc3VGhCQ==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = 'anmTQeeG3MGMYi38Gxyq', "reset_password_email_sent_at" = '2016-10-03 19:55:31.614560' WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+UserMailer#reset_password_email: processed outbound mail in 1.7ms
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.7ms)
+
+
+  
+ArgumentError (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+  
+app/mailers/user_mailer.rb:12:in `reset_password_email'
+app/controllers/password_resets_controller.rb:10:in `create'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.5ms)
+Started GET "/login" for ::1 at 2016-10-03 15:56:48 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (2.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 189ms (Views: 148.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 15:56:51 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 15:56:59 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RfSn61LkElPc6KtwCjWD+0uJep9EI4ixiFR7mF4bUyc7zGTqXhjvSL3FzrPgBUrkRoHGj9ehWeLwwwCIxTj8EA==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 15:56:59 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.7ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 15:57:03 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.7ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 15:57:15 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (6.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 113ms (Views: 107.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 15:57:16 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (1.7ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (6.8ms)
+  Rendered voyages/_voyage.html.erb (0.3ms)
+  Rendered voyages/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 157ms (Views: 150.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 15:57:48 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4fVtWZGf0FgO1mo3yeetdcJNhR1LEiaUKEDi6K8k/4n76S0PahhNyHcHZ0q7zEeKspqdmsSx8A1i7z6YtuMtZw==", "email"=>"jane.rawls@icloud.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@icloud.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 15:57:48 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.3ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2016-10-03 15:57:57 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 53ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 15:57:59 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 15:58:02 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Juk+YB9A2rc6OeQCqBFSEzWk8z1id+QucCSonHq2NxpY0f1hE7wnrFsUgcFCIZsMOKxPLfH1NX0Is9OM4ZWYLQ==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 15:58:02 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.1ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.5ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/password_resets/new" for ::1 at 2016-10-03 16:11:56 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started POST "/password_resets" for ::1 at 2016-10-03 16:12:01 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tjVqMbLeQeU2m57iLjprx1ynit7RV1uHsC6UofftIHCsKSpnSVncdU9Kk59cEYE4LHCSWV70jR76gUjR7iryng==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = '5ZVtxDiwyCjdnLgQyYNH', "reset_password_email_sent_at" = '2016-10-03 20:12:01.781710' WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+UserMailer#reset_password_email: processed outbound mail in 1.8ms
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 3.0ms)
+
+
+  
+ArgumentError (Missing host to link to! Please provide the :host parameter, set default_url_options[:host], or set :only_path to true):
+  
+app/mailers/user_mailer.rb:12:in `reset_password_email'
+app/controllers/password_resets_controller.rb:10:in `create'
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/cfrnch/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.3ms)
+Started POST "/password_resets" for ::1 at 2016-10-03 16:12:12 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tjVqMbLeQeU2m57iLjprx1ynit7RV1uHsC6UofftIHCsKSpnSVncdU9Kk59cEYE4LHCSWV70jR76gUjR7iryng==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 16:12:12 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 51ms (Views: 43.5ms | ActiveRecord: 0.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started POST "/password_resets" for ::1 at 2016-10-03 16:12:15 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tjVqMbLeQeU2m57iLjprx1ynit7RV1uHsC6UofftIHCsKSpnSVncdU9Kk59cEYE4LHCSWV70jR76gUjR7iryng==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 16:12:15 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.8ms)
+  Rendered voyages/_voyage.html.erb (0.2ms)
+  Rendered voyages/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/" for ::1 at 2016-10-03 16:16:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.2ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.7ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 372ms (Views: 351.6ms | ActiveRecord: 0.6ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2016-10-03 16:16:20 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (3.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 553ms (Views: 68.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 16:16:23 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 16:16:26 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ms7s2ArlmjlloR1RDnYNIxtpFwKgf4AY2CzU2nVH0fRM9i/ZBhlnIgSMeJLkRsQ8FmGrEjP9UUugu6/K7mR+ww==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 16:16:26 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.4ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (7.5ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = '2Pg7zQw1DFdpVzcix3Gd', "reset_password_email_sent_at" = '2016-10-03 20:20:33.438075' WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering user_mailer/reset_password_email.html.erb within layouts/mailer
+  Rendered user_mailer/reset_password_email.html.erb within layouts/mailer (1.7ms)
+  Rendering user_mailer/reset_password_email.text.erb within layouts/mailer
+  Rendered user_mailer/reset_password_email.text.erb within layouts/mailer (0.3ms)
+UserMailer#reset_password_email: processed outbound mail in 183.3ms
+Sent mail to jane.rawls@me.com (11.7ms)
+Date: Mon, 03 Oct 2016 16:20:33 -0400
+From: from@example.com
+To: jane.rawls@me.com
+Message-ID: <57f2bd919cb97_70303fbfe643da249868f@cfrnch-macpro.local.mail>
+Subject: Your password has been reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57f2bd919af7a_70303fbfe643da249858b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57f2bd919af7a_70303fbfe643da249858b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#reset_password_email
+
+Hi, jane.rawls@me.com
+===============================================
+
+You have requested to reset your password.
+
+To choose a new password, just follow this link: http://localhost:3000/password_resets/2Pg7zQw1DFdpVzcix3Gd/edit.
+
+Have a great day!
+
+
+----==_mimepart_57f2bd919af7a_70303fbfe643da249858b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#reset_password_email</h1>
+
+<p>
+  , find me in app/views/user_mailer/reset_password_email.html.erb
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_57f2bd919af7a_70303fbfe643da249858b--
+
+Started GET "/" for ::1 at 2016-10-03 16:22:27 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.5ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.8ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 71ms (Views: 61.5ms | ActiveRecord: 1.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2016-10-03 16:22:29 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.2ms)
+  Rendered user_sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 77ms (Views: 36.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 16:22:31 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 16:22:35 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QmBmcwauxvc2N3qlVbsnmHNhfHtsD4ggRotRzktZEus8WKVyClI77FcaH2a/i+6HfmnAa/+NWXM+HCre0Hq93A==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 16:22:35 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/" for ::1 at 2016-10-03 16:28:01 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.1ms)
+  Rendered voyages/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 60ms (Views: 51.7ms | ActiveRecord: 1.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2016-10-03 16:28:04 -0400
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.erb within layouts/application
+  Rendered user_sessions/_form.html.erb (1.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 65ms (Views: 34.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2016-10-03 16:28:05 -0400
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2016-10-03 16:28:09 -0400
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/crY9zyDAiWY9Yzu6TdgLjVONTTJsgGEA9D5GZQs6iyD8hv2MH//PvnY6S0DB6kxOEaJJFow0Nd7R4IJDw9FGw==", "email"=>"jane.rawls@me.com", "commit"=>"Reset my password!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jane.rawls@me.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = 'tTs6g7Q4igWTRUqdozm7', "reset_password_email_sent_at" = '2016-10-03 20:28:09.221916' WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering user_mailer/reset_password_email.html.erb within layouts/mailer
+  Rendered user_mailer/reset_password_email.html.erb within layouts/mailer (0.6ms)
+  Rendering user_mailer/reset_password_email.text.erb within layouts/mailer
+  Rendered user_mailer/reset_password_email.text.erb within layouts/mailer (0.5ms)
+UserMailer#reset_password_email: processed outbound mail in 193.8ms
+Sent mail to jane.rawls@me.com (11.4ms)
+Date: Mon, 03 Oct 2016 16:28:09 -0400
+From: from@example.com
+To: jane.rawls@me.com
+Message-ID: <57f2bf5968dcb_6ffa3fdf85b40920816f@cfrnch-macpro.local.mail>
+Subject: Your password has been reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_57f2bf5966fd3_6ffa3fdf85b4092080de";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_57f2bf5966fd3_6ffa3fdf85b4092080de
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#reset_password_email
+
+Hi, jane.rawls@me.com
+===============================================
+
+You have requested to reset your password.
+
+To choose a new password, just follow this link: http://localhost:3000/password_resets/tTs6g7Q4igWTRUqdozm7/edit.
+
+Have a great day!
+
+
+----==_mimepart_57f2bf5966fd3_6ffa3fdf85b4092080de
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#reset_password_email</h1>
+
+<p>
+  , find me in app/views/user_mailer/reset_password_email.html.erb
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_57f2bf5966fd3_6ffa3fdf85b4092080de--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 216ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2016-10-03 16:28:09 -0400
+Processing by VoyagesController#index as HTML
+  Rendering voyages/index.html.erb within layouts/application
+  [1m[36mVoyage Load (0.3ms)[0m  [1m[34mSELECT "voyages".* FROM "voyages"[0m
+  Rendered voyages/_voyage.html.erb (0.4ms)
+  Rendered voyages/_voyage.html.erb (0.0ms)
+  Rendered voyages/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
