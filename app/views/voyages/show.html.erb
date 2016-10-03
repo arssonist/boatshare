@@ -1,19 +1,25 @@
 <h1>Welcome to <%= @voyage.title %></h1>
 
-<button type="button">Click Me!</button>
-<div>
-  <%= form_for [@voyage, @reservation] do |f|%>
-  <h6>Voyage departs from :<%= @voyage.location %></h6>
-  <h6>Voyage start time: <%= @voyage.start_time %></h6>
-  <h6>Voyage end time: <%= @voyage.end_time %></h6>
-  <h6>Voyage description: <%= @voyage.description %></h6>
-  <h6>Vessel type: <%= @voyage.vessel_type %></h6>
-  <h6>Boat image: <%= @voyage.boat_image_url %></h6>
-  <h6>Voyage capacity: <%= @voyage.capacity %></h6>
+<button type="submit" id="voyage-button">Click Me!</button>
 
-<%= f.submit %>
-  <% end %>
-</div>
+
+
+<div class='modal'>
+
+  <%= form_for [@voyage, @reservation], :html => {:class => 'voyage-form-class'} do |f|%>
+    <button type="button" class="close">x</button>
+    <h6>Voyage departs from :<%= @voyage.location %></h6>
+    <h6>Voyage start time: <%= @voyage.start_time %></h6>
+    <h6>Voyage end time: <%= @voyage.end_time %></h6>
+    <h6>Voyage description: <%= @voyage.description %></h6>
+    <h6>Vessel type: <%= @voyage.vessel_type %></h6>
+    <h6>Boat image: <%= @voyage.boat_image_url %></h6>
+    <h6>Voyage capacity: <%= @voyage.capacity %></h6>
+    <h6><input type="text" name="user" placeholder=" "></h6>
+
+        <h6><%= f.submit %></h6>
+          <% end %>
+        </div>
 
 <%= link_to 'Edit Voyage', edit_voyage_path(@voyage) %>
 
