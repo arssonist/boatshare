@@ -1,18 +1,19 @@
-<h1><%= @voyage.title %></h1>
+<h1>Welcome to <%= @voyage.title %></h1>
 
-<h6>Voyage departs from :<%= @voyage.location %></h6>
-<h6>Voyage start time: <%= @voyage.start_time %></h6>
-<h6>Voyage end time: <%= @voyage.end_time %></h6>
-<h6>Voyage description: <%= @voyage.description %></h6>
-<h6>Vessel type: <%= @voyage.vessel_type %></h6>
-<h6>Boat image: <%= @voyage.boat_image_url %></h6>
-<h6>Voyage capacity: <%= @voyage.capacity %></h6>
-
-<p>
+<button type="button">Click Me!</button>
+<div>
   <%= form_for [@voyage, @reservation] do |f|%>
-  <%= f.submit %>
+  <h6>Voyage departs from :<%= @voyage.location %></h6>
+  <h6>Voyage start time: <%= @voyage.start_time %></h6>
+  <h6>Voyage end time: <%= @voyage.end_time %></h6>
+  <h6>Voyage description: <%= @voyage.description %></h6>
+  <h6>Vessel type: <%= @voyage.vessel_type %></h6>
+  <h6>Boat image: <%= @voyage.boat_image_url %></h6>
+  <h6>Voyage capacity: <%= @voyage.capacity %></h6>
+
+<%= f.submit %>
   <% end %>
-</p>
+</div>
 
 <%= link_to 'Edit Voyage', edit_voyage_path(@voyage) %>
 
