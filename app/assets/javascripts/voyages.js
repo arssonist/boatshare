@@ -1,0 +1,18 @@
+$(document).ready(function(){
+  $('#voyage-button').click(function(event){
+    event.preventDefault();
+       $('.modal').fadeIn('slow');
+    })
+  })
+$(document).ready(function(){
+  $('.close').click(function(event){
+    event.preventDefault();
+    $('.modal').fadeOut('slow');
+  })
+})
+$(document).ready(function(){
+    $('.modal').click(function(event){
+      event.preventDefault();
+      $('.modal').fadeOut('slow');
+  })
+})

@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20161004002303) do
+=======
 ActiveRecord::Schema.define(version: 20161002214913) do
+>>>>>>> cab1bb3ca6b7af24e0cd91bc3dab1a72d7ab4f0e
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "passenger_id"
     t.integer  "voyage_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "seat_location"
+    t.string   "life_jacket_size"
+    t.boolean  "need_accessibility"
   end
 
   create_table "users", force: :cascade do |t|
