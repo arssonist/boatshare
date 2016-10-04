@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20161004002303) do
     t.integer  "capacity"
     t.string   "vessel_type"
     t.string   "boat_image_url"
+    t.float    "longitude"
+    t.float    "latitude"
   end
 
 end
