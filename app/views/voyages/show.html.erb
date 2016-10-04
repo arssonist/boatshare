@@ -11,7 +11,8 @@
 
   <div class='modal'>
     <div class='inner-modal'>
-      <!-- class here pertains to the modal window that will fadeIn. -->
+      <!-- This is the window that fades in, and is different than the window code that is in the partial
+      class here pertains to the modal window that will fadeIn. -->
       <%= form_for [@voyage, @reservation], :html => {:class => 'voyage-form-class'} do |f|%>
       <button type="button" class="close">x</button>
 
@@ -21,7 +22,12 @@
       <h6>Voyage description: <%= @voyage.description %></h6>
       <h6>Vessel type: <%= @voyage.vessel_type %></h6>
       <h6>Boat image: <%= @voyage.boat_image_url %></h6>
-      <h6><input type="text" name="user" placeholder=" "></h6>
+      <!-- <p><input type="text" placeholder="seat location"></p> -->
+      <h6>
+        <%= f.text_field :seat_location %>
+
+      </h6>
+
 
       <h6><%= f.submit %></h6>
       <% end %>
