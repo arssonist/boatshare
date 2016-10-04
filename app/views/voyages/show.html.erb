@@ -1,26 +1,43 @@
 <h1>Welcome to <%= @voyage.title %></h1>
 
-<button type="submit" id="voyage-button">Click Me!</button>
+
+  <%= render 'voyage' %>
+  <h6>Total Voyage capacity: <%= @voyage.capacity %></h6>
 
 
 
-<div class='modal'>
+  <button type="submit" id="voyage-button">Check Space</button>
 
-  <%= form_for [@voyage, @reservation], :html => {:class => 'voyage-form-class'} do |f|%>
-    <button type="button" class="close">x</button>
-    <h6>Voyage departs from :<%= @voyage.location %></h6>
-    <h6>Voyage start time: <%= @voyage.start_time %></h6>
-    <h6>Voyage end time: <%= @voyage.end_time %></h6>
-    <h6>Voyage description: <%= @voyage.description %></h6>
-    <h6>Vessel type: <%= @voyage.vessel_type %></h6>
-    <h6>Boat image: <%= @voyage.boat_image_url %></h6>
-    <h6>Voyage capacity: <%= @voyage.capacity %></h6>
-    <h6><input type="text" name="user" placeholder=" "></h6>
 
-        <h6><%= f.submit %></h6>
-          <% end %>
-        </div>
+  <div class='modal'>
+    <div class='inner-modal'>
+      <!-- class here pertains to the modal window that will fadeIn. -->
+      <%= form_for [@voyage, @reservation], :html => {:class => 'voyage-form-class'} do |f|%>
+      <button type="button" class="close">x</button>
 
-<%= link_to 'Edit Voyage', edit_voyage_path(@voyage) %>
+      <h6>Voyage departs from :<%= @voyage.location %></h6>
+      <h6>Voyage start time: <%= @voyage.start_time %></h6>
+      <h6>Voyage end time: <%= @voyage.end_time %></h6>
+      <h6>Voyage description: <%= @voyage.description %></h6>
+      <h6>Vessel type: <%= @voyage.vessel_type %></h6>
+      <h6>Boat image: <%= @voyage.boat_image_url %></h6>
+      <h6><input type="text" name="user" placeholder=" "></h6>
 
-<%= link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{@voyage.title}'? This cannot be undone!"}%>
+      <h6><%= f.submit %></h6>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to 'Edit Voyage', edit_voyage_path(@voyage) %>
+
+  <%= link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{@voyage.title}'? This cannot be undone!"}%>
+
+
+
+
+
+
+
+
+
+D
