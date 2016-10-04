@@ -10,7 +10,6 @@ class VoyagesController < ApplicationController
   before_action :ensure_user_match, only: [:edit, :update, :delete]
 
   def index
-
     if @user
       @voyages = @user.voyages
     else
@@ -21,6 +20,12 @@ class VoyagesController < ApplicationController
   def show
     @reservation = Reservation.new
     @voyage = Voyage.find(params[:id])
+    # # this is gmaps code from tutorial gmaps4rails
+    # binding.pry
+    # @hash = Gmaps4rails.build_markers(@voyages) do |voyage, marker|
+    #   marker.lat voyage.latitude
+    #   marker.lng voyage.longitude
+    # end
   end
 
   def edit
