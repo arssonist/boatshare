@@ -7,6 +7,6 @@ class Voyage < ApplicationRecord
   validates :location, presence: true
   validates :start_time, presence: true
 
-  geocoded_by :address
+  geocoded_by :location
   after_validation :geocode
 end
