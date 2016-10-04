@@ -3,17 +3,21 @@ class Voyage < ApplicationRecord
   has_many :reservations
   has_many :passengers, through: :reservations
 
+  geocoded_by :location
+  after_validation :geocode
+
   validates :title, presence: true
   validates :location, presence: true
   validates :start_time, presence: true
 
   validate :start_time_cannot_be_in_the_past
 
-   def start_time_cannot_be_in_the_past #validation to make sure captains cannot create voyages in the past
+    def start_time_cannot_be_in_the_past #validation to make sure captains cannot create voyages in the past
      if start_time.present? && start_time < Datetime.today
        errors.add(:start_time, message: "You can't make a voyage in the past! Please try again.")
      end
    end
+  
 
-     validates :capacity, presence: true 
+     validates :capacity, presence: true
 end
