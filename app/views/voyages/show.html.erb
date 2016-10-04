@@ -1,7 +1,7 @@
 <h1>Welcome to <%= @voyage.title %></h1>
 
 
-  <%= render 'voyage' %>
+  <%= render 'voyage', voyage: @voyage %>
   <h6>Total Voyage capacity: <%= @voyage.capacity %></h6>
 
 

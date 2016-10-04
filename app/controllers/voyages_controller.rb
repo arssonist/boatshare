@@ -47,7 +47,8 @@ class VoyagesController < ApplicationController
       redirect_to @voyage
         flash[:notice] = "Voyage succesfully created."
     else
-      flash[:notice] = "Sorry, your voyage wasn't created. Please try again!"
+      errors.full_messages? #Displays full error messages related to not saving voyage. Leads to more specific error messages than a single flash notice here.
+        # flash[:notice] = "Sorry, your voyage wasn't created. Please try again!"
       redirect_to new_voyage_path
     end
 
