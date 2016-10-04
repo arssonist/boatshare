@@ -19,13 +19,10 @@ class VoyagesController < ApplicationController
     @voyage = Voyage.find(params[:id])
     # # this is gmaps code from tutorial gmaps4rails
     # binding.pry
-    @hash = Gmaps4rails.build_markers(@voyages) do |voyage, marker|
-      marker.lat voyage.latitude
-      marker.lng voyage.longitude
-    end
-  
-
-
+    # @hash = Gmaps4rails.build_markers(@voyages) do |voyage, marker|
+    #   marker.lat voyage.latitude
+    #   marker.lng voyage.longitude
+    # end
   end
 
   def edit
