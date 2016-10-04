@@ -4,4 +4,5 @@ class Reservation < ApplicationRecord
 
   validates :passenger_id, presence: true
   validates :voyage_id, presence: true
+  
 end

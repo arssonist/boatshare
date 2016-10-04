@@ -6,4 +6,13 @@ class Voyage < ApplicationRecord
   validates :title, presence: true
   validates :location, presence: true
   validates :start_time, presence: true
+
+  validate :start_time_cannot_be_in_the_past
+
+   def start_time_cannot_be_in_the_past
+     if start_time.present? && start_time < Date.today
+       errors.add(:start_time, message: "You can't make a voyage in the past! Please try again.")
+     end
+   end
+
 end

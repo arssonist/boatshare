@@ -5,7 +5,7 @@ class VoyagesController < ApplicationController
   before_action do
     @user = User.find(params[:user_id]) if params[:user_id]
   end
-  
+
 
   before_action :ensure_user_match, only: [:edit, :update, :delete]
 
