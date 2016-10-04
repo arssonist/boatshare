@@ -15,7 +15,6 @@ class Voyage < ApplicationRecord
      end
    end
 
-
      validates :capacity, presence: true
 
 
