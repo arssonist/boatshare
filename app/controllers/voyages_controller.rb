@@ -23,7 +23,7 @@ class VoyagesController < ApplicationController
       marker.lat voyage.latitude
       marker.lng voyage.longitude
     end
-    byebug
+  
 
 
   end
