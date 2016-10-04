@@ -83,7 +83,7 @@
         <div id="nav">
             <%= link_to "Home", root_path %>
           <% if current_user %>
-            <%= link_to "Profile", user_path(current_user)%>
+              <li><%= link_to "Profile", user_path(current_user)%></li>
             <%= link_to "Logout", :logout, method: :post %>
           <% else %>
             <%= link_to "Register", new_user_path %> |

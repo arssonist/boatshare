@@ -19,4 +19,3 @@ Rails.application.routes.draw do
 
 end
 #destroy', :as => :logout
- 
