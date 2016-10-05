@@ -55,9 +55,36 @@
               <h3>Coming soon to a dock near you</h3>
               <br>
               <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
-
-
           </div>
+
+<!--
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <%= link_to "Home", root_path %>
+                  </li>
+            <% if current_user %>
+                  <li><
+                      <%= link_to "Profile", user_path(current_user)%>
+                  </li>
+                  <li>
+                      <%= link_to "Logout", :logout, method: :post %>
+                  </li>
+            <% else %>
+                 <li >
+                <%= link_to "Register", new_user_path %>
+                  <%= link_to "Login", :login %>
+                  </li>
+
+            <% end %>
+                  <li>
+                      <a href="contact.html">Contact</a>
+                  </li>
+              </ul> -->
+
+
+
       </header>
 
       <!-- About -->
@@ -148,7 +175,7 @@
       <!-- Callout -->
       <aside class="callout">
           <div class="text-vertical-center">
-              <h1>Today's the day for adventure</h1>
+              <h1>Book your adventure today</h1>
           </div>
       </aside>
 
@@ -157,7 +184,7 @@
           <div class="container">
               <div class="row">
                   <div class="col-lg-10 col-lg-offset-1 text-center">
-                      <h2>Choose a Voyage</h2>
+                      <h2>Choose a Voyage</h2> <%= link_to "Or create your own", new_voyage_path  %>
                       <hr class="small">
                       <div class="row">
                           <div class="col-md-6">
@@ -205,7 +232,7 @@
               <div class="row">
                   <div class="col-lg-12 text-center">
                       <h3>Ready for adventure?</h3>
-                      <a href="#" class="btn btn-lg btn-light">Log in</a>
+                      <a href="<%= login_path %>" class="btn btn-lg btn-light">Log in</a>
                       <a href="#" class="btn btn-lg btn-dark">Sign up Now!</a>
                   </div>
 
