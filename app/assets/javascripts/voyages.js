@@ -12,7 +12,7 @@ $(document).ready(function(){
   // NEXT: Flash notice and change number
   $("input[type='submit'][name='commit']").click(function(event){
     event.preventDefault();
-    // $(this).
+      // $(this).
   })
 
 

@@ -55,6 +55,28 @@
 //  width: 100%;
 // }
 
+.voyage-show-header{
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+
+}
+
+.voyage-map-section{
+  height: 300px;
+  background-color: red;
+
+}
+.voyage-images-section{
+  img{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
+
 .modal {
   display: none;
   position: fixed;
@@ -78,6 +100,9 @@
   left: 0;
   right: 0;
 }
+
+
+
 
 #map{
   width:300px;
