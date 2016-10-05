@@ -16,10 +16,10 @@ class Voyage < ApplicationRecord
      if start_time.present? && start_time < DateTime.now
        errors.add(:start_time, message: "You can't make a voyage in the past! Please try again.")
      end
-   end 
+   end
 
     validates :capacity, presence: true
 
     validates :capacity, numericality: true
-    validates :capacity, { :greater_than 0, :less_than_or_equal_to => 20 } # validates capacity to be an integer greater than or equal to 0
+    # validates :capacity, { :greater_than 0, :less_than_or_equal_to => 20 } # validates capacity to be an integer greater than or equal to 0
 end

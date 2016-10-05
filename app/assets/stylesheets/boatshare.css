@@ -1,4 +1,4 @@
-/*,
+,
 *::before
 *::after {
   box-sizing: border-box;
@@ -7,19 +7,21 @@
 }
 
 body {
-    background-image: url('http://wallpapercave.com/wp/OzpiTdT.jpg');
+    background-image: url(' ');
 }
 h1{
   font-size: 40px;
   color: #1290FE;
   margin-top: 10px;
   font-family: monospace;
+  text-align: center;
 }
 h2{
   font-size: 30px;
   text-align: center;
   font-family: sans-serif;
   color: #FFFFFF;
+  text-align: center;
 }
 
 header{
@@ -52,4 +54,4 @@ img {
 
 .navbar-nav{
  width: 100%;
-}*/
+}
