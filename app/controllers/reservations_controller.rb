@@ -43,6 +43,7 @@ class ReservationsController < ApplicationController
 
       if @reservation.save
         redirect_to "/voyages/#{params[:voyage_id]}" #Update this to redirect_to /voyages/reservation/instance
+        flash[:alert]="You're reservation was succesfully booked."
       else
         redirect_to '/voyages' #update this to redirect_to voyages/reservation/new
       end

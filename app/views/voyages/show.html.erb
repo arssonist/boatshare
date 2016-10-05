@@ -40,9 +40,9 @@
     <div class='inner-modal'>
       <!-- This is the window that fades in, and is different than the window code that is in the partial
       class here pertains to the modal window that will fadeIn. -->
-      <%= form_for [@voyage, @reservation], :html => {:class => 'voyage-form-class'} do |f|%>
+      <%= form_for [@voyage, @reservation], :html => {:class => 'voyage-form-class', :id => 'reservation-form-id'} do |f|%>
       <button type="button" class="close">x</button>
-
+<!-- Added id to call ajax request on form -->
       <h6>Voyage departs from :<%= @voyage.location %></h6>
       <h6>Voyage start time: <%= @voyage.start_time %></h6>
       <h6>Voyage end time: <%= @voyage.end_time %></h6>
@@ -57,13 +57,11 @@
       <h6>Special Needs?: <%= f.text_field :need_accessibility,
             placeholder: "what you need?" %></h6>
 
-
+<!-- where is create reservation button ? -->
       <p>
-        <%= form_for [@voyage, @reservation] do |f|%>
         <%= f.submit %>
         <% end %>
       </p>
-      <% end %>
     </div>
   </div>
 
