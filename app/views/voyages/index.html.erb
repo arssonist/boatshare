@@ -1,15 +1,6 @@
 <h2>Voyages</h2>
 
-<div class="voyages-display">
 
-    <% @voyages.each do |voyage|%>
-    <%= link_to "View this Voyage", voyage_path(voyage.id) %>
-      <%= render 'voyage', voyage: voyage%>
-<!-- Possible code snippet for photo link -->
-      <!-- link_to link_to image_tag(voyage.boat_image_url) -->
-
-    <% end %>
-  </div>
 
 <%= link_to "Create a new voyage!", new_voyage_path  %>
 
@@ -130,13 +121,13 @@
                         <div class="portfolio-item">
 
 <!-- sntax ("/icons/icon.gif", height: '32', width: '32', class: "") -->
+                        <h3> <%= voyage.title %> </h3>
                       <%= link_to image_tag(voyage.boat_image_url,  class:'img-portfolio img-responsive'), voyage %>
-                      <%= voyage.title %>
-
-
-                        </div>
                     </div>
-                    <%end%>
+                  </div>
+                  <%end%>
+
+
 
 
                 </div>
