@@ -23,12 +23,11 @@ class Voyage < ApplicationRecord
      end
    end
 
-<<<<<<< HEAD
     validates :capacity, presence: true
 
     validates :capacity, numericality: true
     # validates :capacity, { :greater_than 0, :less_than_or_equal_to => 20 } # validates capacity to be an integer greater than or equal to 0
-=======
+
    def present_capacity
      self.capacity - self.reservations.count
    end
@@ -41,5 +40,4 @@ class Voyage < ApplicationRecord
      end
    end
 
->>>>>>> 30e70cd0acfd136edffb0ae3d0b47ede3a9379e7
 end
