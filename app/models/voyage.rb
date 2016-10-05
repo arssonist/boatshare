@@ -21,5 +21,5 @@ class Voyage < ApplicationRecord
     validates :capacity, presence: true
 
     validates :capacity, numericality: true
-    # validates :capacity, { :greater_than 0, :less_than_or_equal_to => 50 } # validates capacity to be an integer greater than or equal to 0
+    validates :capacity, { :greater_than 0, :less_than_or_equal_to => 20 } # validates capacity to be an integer greater than or equal to 0
 end
