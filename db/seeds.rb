@@ -17,6 +17,6 @@ voyage1 = Voyage.create!(title: "Voyage1", location: "Toronto", start_time: Date
 voyage2 = Voyage.create!(title: "Voyage2", location: "Los Angeles", start_time: DateTime.parse("2017-09-30 11:11:00"), capacity: 10, vessel_type: "sail boat", captain: user2)
 voyage3 = Voyage.create!(title: "Voyage3", location: "Vancouver", start_time: DateTime.parse("2017-09-30 11:11:00"), capacity: 10, vessel_type: "motor boat", captain: user3)
 
-reservation1 = Reservation.create!(passenger: user2, voyage_id: voyage2.id)
-reservation2 = Reservation.create!(passenger: user1, voyage_id: voyage3.id)
-reservation3 = Reservation.create!(passenger: user3, voyage_id: voyage2.id)
+reservation1 = Reservation.create!(passenger: user1, voyage_id: voyage2.id)
+reservation2 = Reservation.create!(passenger: user3, voyage_id: voyage3.id)
+reservation3 = Reservation.create!(passenger: user1, voyage_id: voyage2.id)

@@ -5,19 +5,23 @@ class Reservation < ApplicationRecord
   validates :voyage_id, presence: true
 
   validates  :passenger_id, presence: true
-  validate :passenger_not_captain?
+  # validate :passenger_not_captain?
     def passenger_not_captain? #custom validation method to make sure the passenger is not the captain
-     if  passenger_id == self.voyage.captain_id
+     if  self.voyage.captain_id == passenger_id
       errors.add(:passenger_id, message: "You can't book a place on your own trip! Please try again.")
      end
   end
 
-    validate :capacity_full? #validates capcity: if there is no space on boat then rollback reservation and display custom error.
-      def capacity_full?
-        if self.voyage.capacity - self.voyage.reservations.count <= 0
-         errors.add(:capacity, message: "Sorry, this trip is full. Choose another trip!")
-        end
+    # validate :capacity_full? #validates capcity: if there is no space on boat then rollback reservation and display custom error.
+      def capacity_full
+        self.voyage.capacity - self.voyage.reservations.count
       end
+
+
+      #   <= 0
+      #    errors.add(:capacity, message: "Sorry, this trip is full. Choose another trip!")
+      #   end
+      # end
 
 end
 #
