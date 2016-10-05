@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004002303) do
+ActiveRecord::Schema.define(version: 20161005221858) do
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "passenger_id"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20161004002303) do
   create_table "voyages", force: :cascade do |t|
     t.string   "title"
     t.integer  "captain_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "location"
     t.string   "description"
     t.datetime "start_time"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20161004002303) do
     t.text     "boat_image_url"
     t.float    "longitude"
     t.float    "latitude"
+    t.text     "voyage_image_url"
   end
 
 end
