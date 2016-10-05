@@ -28,16 +28,16 @@ class Voyage < ApplicationRecord
     validates :capacity, numericality: true
     # validates :capacity, { :greater_than 0, :less_than_or_equal_to => 20 } # validates capacity to be an integer greater than or equal to 0
 
-   def present_capacity
-     self.capacity - self.reservations.count
-   end
-
-   def has_capacity?
-     if present_capacity <= 0
-       errors.add(:capacity, message: "Sorry, this trip is full. Choose another trip!")
-     else
-       return true
-     end
-   end
+  #  def present_capacity
+  #    self.capacity - self.reservations.count
+  #  end
+   #
+  #  def has_capacity?
+  #    if present_capacity <= 0
+  #      errors.add(:capacity, message: "Sorry, this trip is full. Choose another trip!")
+  #    else
+  #      return true
+  #    end
+  #  end
 
 end
