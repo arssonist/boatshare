@@ -67,7 +67,7 @@ voyage3 = Voyage.create!(
     )
 
 reservation1 = Reservation.create!(
-    passenger: user1,
+    passenger: user2,
     voyage_id: voyage2.id
     )
 

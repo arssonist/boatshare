@@ -7,10 +7,15 @@ class Voyage < ApplicationRecord
   after_validation :geocode
 
   validates :title, presence: true
+
   validates :location, presence: true
+
   validates :start_time, presence: true
 
   validate :start_time_cannot_be_in_the_past
+
+  validate :has_capacity?#validates capcity: if there is no space on boat then rollback reservation and display custom error.
+  validates :capacity, presence: true
 
     def start_time_cannot_be_in_the_past #validation to make sure captains cannot create voyages in the past
      if start_time.present? && start_time < DateTime.now
@@ -18,6 +23,16 @@ class Voyage < ApplicationRecord
      end
    end
 
+   def present_capacity
+     self.capacity - self.reservations.count
+   end
 
-     validates :capacity, presence: true
+   def has_capacity?
+     if present_capacity <= 0
+       errors.add(:capacity, message: "Sorry, this trip is full. Choose another trip!")
+     else
+       return true
+     end
+   end
+
 end
