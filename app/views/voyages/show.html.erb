@@ -30,20 +30,11 @@
   }
 </script>
 <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_DNqKPkerzufHHYVfwttVAPBCwyuVVb0&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["google_api_key"] %>&callback=initMap">
 </script>
 
 
-<p>
-  <%= form_for [@voyage, @reservation] do |f|%>
-  <%= f.submit %>
-  <% end %>
-</p>
-
-
-
-  <button type="submit" id="voyage-button">Check Space</button>
-
+<button type="submit" id="voyage-button">Check Space</button>
 
   <div class='modal'>
     <div class='inner-modal'>
@@ -58,13 +49,20 @@
       <h6>Voyage description: <%= @voyage.description %></h6>
       <h6>Vessel type: <%= @voyage.vessel_type %></h6>
       <h6>Boat image: <%= @voyage.boat_image_url %></h6>
-      <h6>Seat Location: <%= f.text_field :seat_location, placeholder: "port or starboard" %>
-      <h6>Seat Life Jacket Size: <%= f.text_field :life_jacket_size %>
-          <input placeholder="small, meduim of large"></h6>
-      <h6>Special Needs?: <%= f.text_field :need_accessibility %>
-            <input placeholder="what you need?"></h6>
+      <h6>Seat Location: <%= f.text_field :seat_location, placeholder: "port or starboard?" %>
 
-      <h6><%= f.submit %></h6>
+
+      <h6>Life Jacket Size: <%= f.text_field :life_jacket_size,
+      placeholder: "small, meduim of large" %></h6>
+      <h6>Special Needs?: <%= f.text_field :need_accessibility,
+            placeholder: "what you need?" %></h6>
+
+
+      <p>
+        <%= form_for [@voyage, @reservation] do |f|%>
+        <%= f.submit %>
+        <% end %>
+      </p>
       <% end %>
     </div>
   </div>

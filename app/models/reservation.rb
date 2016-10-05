@@ -21,7 +21,7 @@ class Reservation < ApplicationRecord
 
 end
 #
-#
+# => 
 # irb(main):003:0> passenger_id = 3
 # => 3
 # irb(main):004:0> res.voyage_id = 5
