@@ -3,16 +3,15 @@ $(document).ready(function(){
     event.preventDefault();
        $('.modal').fadeIn('slow');
     })
-  })
-$(document).ready(function(){
   $('.close').click(function(event){
     event.preventDefault();
     $('.modal').fadeOut('slow');
   })
-})
-$(document).ready(function(){
-    $('.modal').click(function(event){
-      event.preventDefault();
-      $('.modal').fadeOut('slow');
+
+  $('.modal').click(function(event){
+      $(this).fadeOut('slow');
+  })
+  $('.voyage-form-class').click(function(event){
+      event.stopPropagation();
   })
 })
