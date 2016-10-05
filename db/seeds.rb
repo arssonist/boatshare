@@ -37,6 +37,7 @@ voyage1 = Voyage.create!(
     start_time: DateTime.parse("2017-09-30 11:11:00"),
     end_time: DateTime.parse("2017-10-30 11:11:00"),
     capacity: 10,
+    voyage_image_url:"http://i0.wp.com/listverse.com/wp-content/uploads/2013/09/Pirate-ship-e1380134034524.jpg?resize=632%2C356",
     boat_image_url:'https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-pirate-ship_1_000000001308_5.jpg',
     vessel_type: "pirate ship",
     captain: user1
@@ -49,6 +50,7 @@ voyage2 = Voyage.create!(
     start_time: DateTime.parse("2017-09-30 11:11:00"),
     end_time: DateTime.parse("2017-10-30 11:11:00"),
     capacity: 10,
+    voyage_image_url:"http://www.clipartkid.com/images/204/outrigger-canoe-o-the-beach-of-nosy-be-madagascar-YKHDUQ-clipart.jpg",
     boat_image_url:'http://1.bp.blogspot.com/_Y1xTrEn3pwg/S-wuQW-9IMI/AAAAAAAACLo/HVIXSLoDDAY/s1600/muskrat+canoe+r.jpg',
     vessel_type: "canoe",
     captain: user2
@@ -61,6 +63,7 @@ voyage3 = Voyage.create!(
     start_time: DateTime.parse("2017-09-30 11:11:00"),
     end_time: DateTime.parse("2017-10-30 11:11:00"),
     capacity: 10,
+    voyage_image_url: "http://tingtau.com/wp-content/uploads/2016/01/White-Water-Rafting-The-Vacation-Of-2016.jpg",
     boat_image_url:'https://faithdlc.files.wordpress.com/2008/05/raft-boy.gif',
     vessel_type: "raft",
     captain: user3
