@@ -1,15 +1,15 @@
 <div class="row">
 <!-- make more general class names -->
-  <section class="col-xs-12 voyage-show-header" style="background-image: url(<%= @voyage.boat_image_url%>)" ></section>
+  <section class="col-xs-12 page-show-header" style="background-image: url(<%= @voyage.voyage_image_url%>)" ></section>
 
-  <section class="col-xs-12 col-sm-6 voyage-details-section">
+  <section class="col-xs-12 col-sm-6 page-details-section">
 
 
     <p> git reset [--<mode>] [<commit>]
       This form resets the current branch head to <commit> and possibly updates the index (resetting it to the tree of <commit>) and the working tree depending on <mode>, which must be one of the following:
 </section>
 
-<section class="col-xs-12 col-sm-6 voyage-images-section">
+<section class="col-xs-12 col-sm-6 page-images-section">
   <%= image_tag(@voyage.boat_image_url) %>
 
 
