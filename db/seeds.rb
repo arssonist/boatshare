@@ -11,6 +11,7 @@
 user1 = User.create!(
     name: "joe",
     email: "joe@joe.com",
+    user_image_url:'http://efdreams.com/data_images/dreams/monkey/monkey-01.jpg',
     password: "1234",
     password_confirmation: "1234"
     )
@@ -19,6 +20,7 @@ user2 = User.create!(
     name: "tom",
     email: "tom@tom.com",
     password: "1234",
+    user_image_url:'http://yourshot.nationalgeographic.com/u/ss/fQYSUbVfts-T7pS2VP2wnKyN8wxywmXtY0-Fwsgxo7n1NlH0mdL2Zkg6gMacZbrQTL6jvpwq2UjSLlf_9yGd/',
     password_confirmation: "1234"
     )
 
@@ -26,6 +28,7 @@ user3 = User.create!(
     name: "john",
     email: "john@john.com",
     password: "1234",
+    user_image_url:'http://kurld.com/images/wallpapers/baby-tiger-pictures/baby-tiger-pictures-23.jpg',
     password_confirmation: "1234"
     )
 
