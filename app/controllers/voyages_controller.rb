@@ -76,7 +76,7 @@ class VoyagesController < ApplicationController
 
 private
   def voyage_params
-    params.require(:voyage).permit(:title, :location, :description, :vessel_type, :boat_image_url, :start_time, :end_time, :capacity) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
+    params.require(:voyage).permit(:title, :location, :description, :vessel_type, :boat_image_url, :voyage_image_url,:start_time, :end_time, :capacity) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
   end
 
 end
