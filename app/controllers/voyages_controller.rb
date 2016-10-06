@@ -48,15 +48,17 @@ class VoyagesController < ApplicationController
   def create
     @voyage = Voyage.new(voyage_params)
     @voyage.captain = current_user
-
-    if @voyage.save
-      redirect_to @voyage
-        flash[:notice] = "Voyage succesfully created."
-    else
-      errors.full_messages? #Displays full error messages related to not saving voyage. Leads to more specific error messages than a single flash notice here.
-        # flash[:notice] = "Sorry, your voyage wasn't created. Please try again!"
-      redirect_to new_voyage_path
-    end
+s
+      if @voyage.save
+        redirect_to @voyage
+          flash[:notice] = "Voyage succesfully created."
+      else
+        errors.full_messages? #Displays full error messages related to not saving voyage. Leads to more specific error messages than a single flash notice here.
+          # flash[:notice] = "Sorry, your voyage wasn't created. Please try again!"
+        redirect_to new_voyage_path
+      end
+    
+    # respond_to
 
   end
 
@@ -76,7 +78,7 @@ class VoyagesController < ApplicationController
 
 private
   def voyage_params
-    params.require(:voyage).permit(:title, :location, :description, :vessel_type, :boat_image_url, :voyage_image_url,:start_time, :end_time, :capacity) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
+    params.require(:voyage).permit(:title, :location, :description, :vessel_type, :boat_image_url,:voyage_image_url,:start_time, :end_time, :capacity) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
   end
 
 end
