@@ -3,7 +3,10 @@ class UsersController < ApplicationController
   #
   skip_before_action :require_login, only: [:index, :new, :create]
 
-
+# This is here only becuase maybe the user page need the voyage info? So far it has not.
+  # before_action do
+  #   @voyage = Voyage.find(params[:voyage_id]) if params[:voyage_id]
+  # end
   # GET /users
   # GET /users.json
   def index

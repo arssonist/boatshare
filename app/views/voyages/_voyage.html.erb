@@ -7,7 +7,6 @@
     <h6>Boat image: <%= voyage.boat_image_url %></h6>
 </div>
 
-<!-- This is all the stuff from the show page -->
 
 <section id="services" class="services bg-primary">
     <div class="container">
@@ -49,8 +48,26 @@
     });
   }
 </script>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["google_api_key"] %>&callback=initMap">
+
+<script>
+  function initMap() {
+    var myLatLng = {lat: <%= @voyage.latitude %>, lng: <%= @voyage.longitude %>};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!'
+    });
+  }
+</script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["google_api_key"] %>&callback=initMap"async defer>
 </script>
 
 
@@ -122,7 +139,7 @@
                           <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
                       </li>
                       <li>
-                          <a href="#"><i class="fa fa-vine fa-fw fa-3x"></i></a>
+                          <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
                       </li>
                   </ul>
                   <hr class="small">

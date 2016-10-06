@@ -1,49 +1,56 @@
-<div>
-  <h6><%= user.name %></h6>
-  <h6><%= user.email %></h6>
-</div>
-
-<h2>All Reservations </h2>
-<% user.reservations.each do |reservation|%>
- <h6><%= reservation.voyage.title %></h6>
-  <h6><%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
-<% end %>
 
 
-<h2>All My Created Voyages </h2>
-<% user.voyages.each do |voyage| %>
-  <h6><%= voyage.title %></h6>
-  <h6><%= voyage.location %></h6>
-  <h6><%= voyage.description %></h6>
-  <h6><%= voyage.boat_image_url %></h6>
-  <h6><%= link_to "View Voyage", voyage_path %></h6>
-<% end %>
 
-   <h4>All passengers on this Voyage</h4>
-   <% user.voyages.each do |voyage| %>
-    <% voyage.passengers.each do |passenger| %>
-     <h6><%= passenger.name %></h6>
-      <h6><%= passenger.bio %></h6>
-     <% end %>
-     <% end %>
      <div class="row">
      <!-- make more general class names -->
-       <section class="col-xs-12 page-show-header" style="background-image: url(<%= @voyage.voyage_image_url%>)" ></section>
+     <section class="col-xs-12 page-show-header" style="background-image: url(<%= @user.user_image_url%>)" >
+
+
+     </section>
 
        <section class="col-xs-12 col-sm-6 page-details-section">
 
+           <div class='user-name-div'>
+             <h6><%= user.name %></h6>
+             <h6><%= user.email %></h6>
+           </div>
 
-         <p> git reset [--<mode>] [<commit>]
-           This form resets the current branch head to <commit> and possibly updates the index (resetting it to the tree of <commit>) and the working tree depending on <mode>, which must be one of the following:
+         <h2>All Reservations </h2>
+         <% user.reservations.each do |reservation|%>
+         <h6><%= reservation.voyage.title %></h6>
+         <h6><%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
+         <% end %>
+
+
      </section>
 
      <section class="col-xs-12 col-sm-6 page-images-section">
-       <%= image_tag(@voyage.boat_image_url) %>
+       <%= image_tag(@user.user_image_url) %>
 
 
      </section>
-       <section class="col-xs-12 voyage-map-section">
+       <section class="col-xs-12 voyage-map-section all-form-text">
 
+         <h2>All My Created Voyages </h2>
+         <% user.voyages.each do |voyage| %>
+         <h6><%= voyage.title %></h6>
+         <h6><%= voyage.location %></h6>
+         <h6><%= voyage.description %></h6>
+         <h6><%= voyage.boat_image_url %></h6>
+         <h6><%= link_to "View Voyage", voyage_path %></h6>
+         <%= link_to 'Edit Voyage', edit_voyage_path %>
+         <%= link_to 'Delete', voyage_path, method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{voyage.title}'? This cannot be undone!"}%>
+         <% end %>
+
+
+
+         <h4>All passengers on this Voyage</h4>
+         <% user.voyages.each do |voyage| %>
+         <% voyage.passengers.each do |passenger| %>
+         <h6><%= passenger.name %></h6>
+         <h6><%= passenger.bio %></h6>
+         <% end %>
+         <% end %>
        </section>
 
      </div>

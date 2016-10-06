@@ -5,13 +5,13 @@ class Reservation < ApplicationRecord
     validates :voyage_id, presence: true
 
     validates  :passenger_id, presence: true
-  #   validate :passenger_not_captain?
+    validate :passenger_not_captain?
   #
-  # def passenger_not_captain? #custom validation method to make sure the passenger is not the captain
-  #    if  self.voyage.captain_id == passenger_id
-  #     errors.add(:passenger_id, message: "You can't book a place on your own trip! Please try again.")
-  #   end
-  # end
+  def passenger_not_captain? #custom validation method to make sure the passenger is not the captain
+     if  self.voyage.captain_id == passenger_id
+      errors.add(:passenger_id, message: "You can't book a place on your own trip! Please try again.")
+    end
+  end
 
 #
   end
