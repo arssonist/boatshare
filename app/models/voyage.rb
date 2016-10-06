@@ -14,7 +14,7 @@ class Voyage < ApplicationRecord
 
   validate :start_time_cannot_be_in_the_past
 
-  validate :has_capacity?#validates capcity: if there is no space on boat then rollback reservation and display custom error.
+  # validate :has_capacity?#validates capcity: if there is no space on boat then rollback reservation and display custom error.
   validates :capacity, presence: true
 
     def start_time_cannot_be_in_the_past #validation to make sure captains cannot create voyages in the past
