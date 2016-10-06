@@ -10,10 +10,19 @@ $(document).ready(function(){
   })
   // to stop close of window on completion to update reservation
   // NEXT: Flash notice and change number
-  $("input[type='submit'][name='commit']").click(function(event){
-    // event.preventDefault();
-    // console.log( 'STOPPED FORM FROM SUBMITTING!' ); /// TEMP
-    //   // $(this).
+  $('#reservation-form-id').on('submit',function(event){
+    event.preventDefault();
+    $.ajax({
+      url:'/voyages/2/reservations',
+      method:'POST',
+      data:$(this).serialize(),
+      dataType:"json"
+    }).done(function(response){
+      $('#seats-left').text(response.seats_left)
+    
+
+
+    })
   })
 
 
@@ -23,6 +32,6 @@ $(document).ready(function(){
       $(this).fadeOut('slow');
   })
   $('.voyage-form-class').click(function(event){
-      // event.stopPropagation();
+      event.stopPropagation();
   })
 })

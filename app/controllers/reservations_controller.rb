@@ -2,7 +2,7 @@ class ReservationsController < ApplicationController
 
     before_action do
       @user = Reservation.find(params[:user_id]) if params[:user_id]
-
+      @voyage = Voyage.find(params[:voyage_id])
     end
 
     def index
@@ -40,14 +40,21 @@ class ReservationsController < ApplicationController
       @reservation = Reservation.new
       @reservation.passenger_id = current_user.id
       @reservation.voyage_id = params[:voyage_id]
-
-      if @reservation.save
-        redirect_to "/voyages/#{params[:voyage_id]}" #Update this to redirect_to /voyages/reservation/instance
-        flash[:alert]="You're reservation was succesfully booked."
+      if request.xhr?
+        @reservation.save
+        respond_to do |format|
+        seats_left = @voyage.present_capacity
+        x = {"seats_left" => seats_left}
+          format.json { render json: x.to_json  }
+        end
       else
-        redirect_to '/voyages' #update this to redirect_to voyages/reservation/new
+        if @reservation.save
+          redirect_to "/voyages/#{params[:voyage_id]}" #Update this to redirect_to /voyages/reservation/instance
+          flash[:alert]="You're reservation was succesfully booked."
+        else
+          redirect_to '/voyages' #update this to redirect_to voyages/reservation/new
+        end
       end
-
     end
 
     def destroy
