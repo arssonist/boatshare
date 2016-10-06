@@ -102,7 +102,7 @@
     </div>
   </div>
 
-  <%= link_to 'Edit Voyage', edit_voyage_path(@voyage) %>
+  <h6><%= link_to 'Edit Voyage', edit_voyage_path(@voyage) %><h6>
 
   <%= link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{@voyage.title}'? This cannot be undone!"}%>
 
