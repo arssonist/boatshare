@@ -44,7 +44,7 @@ class ReservationsController < ApplicationController
         @reservation.save
         respond_to do |format|
         seats_left = @voyage.present_capacity
-        x = {"seats_left" => seats_left}
+        x = {"seats_left" => seats_left,}
           format.json { render json: x.to_json  }
         end
       else
