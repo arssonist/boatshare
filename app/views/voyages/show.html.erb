@@ -4,9 +4,17 @@
 
   <section class="col-xs-12 col-sm-6 page-details-section">
 
+<!-- This is duplicate code of what is on show, can be deleted once show is working -->
+    <h1><%= @voyage.title %></h1>
+    <h6>Voyage departs from :<%= @voyage.location %></h6>
+    <h6>Latitude: <%= @voyage.latitude %></h6>
+    <h6>longitude: <%= @voyage.longitude %></h6>
+    <h6>Voyage start time: <%= @voyage.start_time %></h6>
+    <h6>Voyage end time: <%= @voyage.end_time %></h6>
+    <h6>Voyage description: <%= @voyage.description %></h6>
+    <h6>Vessel type: <%= @voyage.vessel_type %></h6>
+    <h6>Voyage capacity: <%= @voyage.capacity %></h6>
 
-    <p> git reset [--<mode>] [<commit>]
-      This form resets the current branch head to <commit> and possibly updates the index (resetting it to the tree of <commit>) and the working tree depending on <mode>, which must be one of the following:
 </section>
 
 <section class="col-xs-12 col-sm-6 page-images-section">
