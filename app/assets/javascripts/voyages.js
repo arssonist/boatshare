@@ -19,7 +19,7 @@ $(document).ready(function(){
       dataType:"json"
     }).done(function(response){
       $('#seats-left').text(response.seats_left)
-    
+
 
 
     })
