@@ -22,8 +22,44 @@
 
 
 </section>
+
+<section class="col-xs-12 page-show-button">
+    <h3>Book your resevtion now</h3>
+    <!-- add possible last resvertation made -->
+    <!-- maybe a possible clock downtown unitl voyage time -->
+  <button type="submit" id="voyage-button">Check Space</button>
+
+</section>
+
   <section class="col-xs-12 voyage-map-section">
 
   </section>
 
+
 </div>
+
+
+  <div class='modal'>
+    <div class='inner-modal'>
+      <!-- This is the window that fades in, and is different than the window code that is in the partial
+      class here pertains to the modal window that will fadeIn. -->
+      <%= form_for [@voyage, @reservation], :html => {:class => 'voyage-form-class', :id => 'reservation-form-id'} do |f|%>
+      <button type="button" class="close">x</button>
+<!-- Added id to call ajax request on form -->
+      <h6>Voyage departs from :<%= @voyage.location %></h6>
+      <h6>Voyage start time: <%= @voyage.start_time %></h6>
+      <h6>Voyage end time: <%= @voyage.end_time %></h6>
+      <h6>Vessel type: <%= @voyage.vessel_type %></h6>
+      <h6>Seat Location: <%= f.text_field :seat_location, placeholder: "port or starboard?" %>
+      <h6>Life Jacket Size: <%= f.text_field :life_jacket_size,
+      placeholder: "small, meduim of large" %></h6>
+      <h6>Special Needs?: <%= f.text_field :need_accessibility,
+            placeholder: "what you need?" %></h6>
+      <h3 id='seats-left'><%=  @voyage.present_capacity %></h3>
+<!-- where is create reservation button ? -->
+      <p>
+        <%= f.submit %>
+        <% end %>
+      </p>
+    </div>
+  </div>

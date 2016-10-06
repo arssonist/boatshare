@@ -4,20 +4,33 @@
      <div class="row">
      <!-- make more general class names -->
      <section class="col-xs-12 page-show-header" style="background-image: url(<%= @user.user_image_url%>)" >
-       <div>
-         <h6><%= user.name %></h6>
-         <h6><%= user.email %></h6>
-       </div>
 
-       <h2>All Reservations </h2>
-       <% user.reservations.each do |reservation|%>
-       <h6><%= reservation.voyage.title %></h6>
-       <h6><%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
-       <% end %>
 
      </section>
 
        <section class="col-xs-12 col-sm-6 page-details-section">
+
+           <div class='user-name-div'>
+             <h6><%= user.name %></h6>
+             <h6><%= user.email %></h6>
+           </div>
+
+         <h2>All Reservations </h2>
+         <% user.reservations.each do |reservation|%>
+         <h6><%= reservation.voyage.title %></h6>
+         <h6><%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
+         <% end %>
+
+
+     </section>
+
+     <section class="col-xs-12 col-sm-6 page-images-section">
+       <%= image_tag(@user.user_image_url) %>
+
+
+     </section>
+       <section class="col-xs-12 voyage-map-section">
+
          <h2>All My Created Voyages </h2>
          <% user.voyages.each do |voyage| %>
          <h6><%= voyage.title %></h6>
@@ -34,16 +47,6 @@
          <h6><%= passenger.bio %></h6>
          <% end %>
          <% end %>
-
-     </section>
-      image section here will be for 
-     <section class="col-xs-12 col-sm-6 page-images-section">
-       <%= image_tag(@.boat_image_url) %>
-
-
-     </section>
-       <section class="col-xs-12 voyage-map-section">
-
        </section>
 
      </div>
