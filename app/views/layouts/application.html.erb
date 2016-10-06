@@ -24,7 +24,7 @@
               </li>
 
               <li>
-                  <a href="#portfolio" onclick=$("#menu-close").click();>Pick a Voyage</a>
+                  <a href="<%= root_path %>#portfolio" onclick=$("#menu-close").click();>Pick a Voyage</a>
               </li>
               <li>
                   <a href="<%= new_user_path %>" onclick=$("#menu-close").click();>Sign-Up</a>
@@ -33,11 +33,16 @@
                   <a href="<%= login_path %>" onclick=$("#menu-close").click();>Log In</a>
               </li>
               <li>
-                  <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+                  <a href="<%= root_path %>#contact" onclick=$("#menu-close").click();>Contact</a>
               </li>
               <li>
-                  <a href="#services" onclick=$("#menu-close").click();>Log Out</a>
+
+                  <a href="<%= logout_path %>" onclick=$("#menu-close").click();>Log Out</a>
               </li>
+              <li>
+                <%= link_to("Log Out", logout_path, :method => :delete) %>
+              </li>
+
           </ul>
       </nav>
 
