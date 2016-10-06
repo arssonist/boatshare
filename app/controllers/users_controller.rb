@@ -17,6 +17,14 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+
+    if @user == current_user
+
+    else
+      redirect_to root_path
+    end
+
+
     @reservation = @user.reservations
     # find(params[:id])
     # @voyages = User.voyages
