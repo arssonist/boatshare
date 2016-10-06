@@ -7,8 +7,7 @@
     <h6>Boat image: <%= voyage.boat_image_url %></h6>
 </div>
 
-<!-- This is all the stuff from the show page -->
-
+<!-- This is duplicate code of what is on show, can be deleted once show is working -->
 <section id="services" class="services bg-primary">
     <div class="container">
         <div class="row text-center">
@@ -84,10 +83,10 @@
       </p>
     </div>
   </div>
+<!-- Moved to user who made the reservations page -->
+  <%=# link_to 'Edit Voyage', edit_voyage_path(@voyage) %>
 
-  <%= link_to 'Edit Voyage', edit_voyage_path(@voyage) %>
-
-  <%= link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{@voyage.title}'? This cannot be undone!"}%>
+  <%=# link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{@voyage.title}'? This cannot be undone!"}%>
 
   <!-- Map -->
   <section id="contact" class="map">
