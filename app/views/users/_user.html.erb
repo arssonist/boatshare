@@ -1,40 +1,40 @@
-<div>
-  <h6><%= user.name %></h6>
-  <h6><%= user.email %></h6>
-</div>
-
-<h2>All Reservations </h2>
-<% user.reservations.each do |reservation|%>
- <h6><%= reservation.voyage.title %></h6>
-  <h6><%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
-<% end %>
 
 
-<h2>All My Created Voyages </h2>
-<% user.voyages.each do |voyage| %>
-  <h6><%= voyage.title %></h6>
-  <h6><%= voyage.location %></h6>
-  <h6><%= voyage.description %></h6>
-  <h6><%= voyage.boat_image_url %></h6>
-  <h6><%= link_to "View Voyage", voyage_path %></h6>
-<% end %>
 
-   <h4>All passengers on this Voyage</h4>
-   <% user.voyages.each do |voyage| %>
-    <% voyage.passengers.each do |passenger| %>
-     <h6><%= passenger.name %></h6>
-      <h6><%= passenger.bio %></h6>
-     <% end %>
-     <% end %>
      <div class="row">
      <!-- make more general class names -->
-       <section class="col-xs-12 page-show-header" style="background-image: url(<%= @voyage.voyage_image_url%>)" ></section>
+     <section class="col-xs-12 page-show-header" style="background-image: url(<%= @voyage.voyage_image_url%>)" >
+       <div>
+         <h6><%= user.name %></h6>
+         <h6><%= user.email %></h6>
+       </div>
+
+       <h2>All Reservations </h2>
+       <% user.reservations.each do |reservation|%>
+       <h6><%= reservation.voyage.title %></h6>
+       <h6><%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
+       <% end %>
+
+     </section>
 
        <section class="col-xs-12 col-sm-6 page-details-section">
+         <h2>All My Created Voyages </h2>
+         <% user.voyages.each do |voyage| %>
+         <h6><%= voyage.title %></h6>
+         <h6><%= voyage.location %></h6>
+         <h6><%= voyage.description %></h6>
+         <h6><%= voyage.boat_image_url %></h6>
+         <h6><%= link_to "View Voyage", voyage_path %></h6>
+         <% end %>
 
+         <h4>All passengers on this Voyage</h4>
+         <% user.voyages.each do |voyage| %>
+         <% voyage.passengers.each do |passenger| %>
+         <h6><%= passenger.name %></h6>
+         <h6><%= passenger.bio %></h6>
+         <% end %>
+         <% end %>
 
-         <p> git reset [--<mode>] [<commit>]
-           This form resets the current branch head to <commit> and possibly updates the index (resetting it to the tree of <commit>) and the working tree depending on <mode>, which must be one of the following:
      </section>
 
      <section class="col-xs-12 col-sm-6 page-images-section">
