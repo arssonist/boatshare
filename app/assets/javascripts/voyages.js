@@ -11,8 +11,9 @@ $(document).ready(function(){
   // to stop close of window on completion to update reservation
   // NEXT: Flash notice and change number
   $("input[type='submit'][name='commit']").click(function(event){
-    event.preventDefault();
-      // $(this).
+    // event.preventDefault();
+    // console.log( 'STOPPED FORM FROM SUBMITTING!' ); /// TEMP
+    //   // $(this).
   })
 
 
@@ -22,6 +23,6 @@ $(document).ready(function(){
       $(this).fadeOut('slow');
   })
   $('.voyage-form-class').click(function(event){
-      event.stopPropagation();
+      // event.stopPropagation();
   })
 })
