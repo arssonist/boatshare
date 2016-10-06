@@ -40,6 +40,10 @@
          <h6><%= link_to "View Voyage", voyage_path %></h6>
          <% end %>
 
+         <%= link_to 'Edit Voyage', edit_voyage_path(@voyage) %>
+
+         <%= link_to 'Delete', voyage_path(@voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{@voyage.title}'? This cannot be undone!"}%>
+
          <h4>All passengers on this Voyage</h4>
          <% user.voyages.each do |voyage| %>
          <% voyage.passengers.each do |passenger| %>

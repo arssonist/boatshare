@@ -29,6 +29,7 @@ class VoyagesController < ApplicationController
   end
 
   def edit
+    @voyage = Voyage.find(params[:id])
   end
 
   def update
