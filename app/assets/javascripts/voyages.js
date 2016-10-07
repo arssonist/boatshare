@@ -10,16 +10,21 @@ $(document).ready(function(){
   })
   // to stop close of window on completion to update reservation
   // NEXT: Flash notice and change number
-  $('#reservation-form-id').on('submit',function(event){
+  $('.create-res-modal').on('submit',function(event){
     event.preventDefault();
-    $.ajax({
-      url:'/voyages/2/reservations',
-      method:'POST',
-      data:$(this).serialize(),
-      dataType:"json"
-    }).done(function(response){
-        $('#seats-left').text(response)
 
+    var $formId = $('.create-res-modal').attr('id')
+    var form = $(this)
+    $.ajax({
+      url: '/voyages/' + $formId + '/reservations',
+      method: 'POST',
+      data: $(this).serialize(),
+      dataType: "json"
+    }).done(function(response){
+        console.log(response)
+        $('#seats-left').text(response.seats_left)
+        var reservation = $('<h6>').text('reservation succesful')
+        form.append(reservation)
 
 
     })

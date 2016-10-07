@@ -37,15 +37,18 @@ class ReservationsController < ApplicationController
     end
 
     def create
-      @reservation = Reservation.new
+      @reservation = Reservation.new(reservation_params)
       @reservation.passenger_id = current_user.id
       @reservation.voyage_id = params[:voyage_id]
       if request.xhr?
         @reservation.save
         respond_to do |format|
         seats_left = @voyage.present_capacity
-        x = {"seats_left" => seats_left,}
-          format.json { render json: x.to_json  }
+        seat_place = @reservation.seat_location
+        life_jacket = @reservation.life_jacket_size
+        special_needs = @reservation.need_accessibility
+        x = {"seats_left" => seats_left, "seat_place" => seat_place, "life_jacket" => life_jacket, "special_needs" => special_needs}
+          format.json { render json: x.to_json }
         end
       else
         if @reservation.save
@@ -70,8 +73,8 @@ class ReservationsController < ApplicationController
     # end
 
   private
-    # def reservation_params
-    #   params.require(:reservation).permit(:title, :captain_id) #will need to add more fields as they are added to model
-    # end
+    def reservation_params
+      params.require(:reservation).permit(:title, :life_jacket_size, :seat_location, :need_accessibility) #will need to add more fields as they are added to model
+    end
 
   end
