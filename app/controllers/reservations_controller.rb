@@ -39,7 +39,9 @@ class ReservationsController < ApplicationController
     def create
       @reservation = Reservation.new(reservation_params)
       @reservation.passenger_id = current_user.id
+      @voyage = Voyage.find(params[:voyage_id])
       @reservation.voyage_id = params[:voyage_id]
+
       if request.xhr?
         @reservation.save
         respond_to do |format|
@@ -47,7 +49,7 @@ class ReservationsController < ApplicationController
         seat_place = @reservation.seat_location
         life_jacket = @reservation.life_jacket_size
         special_needs = @reservation.need_accessibility
-        x = {"seats_left" => seats_left, "seat_place" => seat_place, "life_jacket" => life_jacket, "special_needs" => special_needs}
+        x = {"voyage_capacity"=> @voyage.capacity, "reservations_count" => @voyage.reservations.count, "seats_left" => seats_left, "seat_place" => seat_place, "life_jacket" => life_jacket, "special_needs" => special_needs}
           format.json { render json: x.to_json }
         end
       else

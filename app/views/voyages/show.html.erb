@@ -22,7 +22,7 @@
 
 
 </section>
-
+  <% if captain_is_user?(@voyage.captain_id) == false %>
 <section class="col-xs-12 page-show-button">
     <h3>Book your reservation now</h3>
     <!-- add possible last resvertation made -->
@@ -30,6 +30,7 @@
   <button type="submit" id="voyage-button">Check Space</button>
 
 </section>
+  <% end %>
 
   <section class="col-xs-12 voyage-map-section">
 

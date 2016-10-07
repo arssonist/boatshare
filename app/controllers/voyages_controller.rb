@@ -9,6 +9,8 @@ class VoyagesController < ApplicationController
 
   before_action :ensure_user_match, only: [:edit, :update, :delete]
 
+  helper_method(:captain_is_user?)
+
   def index
     if @user
       @voyages = @user.voyages
@@ -48,7 +50,7 @@ class VoyagesController < ApplicationController
   def create
     @voyage = Voyage.new(voyage_params)
     @voyage.captain = current_user
-s
+
       if @voyage.save
         redirect_to @voyage
           flash[:notice] = "Voyage succesfully created."
@@ -57,7 +59,7 @@ s
           # flash[:notice] = "Sorry, your voyage wasn't created. Please try again!"
         redirect_to new_voyage_path
       end
-    
+
     # respond_to
 
   end
@@ -74,6 +76,10 @@ s
     if @voyage.captain != current_user
       not_found
     end
+  end
+
+  def captain_is_user?(captain_id)
+   captain_id == current_user.id
   end
 
 private
