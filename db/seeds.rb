@@ -26,7 +26,7 @@ user2 = User.create!(
 
 user3 = User.create!(
     name: "Jonathan Holburn",
-    email: "jonathan@captain.com",
+    email: "jonathan@gilligan.com",
     password: "1234",
     user_image_url:'http://www.voyageoftherascal.com/uploads/2/4/3/5/24351318/291492_orig.jpg',
     password_confirmation: "1234"
