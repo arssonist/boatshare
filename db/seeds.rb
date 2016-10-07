@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+#consider Sean's suggestion from Oct 6 of changing user1 to captain 1, and mkaing three more seeeds where 3 are captains and three are passengers. Then, when calling them in other seeds (voyage for eg) you will understand the validation conflict more easily
 
 user1 = User.create!(
     name: "joe",
@@ -73,16 +73,16 @@ voyage3 = Voyage.create!(
     )
 
 reservation1 = Reservation.create!(
-    passenger: user2,
-    voyage_id: voyage2.id
+    passenger: user3,
+    voyage: voyage2
     )
 
 reservation2 = Reservation.create!(
-    passenger: user3,
-    voyage_id: voyage3.id
+    passenger: user2,
+    voyage: voyage3
     )
 
 reservation3 = Reservation.create!(
     passenger: user1,
-    voyage_id: voyage1.id
+    voyage: voyage3
     )
