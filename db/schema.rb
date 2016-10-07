@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20161006011005) do
     t.datetime "updated_at",         null: false
     t.string   "seat_location"
     t.string   "life_jacket_size"
-    t.boolean  "need_accessibility"
+    t.string   "need_accessibility"
   end
 
   create_table "users", force: :cascade do |t|
