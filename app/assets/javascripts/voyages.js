@@ -18,8 +18,8 @@ $(document).ready(function(){
       data:$(this).serialize(),
       dataType:"json"
     }).done(function(response){
-      $('#seats-left').text(response.seats_left)
-    
+        $('#seats-left').text(response)
+
 
 
     })
