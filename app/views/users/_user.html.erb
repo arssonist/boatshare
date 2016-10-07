@@ -6,10 +6,11 @@
      </section>
 
        <section class="col-xs-12 col-sm-6 page-details-section">
+         <h2><%= user.name %>'s Profile Page </h2>
 
            <div class='user-name-div'>
-             <h6><%= user.name %></h6>
-             <h6><%= user.email %></h6>
+
+             <h6><%= user.name %>'s email: <%= user.email %></h6>
            </div>
 
          <h2>All Reservations </h2>
@@ -22,7 +23,7 @@
 
      <section class="col-xs-12 col-sm-6 page-images-section">
        <%= image_tag(@user.user_image_url) %>
- 
+
      </section>
        <section class="col-xs-12 voyage-map-section all-form-text">
 
@@ -31,15 +32,14 @@
          <h6><%= voyage.title %></h6>
          <h6><%= voyage.location %></h6>
          <h6><%= voyage.description %></h6>
-         <h6><%= voyage.boat_image_url %></h6>
-         <h6><%= link_to "View Voyage", voyage_path %></h6>
-         <h6><%= link_to 'Edit Voyage', edit_voyage_path %><h6>
-         <%= link_to 'Delete', voyage_path, method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{voyage.title}'? This cannot be undone!"}%>
+         <h4><%= link_to "View Voyage", voyage_path %></h4>
+         <h4><%= link_to 'Edit Voyage', edit_voyage_path %><h4>
+         <%= link_to 'Delete Voyage', voyage_path, method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{voyage.title}'? This cannot be undone!"}%>
          <% end %>
 
 
 
-         <h4>All passengers on this Voyage</h4>
+         <h3>All passengers on this Voyage</h3>
          <% user.voyages.each do |voyage| %>
          <% voyage.passengers.each do |passenger| %>
          <h6><%= passenger.name %></h6>
