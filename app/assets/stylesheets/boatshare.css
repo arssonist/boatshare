@@ -1,3 +1,4 @@
+ /*,
 
 *::before
 *::after {
@@ -24,9 +25,9 @@ h2{
   text-align: center;
 }
 
-header{
- width: 100%;
- background-color: #FFFFFF;
+header {
+  width: 100%;
+  background-color: #FFFFFF;
   opacity: 0.5;
 }
 
@@ -54,4 +55,4 @@ img {
 
 .navbar-nav{
  width: 100%;
-}
+}*/
