@@ -61,8 +61,10 @@
 
 
 
-<main>
-<%= yield %>
+<main class ="<%= controller.controller_name %> <%= controller.action_name %>">
+
+  <%= yield %>
+
 </main>
       <!-- Footer -->
       <footer>
