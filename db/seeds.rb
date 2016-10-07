@@ -9,66 +9,66 @@
 #consider Sean's suggestion from Oct 6 of changing user1 to captain 1, and mkaing three more seeeds where 3 are captains and three are passengers. Then, when calling them in other seeds (voyage for eg) you will understand the validation conflict more easily
 
 user1 = User.create!(
-    name: "joe",
-    email: "joe@joe.com",
-    user_image_url:'http://efdreams.com/data_images/dreams/monkey/monkey-01.jpg',
+    name: "Luke Fletcher",
+    email: "luke@gilligan.com",
+    user_image_url:'https://upload.wikimedia.org/wikipedia/commons/8/80/A_boat_man_with_his_small_boat.jpg',
     password: "1234",
     password_confirmation: "1234"
     )
 
 user2 = User.create!(
-    name: "tom",
-    email: "tom@tom.com",
+    name: "Jane Adam",
+    email: "jane@gilligan.com",
     password: "1234",
-    user_image_url:'http://yourshot.nationalgeographic.com/u/ss/fQYSUbVfts-T7pS2VP2wnKyN8wxywmXtY0-Fwsgxo7n1NlH0mdL2Zkg6gMacZbrQTL6jvpwq2UjSLlf_9yGd/',
+    user_image_url:'http://justifiedgrid.com/wp-content/gallery/life/people/166193831.jpg',
     password_confirmation: "1234"
     )
 
 user3 = User.create!(
-    name: "john",
-    email: "john@john.com",
+    name: "Jonathan Holburn",
+    email: "jonathan@captain.com",
     password: "1234",
-    user_image_url:'http://kurld.com/images/wallpapers/baby-tiger-pictures/baby-tiger-pictures-23.jpg',
+    user_image_url:'http://www.voyageoftherascal.com/uploads/2/4/3/5/24351318/291492_orig.jpg',
     password_confirmation: "1234"
     )
 
 
 voyage1 = Voyage.create!(
-    title: "Voyage1",
-    location: "Toronto",
+    title: "Sailing the Saronic Gulf",
+    location: "Poros, Greece",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus mauris, elementum id libero fermentum, cursus faucibus dui. Sed lacinia, nunc ut vehicula gravida, mauris lacus efficitur libero, eget porttitor ante lorem eu sem. Cras aliquam, nibh ut mattis placerat, quam diam convallis lacus, quis suscipit felis nunc eu lectus",
     start_time: DateTime.parse("2017-09-30 11:11:00"),
     end_time: DateTime.parse("2017-10-30 11:11:00"),
     capacity: 10,
-    voyage_image_url:"http://i0.wp.com/listverse.com/wp-content/uploads/2013/09/Pirate-ship-e1380134034524.jpg?resize=632%2C356",
-    boat_image_url:'https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-pirate-ship_1_000000001308_5.jpg',
-    vessel_type: "pirate ship",
+    voyage_image_url:"http://i67.tinypic.com/a9mhw.jpg",
+    boat_image_url:'http://i63.tinypic.com/dqp2lg.jpg',
+    vessel_type: "Beneteau 42",
     captain: user1
     )
 
 voyage2 = Voyage.create!(
-    title: "Voyage2",
-    location: "Los Angeles",
+    title: "Sail from Toronto to Niagara on the Lake",
+    location: "Harbourfront Center, Toronto",
     description: "Proin gravida libero in augue rutrum, in tincidunt turpis consequat. Suspendisse tempor semper augue. Integer nec facilisis felis. Sed sed efficitur neque. Cras iaculis molestie nulla, ac aliquam libero congue a.",
     start_time: DateTime.parse("2017-09-30 11:11:00"),
     end_time: DateTime.parse("2017-10-30 11:11:00"),
     capacity: 10,
-    voyage_image_url:"http://www.clipartkid.com/images/204/outrigger-canoe-o-the-beach-of-nosy-be-madagascar-YKHDUQ-clipart.jpg",
-    boat_image_url:'http://1.bp.blogspot.com/_Y1xTrEn3pwg/S-wuQW-9IMI/AAAAAAAACLo/HVIXSLoDDAY/s1600/muskrat+canoe+r.jpg',
-    vessel_type: "canoe",
+    voyage_image_url:"http://i64.tinypic.com/345zjfn.jpg",
+    boat_image_url:'http://i65.tinypic.com/33xhilh.jpg',
+    vessel_type: "Hunter 38",
     captain: user2
     )
 
 voyage3 = Voyage.create!(
-    title: "Voyage3",
-    location: "Vancouver",
+    title: "Crew needed at Boston Rowing Club",
+    location: "Boston Harbor",
     description: "Cras rhoncus sem sed venenatis finibus. Suspendisse imperdiet facilisis orci sed luctus. Aenean at magna eget augue semper vestibulum sit amet vel nunc. Maecenas aliquet vestibulum quam semper lobortis. Aenean rutrum lobortis lorem. Maecenas ut vehicula dui. In pharetra sodales leo eu dignissim.",
     start_time: DateTime.parse("2017-09-30 11:11:00"),
     end_time: DateTime.parse("2017-10-30 11:11:00"),
     capacity: 10,
-    voyage_image_url: "http://tingtau.com/wp-content/uploads/2016/01/White-Water-Rafting-The-Vacation-Of-2016.jpg",
-    boat_image_url:'https://faithdlc.files.wordpress.com/2008/05/raft-boy.gif',
-    vessel_type: "raft",
+    voyage_image_url: "https://assetrio2016.azureedge.net/sport/alWtsN55.jpg",
+    boat_image_url:'https://upload.wikimedia.org/wikipedia/commons/e/e6/DMURC_mens_8%2B_at_BUCS_Regatta_2010.png',
+    vessel_type: "Boat (Coxed Eight)",
     captain: user3
     )
 
