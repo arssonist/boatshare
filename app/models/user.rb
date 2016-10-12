@@ -6,7 +6,7 @@ class User < ApplicationRecord
     # validates_presence_of :name
     has_many :reservations, foreign_key: :passenger_id
 
-    has_attached_file :user_image_file, default_url: "/images/comic_image_missing.png"
+    has_attached_file :user_image_file, default_url: "/images/Comic_image_missing.png"
      validates_attachment_content_type :user_image_file, content_type: /\Aimage\/.*\z/
     #
     validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }

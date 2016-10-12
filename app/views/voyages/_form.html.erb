@@ -2,7 +2,8 @@
 
 <h1>Create a new voyage!</h1>
 
-<%= form_for @voyage do |f| %>
+<%= form_for voyage, url: voyages_path, html: { multipart: true } do |f| %>
+<!-- form_for user, url: users_path, html: { multipart: true } do -->
 
   <div>
    <%= f.label :title %>
@@ -31,7 +32,7 @@
 
   <div>
     <%= f.label :voyage_image_url %>
-    <%= f.text_field :voyage_image_url %>
+    <%= f.file_field :voyage_image_file %>
   </div>
 
   <div>
@@ -50,6 +51,6 @@
   </div>
 
     <%= f.submit %>
-      <% end %>
+  <% end %>
 
 </section>
