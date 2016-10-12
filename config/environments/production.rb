@@ -49,7 +49,16 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
-  config.action_mailer.default_url_options = { :host => "localhost:3000" } #configures mailer to send from local host 
+
+config.action_mailer.smtp_settings = {
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'https://hidden-beach-16599.herokuapp.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  } #configures action_mailer's SMTP settings to use SendGrid
 
 
   # Use a different cache store in production.
