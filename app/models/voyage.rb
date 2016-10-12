@@ -7,7 +7,7 @@ class Voyage < ApplicationRecord
   after_validation :geocode
 
   has_attached_file :voyage_image_file, default_url: "/images/Comic_image_missing.png"
-   validates_attachment_content_type :voyage_image_file, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :voyage_image_file, content_type: /\Aimage\/.*\z/
 
 
   validates :title, presence: true
