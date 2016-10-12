@@ -1,7 +1,7 @@
      <div class="row">
      <!-- make more general class names -->
-     <section class="col-xs-12 page-show-header" style="background-image: url(http://www.ask2travel.com/wp-content/uploads/2016/07/%CE%99%CE%A3%CE%A4%CE%99%CE%9F%CE%A0%CE%9B%CE%9F%CE%8A%CE%91.png)" >
 
+     <section class="col-xs-12 page-show-header" style="background-image: url(http://www.ask2travel.com/wp-content/uploads/2016/07/%CE%99%CE%A3%CE%A4%CE%99%CE%9F%CE%A0%CE%9B%CE%9F%CE%8A%CE%91.png)" >
 
 
      </section>
@@ -13,7 +13,7 @@
 
              <h6><%= user.name %>'s email: <%= user.email %></h6>
            </div>
-
+           <h6><%= link_to "Click to Edit User", edit_user_path %>
          <h2>All Reservations </h2>
          <% user.reservations.each do |reservation|%>
          <h6><%= reservation.voyage.title %></h6>
@@ -23,7 +23,7 @@
      </section>
 
      <section class="col-xs-12 col-sm-6 page-images-section">
-       <%= image_tag(@user.user_image_url) %>
+       <%= image_tag(@user.user_image_file.url) %>
 
      </section>
        <section class="col-xs-12 voyage-map-section all-form-text">
