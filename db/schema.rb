@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006011005) do
+ActiveRecord::Schema.define(version: 20161012202011) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "reservations", force: :cascade do |t|
     t.integer  "passenger_id"
@@ -33,9 +36,14 @@ ActiveRecord::Schema.define(version: 20161006011005) do
     t.string   "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
-    t.text     "user_image_url"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token"
+    t.string   "user_image_url"
+    t.string   "user_image_file"
+    t.string   "user_image_file_file_name"
+    t.string   "user_image_file_content_type"
+    t.integer  "user_image_file_file_size"
+    t.datetime "user_image_file_updated_at"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", using: :btree
   end
 
   create_table "voyages", force: :cascade do |t|
@@ -52,7 +60,7 @@ ActiveRecord::Schema.define(version: 20161006011005) do
     t.text     "boat_image_url"
     t.float    "longitude"
     t.float    "latitude"
-    t.text     "voyage_image_url"
+    t.string   "voyage_image_url"
   end
 
 end
