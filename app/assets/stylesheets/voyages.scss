@@ -2,7 +2,7 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 //
- 
+
 .page-show-header{
   height: 300px;
   background-repeat: no-repeat;
@@ -61,9 +61,15 @@
   left: 0;
   right: 0;
 }
-
-
-
+.overlay {
+  background-color: yellow;
+  background:transparent;
+  position:relative;
+  width:640px;
+  height:480px; /* your iframe height */
+  top:480px;  /* your iframe height */
+  margin-top:-480px;  /* your iframe height */
+}
 
 #map{
   width:80%;
