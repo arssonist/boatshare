@@ -57,7 +57,7 @@ config.action_mailer.smtp_settings = {
    :address        => ENV['MAILGUN_SMTP_SERVER'],
    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-   :domain         => ENV['MAILGUN_DOMAIN'],
+   :domain         => "https://hidden-beach-16599.herokuapp.com",
    :authentication => :plain,
  } #configures action_mailer's SMTP settings to use MailGun
 ActionMailer::Base.delivery_method = :smtp
