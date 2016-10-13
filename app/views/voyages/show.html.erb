@@ -1,4 +1,5 @@
 <div class="row">
+
 <!-- make more general class names -->
   <section class="col-xs-12 page-show-header" style="background-image: url(<%= @voyage.voyage_image_file.url%>)" ></section>
 
@@ -34,7 +35,7 @@
 
 
   <section class="col-xs-12 voyage-map-section">
-      <div id="map" class="'embed-containers   "></div>
+      <div id="map" class="overlay">
         <script>
 
           function initMap() {
@@ -52,7 +53,7 @@
             });
           }
     </script>
-
+  </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["google_api_key"] %>&callback=initMap" async defer></script>
 
