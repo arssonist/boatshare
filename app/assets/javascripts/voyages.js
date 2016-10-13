@@ -25,6 +25,9 @@ $(document).ready(function(){
         $('#seats-left').text(response.seats_left)
         var reservation = $('<h6>').text("Your reservation includes seat place: " + response.seat_place + ", a life jacket size of: " + response.life_jacket + ", and special needs of: " + response.special_needs)
         form.append(reservation)
+        $('input[type="submit"][value="Create Reservation"]').attr('disabled', false)
+
+
 
 
     })
