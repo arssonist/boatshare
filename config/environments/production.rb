@@ -49,6 +49,7 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
+  config.action_mailer.default_url_options = { :host => "https://hidden-beach-16599.herokuapp.com" }
 
 config.action_mailer.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'],
