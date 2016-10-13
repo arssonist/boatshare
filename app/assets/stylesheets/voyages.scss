@@ -3,6 +3,10 @@
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 
+#search-bar{
+  position: absolute;
+  z-index: 100;
+}
 .page-show-header{
   height: 300px;
   background-repeat: no-repeat;
