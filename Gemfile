@@ -19,6 +19,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'rails_12factor', group: :production
 
 gem 'figaro'
+
 gem "paperclip", "~> 5.0.0"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -59,4 +60,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'sendgrid-ruby' #gem for SendGrid 
+gem 'sendgrid-ruby' #gem for SendGrid
