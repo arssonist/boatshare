@@ -48,4 +48,9 @@ class Voyage < ApplicationRecord
      end
    end
 
+  def self.search(search)
+    where("title LIKE ?", "%#{search}%")
+
+  end
+
 end
