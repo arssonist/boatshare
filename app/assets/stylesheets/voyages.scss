@@ -3,6 +3,10 @@
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 
+#search-bar{
+  position: absolute;
+  z-index: 100;
+}
 .page-show-header{
   height: 300px;
   background-repeat: no-repeat;
@@ -61,17 +65,20 @@
   left: 0;
   right: 0;
 }
-.overlay {
+.scrolloff {
+  pointer-events: none;
+}
+
+.embed-containers {
   background-color: yellow;
   background:transparent;
   position:relative;
-  width:640px;
-  height:480px; /* your iframe height */
+  width:500px;
+  height:100%; /* your iframe height */
   top:480px;  /* your iframe height */
   margin-top:-480px;  /* your iframe height */
 }
-
 #map{
-  width:80%;
+  width:100%;
   height:500px;
 }

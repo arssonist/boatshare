@@ -1,6 +1,17 @@
 <!-- Header -->
+
+<div id="search-bar">
+
+  <%= form_tag(voyages_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Voyages" %>
+  <%= submit_tag "Search" %>
+  <% end %>
+</div>
+
+
 <header id="top" class="header">
     <div class="text-vertical-center">
+
         <h1>Gilligan</h1>
         <h3>Coming soon to a dock near you</h3>
         <br>

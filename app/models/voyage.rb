@@ -6,10 +6,10 @@ class Voyage < ApplicationRecord
   geocoded_by :location
   after_validation :geocode
 
-  has_attached_file :voyage_image_file, default_url: ("/app/assets/images/Comic_image_missing.png")
+  has_attached_file :voyage_image_file, default_url: "missing.png"
   validates_attachment_content_type :voyage_image_file, content_type: /\Aimage\/.*\z/
 
-  has_attached_file :boat_image_file, default_url: "/images/Comic_image_missing.png"
+  has_attached_file :boat_image_file, default_url: "missing.png"
   validates_attachment_content_type :boat_image_file, content_type: /\Aimage\/.*\z/
 
 
@@ -47,5 +47,10 @@ class Voyage < ApplicationRecord
        return true
      end
    end
+
+  def self.search(search)
+    where("title LIKE ?", "%#{search}%")
+
+  end
 
 end
