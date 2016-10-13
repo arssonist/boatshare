@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012202011) do
+ActiveRecord::Schema.define(version: 20161012223200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,18 +48,24 @@ ActiveRecord::Schema.define(version: 20161012202011) do
   create_table "voyages", force: :cascade do |t|
     t.string   "title"
     t.integer  "captain_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "location"
     t.string   "description"
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer  "capacity"
     t.string   "vessel_type"
-    t.text     "boat_image_url"
     t.float    "longitude"
     t.float    "latitude"
-    t.text     "voyage_image_url"
+    t.string   "voyage_image_file_file_name"
+    t.string   "voyage_image_file_content_type"
+    t.integer  "voyage_image_file_file_size"
+    t.datetime "voyage_image_file_updated_at"
+    t.string   "boat_image_file_file_name"
+    t.string   "boat_image_file_content_type"
+    t.integer  "boat_image_file_file_size"
+    t.datetime "boat_image_file_updated_at"
   end
 
 end

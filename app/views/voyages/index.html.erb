@@ -118,7 +118,7 @@
 
 <!-- sntax ("/icons/icon.gif", height: '32', width: '32', class: "") -->
                         <h3> <%= voyage.title %> </h3>
-                      <%= link_to image_tag(voyage.voyage_image_url,  class:'img-portfolio img-responsive'), voyage %>
+                      <%= link_to image_tag(voyage.voyage_image_file.url,  class:'img-portfolio img-responsive'), voyage %>
                     </div>
                   </div>
                   <%end%>

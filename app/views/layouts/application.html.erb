@@ -35,6 +35,8 @@
                   <a href="<%= root_path %>#portfolio" onclick=$("#menu-close").click();>Choose a Voyage</a>
               </li>
 
+
+
               <li>
                   <a href="<%= new_voyage_path %>" onclick=$("#menu-close").click();>Create a Voyage</a>
               </li>
@@ -74,7 +76,12 @@
       <!-- Portfolio -->
 
 <!-- sntax ("/icons/icon.gif", height: '32', width: '32', class: "") -->
-
+<% if flash[:notice] %>
+      <p id="notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p id="alert"><%= flash[:alert] %></p>
+    <% end %>
 
 
 <main class ="<%= controller.controller_name %> <%= controller.action_name %>">

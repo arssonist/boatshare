@@ -55,8 +55,7 @@ class VoyagesController < ApplicationController
         redirect_to @voyage
           flash[:notice] = "Voyage succesfully created."
       else
-        errors.full_messages?
-          flash[:notice] = "Sorry, your voyage wasn't created. Please try again!"
+          flash[:notice] = @voyage.errors.full_messages
         redirect_to new_voyage_path
       end
 
@@ -84,7 +83,7 @@ class VoyagesController < ApplicationController
 
 private
   def voyage_params
-    params.require(:voyage).permit(:title, :location, :description, :vessel_type, :boat_image_url,:voyage_image_url,:start_time, :end_time, :capacity) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
+    params.require(:voyage).permit(:title, :location, :description, :vessel_type, :boat_image_file,:voyage_image_file,:start_time, :end_time, :capacity) #will need to add more fields as they are added to model. , add :captain_id later once it's populated
   end
 
 end
