@@ -52,15 +52,14 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => "https://hidden-beach-16599.herokuapp.com" }
 
 config.action_mailer.smtp_settings = {
-    :user_name => ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'https://hidden-beach-16599.herokuapp.com',
-    :address => 'smtp.sendgrid.net',
-    :port => 587,
-    :authentication => :plain,
-    :enable_starttls_auto => true
-  } #configures action_mailer's SMTP settings to use SendGrid
-
+   :port           => ENV['MAILGUN_SMTP_PORT'],
+   :address        => ENV['MAILGUN_SMTP_SERVER'],
+   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+   :domain         => ENV['MAILGUN_DOMAIN'],
+   :authentication => :plain,
+ } #configures action_mailer's SMTP settings to use MailGun
+ActionMailer::Base.delivery_method = :smtp
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
