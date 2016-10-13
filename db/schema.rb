@@ -36,8 +36,7 @@ ActiveRecord::Schema.define(version: 20161012202011) do
     t.string   "reset_password_token"
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
-    t.string   "user_image_url"
-    t.string   "user_image_file"
+    t.text     "user_image_url"
     t.string   "user_image_file_file_name"
     t.string   "user_image_file_content_type"
     t.integer  "user_image_file_file_size"
@@ -60,7 +59,7 @@ ActiveRecord::Schema.define(version: 20161012202011) do
     t.text     "boat_image_url"
     t.float    "longitude"
     t.float    "latitude"
-    t.string   "voyage_image_url"
+    t.text     "voyage_image_url"
   end
 
 end
