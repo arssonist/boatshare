@@ -1,16 +1,20 @@
-$(document).ready(function () {
-      $('#map div').addClass('scrolloff');                // set the mouse events to none when doc is ready
+$(document).ready(function(){
+      $('.overlay').on('click',function(){
+        $('#map div').toggleClass('scrolloff');
 
-      $('#map').on("mouseup",function(){          // lock it when mouse up
-          $('#map div').addClass('scrolloff');
-          //somehow the mouseup event doesn't get call...
-      });
-      $('#map').on("mousedown",function(){        // when mouse down, set the mouse events free
-          $('#map div').removeClass('scrolloff');
-      });
-      $('#map div').mouseleave(function () {              // becuase the mouse up doesn't work...
-          $('#map div').addClass('scrolloff');            // set the pointer events to none when mouse leaves the map area
-                                                      // or you can do it on some other event
       });
 
+      // $('#map').on('click',function(){
+      //   $(this).removeClass('scrolloff');
+      // });
+
+      // $('#map div').mouseleave(function () {              // becuase the mouse up doesn't work...
+  //     //   alert('test')
+  //         $('#map div').addClass('scrolloff');            // set the pointer events to none when mouse leaves the map area
+  //       $('#map').on("mousedown",function(){        // when mouse down, set the mouse events free
+  //
+  //         $('#map div').removeClass('scrolloff');
+  //       });                                // or you can do it on some other event
+  //     });
+  //
   });

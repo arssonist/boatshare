@@ -36,7 +36,7 @@
 
   <section class="col-xs-12 voyage-map-section">
       <div id="map" class="overlay">
-        <script>
+        <script id="map-div">
 
           function initMap() {
             var myLatLng = {lat: <%= @voyage.latitude %>, lng: <%= @voyage.longitude %>};
