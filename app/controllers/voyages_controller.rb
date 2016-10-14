@@ -87,7 +87,9 @@ class VoyagesController < ApplicationController
   end
 
   def captain_is_user?(captain_id)
-   captain_id == current_user.id
+   if current_user
+     captain_id == current_user.id
+   end
   end
 
 private

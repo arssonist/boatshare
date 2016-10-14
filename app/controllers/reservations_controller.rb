@@ -42,23 +42,18 @@ class ReservationsController < ApplicationController
       @voyage = Voyage.find(params[:voyage_id])
       @reservation.voyage_id = params[:voyage_id]
 
-      if request.xhr?
-        @reservation.save
-        respond_to do |format|
+
+      # if @reservation.save
+      if false
         seats_left = @voyage.present_capacity
         seat_place = @reservation.seat_location
         life_jacket = @reservation.life_jacket_size
         special_needs = @reservation.need_accessibility
         x = {"voyage_capacity"=> @voyage.capacity, "reservations_count" => @voyage.reservations.count, "seats_left" => seats_left, "seat_place" => seat_place, "life_jacket" => life_jacket, "special_needs" => special_needs}
-          format.json { render json: x.to_json }
-        end
+        render json: x.to_json
+
       else
-        if @reservation.save
-          redirect_to "/voyages/#{params[:voyage_id]}" #Update this to redirect_to /voyages/reservation/instance
-          flash[:alert]="You're reservation was succesfully booked."
-        else
-          redirect_to '/voyages' #update this to redirect_to voyages/reservation/new
-        end
+        render json: { error: "Could not save" }
       end
     end
 

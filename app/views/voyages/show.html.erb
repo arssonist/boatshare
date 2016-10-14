@@ -5,6 +5,11 @@
 
   <section class="col-xs-12 col-sm-6 page-details-section">
 
+    <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+
+
 
     <h1><%= @voyage.title %></h1>
     <h5>Voyage departs from :<%= @voyage.location %></h5>
