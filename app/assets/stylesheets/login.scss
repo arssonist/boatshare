@@ -1,10 +1,14 @@
 main.user_sessions {
 
+}
+
+.login-in-bkg-box {
 background-image: url("boats.jpg");
 opacity: 0.8;
 // background-color: #100f3e;
 background-size: cover;
 height: 600px;
+padding-top: 120px;
 }
 
 
@@ -31,5 +35,5 @@ a
 
 .all-form-text {
  color: white;
- padding-top: 120px;
+
 }
