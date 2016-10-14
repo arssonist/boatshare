@@ -1,5 +1,6 @@
-<section class="all-form-text">
-<h2>New User!</h2>
+<section class="all-form-text all-sign-up-box">
+
+<h2>All Aboard! Sign up now.</h2>
 <%= form_for user, html: { multipart: true } do |f| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -41,7 +42,6 @@
     <%= f.label :bio %>
     <%= f.text_area :bio, placeholder: "optional"%>
   </div>
-
 
 
   <div class="actions">

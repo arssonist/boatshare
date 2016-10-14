@@ -1,18 +1,41 @@
 main.user_sessions {
+}
 
+.all-form-text {
+}
+
+.login-bkg-box {
+background-image: url("boats.jpg");
+opacity: 0.7;
+// background-color: rgba(0, 0, 0, 0.6);
+// background-color: #100f3e;
+background-size: cover;
+height: 600px;
+padding-top: 120px;
+}
+
+.log-in-page-text {
+   color: white;
 }
 
 
 h1 {
-
+    text-align: center;
 }
 
-#login-form {
-  margin-top: 60px;
-  margin-left: 40px;
+form {
+
+  text-align: center;
 }
+
 
 a
  {
   text-align: center;
 }
+
+//
+// a[href="/password_resets/new"] {
+//   color: white;
+//   text-align: center;
+// }
