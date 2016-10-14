@@ -1,0 +1,21 @@
+.all-sign-up-box { //adds background image to users_new
+  background-image: url("linemacro.jpg");
+  opacity: 0.8;
+  background-size: cover;
+  height: 600px;
+}
+
+ h2 { //Styles Sign Up Now header
+   font-size: 50px;
+   color: white;
+   margin-top: 0px;
+ }
+
+ #user_user_image_file { //This styles the Choose File button
+   text-align: center;
+   position: absolute;
+  //  height: 35px;
+   right: 185px;
+   top: 470px;
+
+ }
