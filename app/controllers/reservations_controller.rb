@@ -35,30 +35,53 @@ class ReservationsController < ApplicationController
       @voyage = Voyage.find(params[:voyage_id])
       # @voyage = Voyage.capacity += 1
     end
-
     def create
       @reservation = Reservation.new(reservation_params)
       @reservation.passenger_id = current_user.id
       @voyage = Voyage.find(params[:voyage_id])
       @reservation.voyage_id = params[:voyage_id]
 
-
-      if @reservation.save
+      if request.xhr?
+        @reservation.save
         respond_to do |format|
         seats_left = @voyage.present_capacity
         seat_place = @reservation.seat_location
         life_jacket = @reservation.life_jacket_size
         special_needs = @reservation.need_accessibility
         x = {"voyage_capacity"=> @voyage.capacity, "reservations_count" => @voyage.reservations.count, "seats_left" => seats_left, "seat_place" => seat_place, "life_jacket" => life_jacket, "special_needs" => special_needs}
-          format.json { render json: x.to_json notice: 'Reservation was succesfully made'}
+          format.json { render json: x.to_json }
         end
       else
-        # render json: { error: "Could not save" }
+        if @reservation.save
+          redirect_to "/voyages/#{params[:voyage_id]}" #Update this to redirect_to /voyages/reservation/instance
+          flash[:alert]="You're reservation was succesfully booked."
+        else
+          redirect_to '/voyages' #update this to redirect_to voyages/reservation/new
+        end
       end
-
-
-
     end
+    # def create
+    #   @reservation = Reservation.new(reservation_params)
+    #   @reservation.passenger_id = current_user.id
+    #   @voyage = Voyage.find(params[:voyage_id])
+    #   @reservation.voyage_id = params[:voyage_id]
+    #
+    #
+    #   if @reservation.save
+    #     seats_left = @voyage.present_capacity
+    #     seat_place = @reservation.seat_location
+    #     life_jacket = @reservation.life_jacket_size
+    #     special_needs = @reservation.need_accessibility
+    #     x = {"voyage_capacity"=> @voyage.capacity, "reservations_count" => @voyage.reservations.count, "seats_left" => seats_left, "seat_place" => seat_place, "life_jacket" => life_jacket, "special_needs" => special_needs}
+    #       format.json { render json: x.to_json notice: 'Reservation was succesfully made' }
+    #     end
+    #   else
+    #     render json: { error: "Could not save" }
+    #   end
+    #
+    #
+    #
+    # end
 
     def destroy
       @voyage = Voyage.find(params[:id])
