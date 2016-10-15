@@ -30,12 +30,13 @@
 
          <h2>All My Created Voyages </h2>
          <% user.voyages.each do |voyage| %>
-         <h6><%= voyage.title %></h6>
-         <h6><%= voyage.location %></h6>
-         <h6><%= voyage.description %></h6>
-         <h4><%= link_to "View Voyage", voyage_path(voyage) %></h4>
-         <h4><%= link_to 'Edit Voyage', edit_voyage_path(voyage) %><h4>
-         <%= link_to 'Delete Voyage', voyage_path(voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{voyage.title}'? This cannot be undone!"} %>
+         <h4>Voyage Title: <%= voyage.title %></h4>
+         <h4>Voyage Location: <%= voyage.location %></h4>
+         <h4>Voyage Desctiption: <%= voyage.description %></h4>
+         <h5><%= link_to "Click to View Voyage", voyage_path(voyage) %></h5>
+         <h5><%= link_to 'Click to Edit Voyage', edit_voyage_path(voyage) %><h5>
+         <h5><%= link_to 'Click to Delete Voyage', voyage_path(voyage), method: :delete, data: {confirm: "Are you sure you want to delete the voyage '#{voyage.title}'? This cannot be undone!"} %></h5>
+<hr>
          <% end %>
 
 
@@ -43,8 +44,8 @@
          <h3>All passengers on this Voyage</h3>
          <% user.voyages.each do |voyage| %>
          <% voyage.passengers.each do |passenger| %>
-         <h6><%= passenger.name %></h6>
-         <h6><%= passenger.bio %></h6>
+         <h4>Passenger Name: <%= passenger.name %></h4>
+         <h6>Passenger Info:<%= passenger.bio %></h6>
          <% end %>
          <% end %>
        </section>

@@ -7,7 +7,7 @@ class Reservation < ApplicationRecord
     validates  :passenger_id, presence: true
     validate :passenger_not_captain?
 
-    validate :voyage_has_capacity?
+    # validate :voyage_has_capacity?
 
   #
   def passenger_not_captain? #custom validation method to make sure the passenger is not the captain
