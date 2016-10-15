@@ -43,18 +43,21 @@ class ReservationsController < ApplicationController
       @reservation.voyage_id = params[:voyage_id]
 
 
-      # if @reservation.save
-      if false
+      if @reservation.save
+        respond_to do |format|
         seats_left = @voyage.present_capacity
         seat_place = @reservation.seat_location
         life_jacket = @reservation.life_jacket_size
         special_needs = @reservation.need_accessibility
         x = {"voyage_capacity"=> @voyage.capacity, "reservations_count" => @voyage.reservations.count, "seats_left" => seats_left, "seat_place" => seat_place, "life_jacket" => life_jacket, "special_needs" => special_needs}
-        render json: x.to_json
-
+          format.json { render json: x.to_json notice: 'Reservation was succesfully made'}
+        end
       else
-        render json: { error: "Could not save" }
+        # render json: { error: "Could not save" }
       end
+
+
+
     end
 
     def destroy
