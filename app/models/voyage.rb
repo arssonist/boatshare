@@ -19,6 +19,8 @@ class Voyage < ApplicationRecord
 
   validates :start_time, presence: true
 
+  validates :end_time, presence: true
+
   validate :start_time_cannot_be_in_the_past
 
   #  validate :check_for_capacity?
