@@ -21,7 +21,7 @@ class Voyage < ApplicationRecord
 
   validate :start_time_cannot_be_in_the_past
 
-   validate :check_for_capacity?
+  #  validate :check_for_capacity?
    #validates capcity: if there is no space on boat then rollback reservation and display custom error.
   validates :capacity, presence: true
 
@@ -41,11 +41,11 @@ class Voyage < ApplicationRecord
      self.capacity - self.reservations.count
    end
 
-   def check_for_capacity?
-     unless has_capacity?
-       errors.add(:capacity, message: "Sorry, this trip is full. Choose another trip!")
-     end
-   end
+  #  def check_for_capacity?
+  #    unless has_capacity?
+  #      errors.add(:capacity, message: "Sorry, this trip is full. Choose another trip!")
+  #    end
+  #  end
 
    def has_capacity?
      present_capacity <= 0
