@@ -14,10 +14,10 @@
              <h6><%= user.name %>'s email: <%= user.email %></h6>
            </div>
            <h6><%= link_to "Click to Edit User", edit_user_path %>
-         <h2>All Reservations </h2>
+         <h3>All Reservations</h3>
          <% user.reservations.each do |reservation|%>
-         <h6><%= reservation.voyage.title %></h6>
-         <h6><%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
+         <h6>Voyage Title: <%= reservation.voyage.title %></h6>
+         <h6>Click to View this Voyage: <%= link_to "View Voyage", voyage_path(reservation.voyage_id) %></h6>
          <% end %>
 
      </section>

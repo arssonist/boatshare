@@ -35,7 +35,7 @@
   padding: 50px 50px;
   background-color: #00264d;
   text-align: center;
-  color:red;
+  color:white;
   button{
     color:black;
     padding:20px 50px;
@@ -87,4 +87,7 @@
 .size {
   height: 50%;
   width: 50%;
+}
+.create-res-modal {
+  overflow: auto;
 }
