@@ -1,7 +1,7 @@
-<h1>Voyages#edit</h1>
-<p>Find me in app/views/voyages/edit.html.erb</p>
+<h1>Edit Your Voyage</h1>
 
 
+<section class="voyage-new-edit all-form-text">
 <%= form_for [@user, @voyage] do |f| %>
 <!-- form_for user, url: users_path, html: { multipart: true } do -->
 
@@ -52,3 +52,4 @@
 
     <%= f.submit %>
   <% end %>
+</section>
