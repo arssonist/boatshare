@@ -1,4 +1,54 @@
 <h1>Voyages#edit</h1>
 <p>Find me in app/views/voyages/edit.html.erb</p>
 
-<%= render 'form', voyage: @voyage, reservation: @reservation %>
+
+<%= form_for [@user, @voyage] do |f| %>
+<!-- form_for user, url: users_path, html: { multipart: true } do -->
+
+  <div class="field" class="form-group">
+   <%= f.label :title %>
+   <%= f.text_field :title, :class => "form-control"  %>
+   </div>
+
+  <div"field" class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, :class => "form-control"  %>
+  </div>
+
+  <div"field" class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, :class => "form-control"   %>
+  </div>
+
+  <div>
+    <%= f.label :vessel_type %>
+    <%= f.select :vessel_type, options_for_select([['Keelboat','Keelboat'], ['Dinghy','Dinghy'],['Canoe','Canoe'],['Kayak ','Kayak'],['Motorboat ','Motorboat'],['Jetski','Jetski'],['Catamaran','Catamaran']]) %>
+  </div>
+
+  <div>
+    <%= f.label :boat_image_file %>
+    <%= f.file_field :boat_image_file %>
+  </div>
+
+  <div>
+    <%= f.label :voyage_image_file %>
+    <%= f.file_field :voyage_image_file %>
+  </div>
+
+  <div>
+    <%= f.label :start_time %>
+    <%= f.datetime_field :start_time %>
+  </div>
+
+  <div>
+    <%= f.label :end_time %>
+    <%= f.datetime_field :end_time %>
+  </div>
+
+  <div>
+    <%= f.label :capacity%>
+    <%= f.select :capacity, options_for_select(0..20) %>
+  </div>
+
+    <%= f.submit %>
+  <% end %>

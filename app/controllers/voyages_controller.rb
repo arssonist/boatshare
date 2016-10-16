@@ -44,11 +44,14 @@ class VoyagesController < ApplicationController
   end
 
   def update
+    @user = User.find(current_user)
     @voyage = Voyage.find(params[:id])
     if @voyage.update(voyage_params)
-      redirect_to [@user, @voyage] #review
+      redirect_to @user
+      flash[:Success] = ": Voyage succesfully changed."
     else
-      redirect_back_or_to [@user, @voyage]
+      redirect_to @user
+      flash[:notice] = "Voyage was not updated."
     end
   end
 
