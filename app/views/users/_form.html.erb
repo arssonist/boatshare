@@ -16,27 +16,27 @@
 
   <div class="field" class="form-group">
     <%= f.label :name %><br />
-    <%= f.text_field :name, :class => "form-control" %>
+    <%= f.text_field :name, placeholder: "Full Name", :class => "form-control" %>
   </div>
 
   <div class="field" class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, :class => "form-control" %>
+    <%= f.email_field :email, placeholder: "Email", :class => "form-control" %>
   </div>
 
   <div class="field" class="form-group">
    <%= f.label :password %><br />
-   <%= f.password_field :password, :class => "form-control" %>
+   <%= f.password_field :password, placeholder: "Create password", :class => "form-control" %>
  </div>
 
  <div class="field" class="form-group">
    <%= f.label :password_confirmation %><br />
-   <%= f.password_field :password_confirmation, :class => "form-control" %>
+   <%= f.password_field :password_confirmation, placeholder: "Confirm password", :class => "form-control" %>
  </div>
 
   <div class="field" class="form-group">
     <%= f.label :bio %>
-    <%= f.text_area :bio, placeholder: "optional", :class => "form-control"%>
+    <%= f.text_area :bio, placeholder: "Optional", :class => "form-control"%>
   </div>
 
     <div class="field">
