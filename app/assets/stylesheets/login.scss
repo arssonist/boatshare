@@ -11,7 +11,7 @@ main.user_sessions::before {
   height: 100%;
   background-image: url("boats.jpg");
   background-size: cover;
-  opacity: .4;
+  opacity: .6;
   z-index: -1;
 }
 
@@ -28,31 +28,12 @@ main.user_sessions::before {
   padding-top: 120px;
 
 }
-//
-// .login-all .login-bkg {
-//   background-image: url("boats.jpg");
-//   background-size: cover;
-//   height: 600px;
-//   padding-top: 120px;
-//   opacity: .4
-// }
 
 .login-bkg {
 // background-image: url("boats.jpg");
 // background-size: cover;
 // height: 600px;
 // padding-top: 120px;
-}
-
-
-.login-bkg::after{
-    // content: '';
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // left: 0;
-    // bottom: 0;
-    // background: rgba(255,255,255,0.8);
 }
 
 .login-all .log-in-page-text {
@@ -66,5 +47,5 @@ form {
 }
 
 a {
-  // text-align: center;
+  color: #333;  
 }
