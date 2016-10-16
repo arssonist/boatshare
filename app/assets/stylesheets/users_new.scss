@@ -3,7 +3,7 @@ main.users {
   width: 100%;
 }
 
-main.users::before {
+main.users::before { //Adds pseudoclass for background image so opacity doesn't affect child element of text and form
   content: "";
   position: absolute;
   top: 0;
@@ -24,7 +24,7 @@ main.users::before {
  }
 
 
- .new_user .field {
+ .new_user .field { //Changes size of input fields in form
    width: 25%;
    margin: 0 auto 15px;
  }
