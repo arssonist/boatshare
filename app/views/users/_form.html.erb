@@ -14,35 +14,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" class="form-group">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field" class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email %>
+    <%= f.email_field :email, :class => "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field" class="form-group">
    <%= f.label :password %><br />
-   <%= f.password_field :password %>
+   <%= f.password_field :password, :class => "form-control" %>
  </div>
 
- <div class="field">
+ <div class="field" class="form-group">
    <%= f.label :password_confirmation %><br />
-   <%= f.password_field :password_confirmation %>
+   <%= f.password_field :password_confirmation, :class => "form-control" %>
  </div>
 
-  <div class="field">
- <%= f.file_field :user_image_file %>
-  </div>
-
-  <div class="field">
+  <div class="field" class="form-group">
     <%= f.label :bio %>
-    <%= f.text_area :bio, placeholder: "optional"%>
+    <%= f.text_area :bio, placeholder: "optional", :class => "form-control"%>
   </div>
 
+    <div class="field">
+   <%= f.file_field :user_image_file %>
+    </div>
 
   <div class="actions">
     <%= f.submit %>
