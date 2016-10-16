@@ -15,6 +15,7 @@ $(document).ready(function(){
 
     var $formId = $('.create-res-modal').attr('id')
     var form = $(this)
+
     $.ajax({
       url: '/voyages/' + $formId + '/reservations',
       method: 'POST',
@@ -23,7 +24,7 @@ $(document).ready(function(){
     }).done(function(response){
         console.log(response)
         $('#seats-left').text(response.seats_left)
-        var reservation = $('<h6>').text("Your reservation includes seat place: " + response.seat_place + ", a life jacket size of: " + response.life_jacket + ", and special needs of: " + response.special_needs)
+        var reservation = $('<h5>').text("Your reservation includes seat place: " + response.seat_place + ", a life jacket size of: " + response.life_jacket + ", and special needs of: " + response.special_needs)
         form.append(reservation)
         $('input[type="submit"][value="Create Reservation"]').attr('disabled', false)
 

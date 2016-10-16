@@ -5,13 +5,16 @@
 
   <section class="col-xs-12 col-sm-6 page-details-section">
 
+    <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+
+
 
     <h1><%= @voyage.title %></h1>
     <h5>Voyage departs from :<%= @voyage.location %></h5>
-    <h5>Latitude: <%= @voyage.latitude %></h5>
-    <h5>longitude: <%= @voyage.longitude %></h5>
-    <h5>Voyage start time: <%= @voyage.start_time %></h5>
-    <h5>Voyage end time: <%= @voyage.end_time %></h5>
+    <h5>Voyage start time: <%= @voyage.start_time.strftime("%I %b,%Y %I:%M%P") %></h5>
+    <h5>Voyage end time: <%= @voyage.end_time.strftime("%I %b,%Y %I:%M%P") %></h5>
     <h5>Voyage description: <%= @voyage.description %></h5>
     <h5>Vessel type: <%= @voyage.vessel_type %></h5>
     <h5>Voyage capacity: <%= @voyage.capacity %></h5>

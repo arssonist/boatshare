@@ -75,7 +75,7 @@ class VoyagesController < ApplicationController
   def destroy
     @voyage = Voyage.find(params[:id])
     @voyage.destroy
-    redirect_to voyages_path
+    redirect_to current_user
   end
 
   #edit needs to be down there to create @voyage before it can be changed.
@@ -87,7 +87,9 @@ class VoyagesController < ApplicationController
   end
 
   def captain_is_user?(captain_id)
-   captain_id == current_user.id
+   if current_user
+     captain_id == current_user.id
+   end
   end
 
 private

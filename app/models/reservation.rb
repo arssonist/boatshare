@@ -6,6 +6,9 @@ class Reservation < ApplicationRecord
 
     validates  :passenger_id, presence: true
     validate :passenger_not_captain?
+
+    # validate :voyage_has_capacity?
+
   #
   def passenger_not_captain? #custom validation method to make sure the passenger is not the captain
      if  voyage.captain == passenger
@@ -13,5 +16,11 @@ class Reservation < ApplicationRecord
     end
   end
 
-
+  def voyage_has_capacity?
+    unless voyage.has_capacity?
+      errors.add(:voyage, message: "Full!")
+    end
   end
+
+
+end
