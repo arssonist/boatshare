@@ -43,26 +43,26 @@
   <div class="form-group">
     <%= f.label :boat_image_file, class: "col-sm-2 control-label" %>
     <div class="col-sm-4">
-      <span class="btn btn-blue btn-file">
+      <div class="btn btn-blue btn-file">
         Choose Image
-    <%= f.file_field :boat_image_file %>
-      </span>
+        <%= f.file_field :boat_image_file %>
+      </div>
     </div>
-  </div>
+  </div> </br>
 
   <div class="form-group">
     <%= f.label :voyage_image_file, class: "col-sm-2 control-label" %>
     <div class="col-sm-4">
-      <span class="btn btn-blue btn-file">
+      <div class="btn btn-blue btn-file">
         Choose Image
-    <%= f.file_field :voyage_image_file %>
-      </span>
+        <%= f.file_field :voyage_image_file %>
+      </div>
     </div>
-  </div>
+  </div> </br>
 
-
+  <div>
     <%= f.submit 'Submit', :class => 'btn btn-primary'  %>
-
+  </div>
 
   <% end %>
 

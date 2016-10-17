@@ -29,6 +29,7 @@ main.voyages.new::before {
 .btn-file {
     position: relative;
     overflow: hidden;
+
 }
 
 .btn-file input[type=file] {
@@ -39,11 +40,18 @@ main.voyages.new::before {
     min-height: 100%;
     font-size: 100px;
     text-align: right;
-    // filter: alpha(opacity=0);
+    filter: alpha(opacity=0);
     opacity: 0.9;
     outline: none;
     background: #FFF;
     cursor: inherit;
     display: block;
+      // width: 35%;
+      // margin: 0 auto 15px;
 
 }
+
+// .voyages-new-btn {
+//   width: 35%;
+//   margin: 0 auto 15px;
+// }
