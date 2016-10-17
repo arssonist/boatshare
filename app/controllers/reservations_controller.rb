@@ -88,7 +88,7 @@ class ReservationsController < ApplicationController
       if
         @reservation.destroy
         flash[:Notice] = "Reservation deleted"
-      redirect_to user_path
+      redirect_to user_path(current_user.id)
     end
     end
 

@@ -11,9 +11,9 @@
 
            <div class='user-name-div'>
 
-            <h6><%= user.name %>'s email: <%= user.email %></h6>
+            <h4><%= user.name %>'s email: <%= user.email %></h4>
            </div>
-           <h6><%= link_to "Click to Edit User", edit_user_path %>
+           <h3><%= link_to "Click to Edit User", edit_user_path %>
          <h3>All Reservations</h3>
            <% user.reservations.each do |reservation|%>
            <h6>Reservation Confirmation No. <%=  reservation.id %> </h6>
