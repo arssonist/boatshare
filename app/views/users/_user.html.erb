@@ -19,6 +19,7 @@
            <h6>Reservation Confirmation No. <%=  reservation.id %> </h6>
            <h6>Voyage Title: <%= reservation.voyage.title %></h6>
            <h6><%= link_to "Click to View this Voyage:", voyage_path(reservation.voyage_id) %></h6>
+             <h5><%= link_to 'Click to Delete Reservation',voyage_reservation_path(reservation.voyage_id, reservation.id), method: :delete, data: {confirm: "Are you sure you want to delete this reservation # '#{reservation.id}'? This cannot be undone!"} %></h5>
            <hr>
          <% end %>
 
