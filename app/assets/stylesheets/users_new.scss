@@ -10,7 +10,7 @@ main.users::before { //Adds pseudoclass for background image so opacity doesn't 
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("linemacro.jpg");
+  // background-image: url("linemacro.jpg");
   background-size: cover;
   opacity: .5;
   z-index: -1;
