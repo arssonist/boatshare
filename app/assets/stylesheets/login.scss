@@ -2,7 +2,7 @@ main.user_sessions {
   height: 100%;
 }
 
-main.user_sessions::before {
+main.user_sessions::before { //pseudoclass for background image to deliver proper opacity
   content: "";
   position: absolute;
   top: 0;
@@ -10,7 +10,6 @@ main.user_sessions::before {
   width: 100%;
   height: 100%;
   background-image: image-url("rowboat.jpg");
-  // background: image-url("sailing.jpg") no-repeat center
   background-size: cover;
   opacity: .6;
   z-index: -1;
@@ -30,7 +29,7 @@ main.user_sessions::before {
   color: #FFF;
   text-align: center;
   opacity:1.0;
-} 
+}
 
 a {
   color: #333;
