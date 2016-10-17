@@ -41,9 +41,16 @@
     <%= f.text_area :bio, placeholder: "Tell us about your boating experience! (Optional)", :class => "form-control"%>
   </div>
 
-    <div class="field">
-   <%= f.file_field :user_image_file %>
+    <div class="form-group">  
+     <%= f.label :user_image_file, class: "col-sm-2 control-label" %>
+     <div class="col-sm-4">
+       <div class="btn btn-blue btn-file">
+         Choose Profile Image
+         <%= f.file_field :user_image_file %>
+       </div>
+      </div>
     </div>
+
 
   <div class="actions">
     <%= f.submit 'Submit', :class => 'btn btn-primary'  %>

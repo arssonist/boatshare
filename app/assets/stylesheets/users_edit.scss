@@ -1,0 +1,32 @@
+#edit-user-header {
+  color: #00264d;
+}
+
+.all-form-text {
+  color: #00264d;
+}
+
+.btn-file { //styles Submit button in Bootstrap-like way
+    position: relative;
+    overflow: hidden;
+    color: #00264d;
+}
+
+.btn-file input[type=file] { //styles Submit button in Bootstrap-like way
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0.9;
+    outline: none;
+    background: #FFF;
+    cursor: inherit;
+    display: block;
+      // width: 35%;
+      // margin: 0 auto 15px;
+
+}
