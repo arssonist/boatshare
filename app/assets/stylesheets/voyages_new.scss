@@ -32,7 +32,7 @@ main.voyages.new::before {
     // color: #00264d;
 
 }
- 
+
 .btn-file input[type=file] { //styles Submit button in Bootstrap-like way
     position: absolute;
     top: 0;
@@ -41,10 +41,10 @@ main.voyages.new::before {
     min-height: 100%;
     font-size: 100px;
     text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0.9;
+    // filter: alpha(opacity=0);
+    // opacity: 0.9;
     outline: none;
-    background: #FFF;
+
     cursor: inherit;
     display: block;
       // width: 35%;
@@ -53,6 +53,8 @@ main.voyages.new::before {
 
 .btn.btn-blue.btn-file {
   color: #00264d;
+      background: #FFF;
+
 }
 
 // .voyages-new-btn {
