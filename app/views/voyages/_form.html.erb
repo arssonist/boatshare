@@ -11,29 +11,14 @@
    <%= f.text_field :title, :class => "form-control"  %>
    </div>
 
+   <div class="field" class="form-group">
+     <%= f.label :location %>
+     <%= f.text_field :location, :class => "form-control"   %>
+   </div>
+
   <div class="field" class="form-group">
     <%= f.label :description %>
     <%= f.text_area :description, :class => "form-control"  %>
-  </div>
-
-  <div class="field" class="form-group">
-    <%= f.label :location %>
-    <%= f.text_field :location, :class => "form-control"   %>
-  </div>
-
-  <div>
-    <%= f.label :vessel_type %>
-    <%= f.select :vessel_type, options_for_select([['Keelboat','Keelboat'], ['Dinghy','Dinghy'],['Canoe','Canoe'],['Kayak ','Kayak'],['Motorboat ','Motorboat'],['Jetski','Jetski'],['Catamaran','Catamaran']]) %>
-  </div>
-
-  <div>
-    <%= f.label :boat_image_file %>
-    <%= f.file_field :boat_image_file %>
-  </div>
-
-  <div>
-    <%= f.label :voyage_image_file %>
-    <%= f.file_field :voyage_image_file %>
   </div>
 
   <div>
@@ -49,6 +34,21 @@
   <div>
     <%= f.label :capacity%>
     <%= f.select :capacity, options_for_select(0..20) %>
+  </div>
+
+  <div>
+    <%= f.label :vessel_type %>
+    <%= f.select :vessel_type, options_for_select([['Keelboat','Keelboat'], ['Dinghy','Dinghy'],['Canoe','Canoe'],['Kayak ','Kayak'],['Motorboat ','Motorboat'],['Jetski','Jetski'],['Catamaran','Catamaran']]) %>
+  </div>
+
+  <div>
+    <%= f.label :boat_image_file %>
+    <%= f.file_field :boat_image_file %>
+  </div>
+
+  <div>
+    <%= f.label :voyage_image_file %>
+    <%= f.file_field :voyage_image_file %>
   </div>
 
     <%= f.submit %>

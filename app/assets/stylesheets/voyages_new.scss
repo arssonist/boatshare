@@ -14,8 +14,13 @@ main.voyages.new::before {
   opacity: .6;
   z-index: -1;
 }
+// 
+// .voyages.new .field {
+//   width: 35%;
+//   margin: 0 auto 15px;
+// }
 
-.voyages.new .field {
+#new_voyage.new_voyage {
   width: 35%;
   margin: 0 auto 15px;
 }
