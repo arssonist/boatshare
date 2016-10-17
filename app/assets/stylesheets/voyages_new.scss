@@ -1,21 +1,21 @@
-// main.voyages {
-//   height: 100%;
-// }
-//
-// main.voyages::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-image: url("foam.jpg");
-//   background-size: cover;
-//   opacity: .6;
-//   z-index: -1;
-// }
-//
-// .voyages .field {
-//   width: 35%;
-//   margin: 0 auto 15px;
-// }
+main.voyages.new {
+  height: 100%;
+}
+
+main.voyages.new::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("foam.jpg");
+  background-size: cover;
+  opacity: .6;
+  z-index: -1;
+}
+
+.voyages.new .field {
+  width: 35%;
+  margin: 0 auto 15px;
+}
