@@ -30,8 +30,9 @@ body {
 
 #portfolio.portfolio { //styles voyages section in index
   color: #00264d;
-  a { //changes properties of url action call to create voyage specifically 
+  a { //changes properties of url action call to create voyage specifically
     color: #00264d;
+    text-decoration: underline;
   }
 }
 
