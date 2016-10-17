@@ -9,7 +9,7 @@ main.user_sessions::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("boats.jpg");
+  background-image: url("rowboat.jpg");
   background-size: cover;
   opacity: .6;
   z-index: -1;
@@ -27,7 +27,7 @@ main.user_sessions::before {
   height: 100%;
   padding-top: 120px;
 
-} 
+}
 
 .login-all .log-in-page-text {
   color: #FFF;
