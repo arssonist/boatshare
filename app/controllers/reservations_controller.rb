@@ -84,9 +84,12 @@ class ReservationsController < ApplicationController
     # end
 
     def destroy
-      @voyage = Voyage.find(params[:id])
-      @voyage.destroy
-      redirect_to user_voyages_path
+      @reservation = Reservation.find(params[:id])
+      if
+        @reservation.destroy
+        flash[:Notice] = "Reservation deleted"
+      redirect_to user_path
+    end
     end
 
     # def ensure_user_match
