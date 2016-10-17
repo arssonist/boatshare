@@ -1,12 +1,15 @@
 <!-- Header -->
 
-<div id="search-bar">
 
-  <%= form_tag(voyages_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search by locations" %>
-  <%= submit_tag "Search" %>
-  <% end %>
-</div>
+
+  <div id="search-bar"> 
+    <%= form_tag(voyages_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by locations", class: 'form-control' %>
+      <span class="input-group-btn">
+    <%= submit_tag "Search", class: 'btn btn-default'  %>
+      </span>
+    <% end %>
+  </div>
 
 
 <header id="top" class="header">
@@ -155,7 +158,7 @@
                 <a href="<%= new_user_path %>" class="btn btn-lg btn-dark">Sign up Now!</a>
             </div>
 
- 
+
 
 
         </div>
