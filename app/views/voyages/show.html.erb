@@ -84,7 +84,7 @@
       <%= form_for [@voyage, @reservation], :html => {:class => 'voyage-form-class create-res-modal', :id => @voyage.id } do |f|%>
       <button type="button" class="close">x</button>
 <!-- Added id to call ajax request on form -->
-      <h6>Voyage departs from :<%= @voyage.location %></h6>
+      <h6>Voyage departs from: <%= @voyage.location %></h6>
       <h6>Voyage start time: <%= @voyage.start_time %></h6>
       <h6>Voyage end time: <%= @voyage.end_time %></h6>
       <h6>Vessel type: <%= @voyage.vessel_type %></h6>

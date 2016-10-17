@@ -26,13 +26,13 @@ main.voyages.new::before {
   color: #00264d;
 }
 
-.btn-file {
+.btn-file { //styles Submit button in Bootstrap-like way
     position: relative;
     overflow: hidden;
 
 }
 
-.btn-file input[type=file] {
+.btn-file input[type=file] { //styles Submit button in Bootstrap-like way
     position: absolute;
     top: 0;
     right: 0;
