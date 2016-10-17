@@ -29,11 +29,33 @@ main.users::before { //Adds pseudoclass for background image so opacity doesn't 
    margin: 0 auto 10px;
  }
 
+ .edit_user .field { //Changes size of input fields in form
+   width: 25%;
+   margin: 0 auto 10px;
+ }
+
+
+
  #user_user_image_file { //This styles the Choose File button
    text-align: center;
-   position: absolute;
+  //  position: absolute;
   //  height: 35px;
-   right: 185px;
-   top: 470px;
+  //  right: 185px;
+  //  top: 470px;
+  margin-top: 30px;
 
  }
+.edit_user .actions{
+    width: 200px;
+    margin: 50px auto;
+
+  }
+
+input[value="Update User"]{
+    width:200px;
+}
+input[type="submit"][value="Back"]{
+    text-align: center;
+    margin: 0 auto;
+    width:100px;
+}

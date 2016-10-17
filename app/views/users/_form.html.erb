@@ -1,6 +1,6 @@
 <section class="all-form-text all-sign-up-box">
 
-<h2>All Aboard! Sign up now.</h2>
+
 <%= form_for user, html: { multipart: true } do |f| %>
 
   <% if user.errors.any? %>
@@ -51,5 +51,5 @@
 
 <% end %>
 
-<%= link_to 'Back',  new_user_session_path %>
+<h6><%= link_to 'Back',  new_user_session_path %></h6>  
 </section>
