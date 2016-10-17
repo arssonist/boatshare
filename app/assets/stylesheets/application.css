@@ -22,4 +22,7 @@ body{
 
 .nautical_footer {
   color: #100f3e;
+  .a {
+    color: #00264d;
+  }
 }

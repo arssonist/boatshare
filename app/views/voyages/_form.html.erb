@@ -40,14 +40,25 @@
     <%= f.select :vessel_type, options_for_select([['Keelboat','Keelboat'], ['Dinghy','Dinghy'],['Canoe','Canoe'],['Kayak ','Kayak'],['Motorboat ','Motorboat'],['Jetski','Jetski'],['Catamaran','Catamaran']]) %>
   </div>
 
-  <div>
-    <%= f.label :boat_image_file %>
+  <div class="form-group">
+    <%= f.label :boat_image_file, class: "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <span class="btn btn-blue btn-file">
+        Choose Image
     <%= f.file_field :boat_image_file %>
+      </span>
+    </div>
   </div>
+ 
 
-  <div>
-    <%= f.label :voyage_image_file %>
+  <div class="form-group">
+    <%= f.label :voyage_image_file, class: "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <span class="btn btn-blue btn-file">
+        Choose Image
     <%= f.file_field :voyage_image_file %>
+      </span>
+    </div>
   </div>
 
     <%= f.submit %>
