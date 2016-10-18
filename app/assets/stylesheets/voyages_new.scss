@@ -14,7 +14,11 @@ main.voyages.new::before {
   opacity: .6;
   z-index: -1;
 }
-//
+.voyage-new-edit {
+  h1 {
+    font-size: 70px;
+  }
+}
 // .voyages.new .field {
 //   width: 35%;
 //   margin: 0 auto 15px;
