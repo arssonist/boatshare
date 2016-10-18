@@ -1,5 +1,5 @@
 <section class="voyage-new-edit all-form-text">
- 
+
 <h1>Take the helm. Create a voyage.</h1> </br> </br>
 
 <%= form_for voyage, url: voyages_path, html: { multipart: true } do |f| %>
@@ -41,13 +41,11 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :boat_image_file, class: " control-label" %>
-
+    <%= f.label :boat_image_file, class: "control-label" %>
       <div class="btn btn-blue btn-file">
         Choose Image
         <%= f.file_field :boat_image_file %>
       </div>
-    </div>
   </div>
 
   <div class="form-group">
@@ -56,7 +54,6 @@
         Choose Image
         <%= f.file_field :voyage_image_file %>
       </div>
-    </div>
   </div> </br>
 
   <div>
