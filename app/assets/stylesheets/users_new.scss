@@ -1,26 +1,30 @@
-main.users {
+main.users.new {
   // height: 100%;
   width: 100%;
+  height: 100%;
 }
 
-main.users::before { //Adds pseudoclass for background image so opacity doesn't affect child element of text and form
+main.users.new::before { //Adds pseudoclass for background image so opacity doesn't affect child element of text and form
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  // background-image: url("linemacro.jpg");
+  background-image: url("canoes.jpeg");
   background-size: cover;
   opacity: .5;
   z-index: -1;
 }
 
 
- h2 { //Styles Sign Up Now header
-   font-size: 50px;
-  //  color: #FFF;
+#user-new-h2 { //Styles Sign Up Now header
+  margin-top: 50px;
+   font-size: 75px;
+   color: #00264d;
    margin-top: 0px;
+
+    text-align: center;
  }
 
 
