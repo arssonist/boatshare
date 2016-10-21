@@ -1,23 +1,23 @@
 <section class="voyage-new-edit all-form-text">
 
-<h1>Take the helm. Create your own voyage.</h1>
+<h1>Take the helm. Create a voyage.</h1> </br> </br>
 
 <%= form_for voyage, url: voyages_path, html: { multipart: true } do |f| %>
 <!-- form_for user, url: users_path, html: { multipart: true } do -->
 
   <div class="field" class="form-group">
    <%= f.label :title %>
-   <%= f.text_field :title, :class => "form-control"  %>
+   <%= f.text_field :title, :class => "form-control", placeholder: "What's your trip called?"  %>
    </div>
 
    <div class="field" class="form-group">
      <%= f.label :location %>
-     <%= f.text_field :location, :class => "form-control"   %>
+     <%= f.text_field :location, :class => "form-control", placeholder: "What's your point of departure?"   %>
    </div>
 
   <div class="field" class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description, :class => "form-control"  %>
+    <%= f.text_area :description, :class => "form-control", placeholder: "Why should a passenger take this voyage with you? Where will you go? What will you do? Be convincing!"  %>
   </div>
 
   <div>
@@ -41,23 +41,19 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :boat_image_file, class: "col-sm-2 control-label" %>
-    <div class="col-sm-4">
+    <%= f.label :boat_image_file, class: "control-label" %>
       <div class="btn btn-blue btn-file">
         Choose Image
         <%= f.file_field :boat_image_file %>
       </div>
-    </div>
-  </div> </br>
+  </div>
 
   <div class="form-group">
-    <%= f.label :voyage_image_file, class: "col-sm-2 control-label" %>
-    <div class="col-sm-4">
+    <%= f.label :voyage_image_file, class: "control-label" %>
       <div class="btn btn-blue btn-file">
         Choose Image
         <%= f.file_field :voyage_image_file %>
       </div>
-    </div>
   </div> </br>
 
   <div>

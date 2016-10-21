@@ -21,8 +21,12 @@ body{
 }
 
 .nautical_footer {
-  color: #100f3e;
+  color: #00264d;
   .a {
     color: #00264d;
+  }
+
+  .list-inline {
+    color: #00264d
   }
 }

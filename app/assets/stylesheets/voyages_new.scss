@@ -14,7 +14,11 @@ main.voyages.new::before {
   opacity: .6;
   z-index: -1;
 }
-//
+.voyage-new-edit {
+  h1 {
+    font-size: 70px;
+  }
+}
 // .voyages.new .field {
 //   width: 35%;
 //   margin: 0 auto 15px;
@@ -41,10 +45,10 @@ main.voyages.new::before {
     min-height: 100%;
     font-size: 100px;
     text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0.9;
+    // filter: alpha(opacity=0);
+    // opacity: 0.9;
     outline: none;
-    background: #FFF;
+
     cursor: inherit;
     display: block;
       // width: 35%;
@@ -52,7 +56,9 @@ main.voyages.new::before {
 }
 
 .btn.btn-blue.btn-file {
-  color: #00264d;
+  color: #FFF;
+      background: #337ab7;
+
 }
 
 // .voyages-new-btn {
