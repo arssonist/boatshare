@@ -5,6 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
 
   config.paperclip_defaults = {
+    s3_host_name: 's3.us-east-2.amazonaws.com',
     storage: :s3,
     s3_protocol: :https,
     s3_credentials: {
