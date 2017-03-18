@@ -1,6 +1,11 @@
-<h2>Welcome to Gilligan! This is ride-sharing app for boats. Boat lovers can book a ride and boat owners can request a crew<h2>
+<h2>Welcome to Gilligan! This is ride-sharing app for boats.</h2> 
+<h2>Boat lovers can book a ride and boat owners can request a crew</h2>
 
 <h4>An application created as a final project for Bitmaker Web Dev Bootcamp</h4>
+
+View a demo!--
+
+https://arssonist.github.io/business-card-maker/
 
 This is an app based on the concept of the sharing economy. It allows both boat owners and sailors without their own boats to connect.
 
