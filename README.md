@@ -1,4 +1,4 @@
-<h2>Welcome to Gilligan! This is ride-sharing app for boats. Boat lovers can book a ride and boat owners can request a crew>/h2>
+<h2>Welcome to Gilligan! This is ride-sharing app for boats. Boat lovers can book a ride and boat owners can request a crew<h2>
 
 <h4>An application created as a final project for Bitmaker Web Dev Bootcamp</h4>
 
